@@ -1,0 +1,24 @@
+Format-Specification:
+ http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=402
+Upstream-Name: lightdm
+Upstream-Maintainer: Robert Ancell
+Upstream-Source: https://launchpad.net/lightdm
+
+Files: *
+Copyright: Robert Ancell
+License: GPL-3
+
+Files: debian/*
+Copyright: © 2010 Yves-Alexis Perez <corsac@debian.org>
+License: GPL-2
+
+License: GPL-2
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2'.
+
+License: GPL-3
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3'.
+

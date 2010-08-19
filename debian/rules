@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+CFLAGS=$(shell dpkg-buildflags --get CFLAGS)
+LDFLAGS=$(shell dpkg-buildflags --get LDFLAGS)
+#LDFLAGS += -Wl,-z,defs -Wl,--as-needed
+
+%:
+	dh $@
