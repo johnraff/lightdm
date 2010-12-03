@@ -1,0 +1,2 @@
+version=3
+http://launchpad.net/lightdm/+download http://launchpad.net/lightdm/.*/lightdm-(.*)\.tar\.gz
