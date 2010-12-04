@@ -1,0 +1,67 @@
+=== modified file 'src/display-manager.c'
+--- lightdm/src/display-manager.c	2010-11-17 03:23:08 +0000
++++ lightdm/src/display-manager.c	2010-12-04 15:38:08 +0000
+@@ -146,36 +146,44 @@
+     session_set_env (session, "LDM_DISPLAY", string);
+     g_free (string);
+ 
+-    authorization = xserver_get_authorization (display_get_xserver (display));
+-    if (authorization)
+-    {
+-        gchar *path;
+-
+-        path = get_authorization_path (manager);
+-        session_set_authorization (session, authorization, path);
+-        g_free (path);
+-    }
+-
+     if (is_greeter)
+     {
+         gchar *filename;
+         filename = g_strdup_printf ("%s-greeter.log", xserver_get_address (display_get_xserver (display)));
+         string = g_build_filename (manager->priv->log_dir, filename, NULL);
+         g_free (filename);
++        authorization = xserver_get_authorization (display_get_xserver (display));
++        if (authorization)
++        {
++            gchar *path;
++
++            path = get_authorization_path (manager);
++            session_set_authorization (session, authorization, path);
++            g_free (path);
++        }
++
+     }
+     else
+     {
++        struct passwd *user_info = getpwnam (session_get_username (session));
++        if (user_info)
++            string = g_build_filename (user_info->pw_dir, ".xsession-errors", NULL);
++        else
++            g_warning ("Failed to get user info for user '%s'", session_get_username (session));
++
++        authorization = xserver_get_authorization (display_get_xserver (display));
++        if (authorization)
++        {
++            gchar *path;
++
++            path = g_build_filename(user_info->pw_dir, ".Xauthority", NULL);
++            session_set_authorization (session, authorization, path);
++            g_free (path);
++        }
++
+         // FIXME: Copy old error file
+         if (manager->priv->test_mode)
+             string = g_strdup (".xsession-errors");
+-        else
+-        {
+-            struct passwd *user_info = getpwnam (session_get_username (session));
+-            if (user_info)
+-                string = g_build_filename (user_info->pw_dir, ".xsession-errors", NULL);
+-            else
+-                g_warning ("Failed to get user info for user '%s'", session_get_username (session));
+-        }
+     }
+     g_debug ("Logging to %s", string);
+     session_set_log_file (session, string);
+

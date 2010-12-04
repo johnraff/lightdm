@@ -1,0 +1,14 @@
+=== modified file 'src/session.c'
+--- lightdm/src/session.c	2010-11-12 02:53:29 +0000
++++ lightdm/src/session.c	2010-12-04 11:21:17 +0000
+@@ -244,6 +244,9 @@
+     }
+     g_free (username);
+ 
++    if (initgroups(user_info->pw_name, user_info->pw_gid) < 0)
++      g_warning("Failed to initialize supplementary groups for %s: %s",username, strerror(errno));
++
+     env = get_env (session);
+ 
+     result = g_shell_parse_argv (session->priv->command, &argc, &argv, &error);
+

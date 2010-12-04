@@ -1,0 +1,33 @@
+=== modified file 'data/lightdm.conf'
+--- lightdm/data/lightdm.conf	2010-11-17 03:23:08 +0000
++++ lightdm/data/lightdm.conf	2010-12-04 16:05:01 +0000
+@@ -9,9 +9,9 @@
+ #
+ [LightDM]
+ #xserver=/usr/bin/X
+-#authorization-directory=/var/cache/lightdm/authority
++authorization-directory=/var/lib/lightdm/authority
+ #log-directory=/var/log/lightdm
+-#session-wrapper=/etc/X11/Xsession
++session-wrapper=/etc/X11/Xsession
+ displays=default-display
+ 
+ #
+@@ -54,7 +54,7 @@
+ # hidden-shells = Shells that indicate a user cannot login
+ #
+ [UserManager]
+-#load-users=true
++load-users=false
+ #minimum-uid=500
+ #hidden-users=nobody nobody4 noaccess
+ #hidden-shells=/bin/false /usr/sbin/nologin
+@@ -70,6 +70,6 @@
+ # it can be a word and the first 7 characters are used as the key.
+ #
+ [xdmcp]
+-#enabled=true
++enabled=false
+ #port=177
+ #key=0x0123456789ABCD
+

@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+if [ "$1" = "configure" ];
+then
+  echo "adding lightdm user" >&2
+  adduser --system --home /var/lib/lightdm lightdm || true
+
+  invoke-rc.d dbus reload
+fi
+
+#DEBHELPER#

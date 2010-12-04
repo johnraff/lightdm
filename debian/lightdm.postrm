@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+if [ "$1" = "purge" ];
+then
+  echo "removing lightdm user" >&2
+  deluser system lightdm || echo "failure removing lightdm user" >&2
+fi
+
+#DEBHELPER#

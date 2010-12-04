@@ -7,7 +7,8 @@ Uploaders: Evgeni Golov <evgeni@debian.org>,
  Simon Huggins <huggie@earth.li>          
 Build-Depends: debhelper (>= 7.0.50~), intltool, pkg-config, libglib2.0-dev, 
  libdbus-glib-1-dev, libxcb1-dev, libxdmcp-dev, libpam-dev, libxklavier-dev, 
- libgtk2.0-dev, libwebkit-dev, libck-connector-dev, gnome-doc-utils
+ libgtk2.0-dev, libwebkit-dev, libck-connector-dev, gnome-doc-utils, libqt4-dev,
+ hardening-includes
 Standards-Version: 3.9.1
 Homepage: https://launchpad.net/lightdm
 Vcs-Svn: svn://svn.debian.org/pkg-xfce/goodies/trunk/lightdm
@@ -17,7 +18,8 @@ Vcs-Browser: http://svn.debian.org/wsvn/pkg-xfce/goodies/trunk/lightdm
 Package: lightdm
 Section: xfce
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, lightdm-gtk | lightdm-webkit | lightdm-qt, 
+ dbus
 Description: simple display manager
  An X display manager that:
   * Has a lightweight codebase
@@ -25,3 +27,48 @@ Description: simple display manager
   * Has a well defined interface between the server and user interface
   * Fully themeable (easiest with the webkit interface)
   * Cross-desktop (greeters can be written in any toolkit)
+
+Package: lightdm-gtk
+Section: xfce
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: simple display manager (GTK+ greeter)
+ This package contains the GTK+ greeter for the lightdm display manager
+
+Package: lightdm-webkit
+Section: x11
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: simple display manager (webkit greeter)
+ This package contains the webkit greeter for the lightdm display manager
+
+Package: liblightdm-gobject-0-0
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: simple display manager (gobject library)
+ This package contains the gobject library for lightdm, used by the GTK+
+ greeter.
+
+Package: liblightdm-gobject-dev
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: simple display manager (gobject development files)
+ This package contains the development files for lightdm.
+ They can be used to build new greeters applications GTK+ based.
+
+Package: liblightdm-qt-0-0
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: simple display manager (Qt library)
+ This package contains the Qt library for lightdm.
+
+Package: liblightdm-qt-dev
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: simple display manager (Qt development files)
+ This package contains the development files for lightdm.
+ They can be used to build new greeters applications Qt based.
