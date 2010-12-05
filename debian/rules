@@ -14,7 +14,7 @@ override_dh_auto_configure:
 	dh_auto_configure -- --with-greeter-user=lightdm --with-default-session=xfce
 
 override_dh_installinit:
-	dh_installinit -- defaults S30 K01
+	dh_installinit --noscripts
 
 %:
 	dh $@
