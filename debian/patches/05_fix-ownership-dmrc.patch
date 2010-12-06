@@ -1,0 +1,11 @@
+=== modified file 'src/display.c'
+--- lightdm/src/display.c	2010-11-17 03:23:08 +0000
++++ lightdm/src/display.c	2010-12-04 22:59:01 +0000
+@@ -486,6 +486,7 @@
+             {
+                 path = g_build_filename (user_info->pw_dir, ".dmrc", NULL);
+                 g_file_set_contents (path, data, length, NULL);
++                chown(path, user_info->pw_uid, user_info->pw_gid);
+                 g_free (path);
+             }
+ 
