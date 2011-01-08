@@ -1,5 +1,5 @@
-lightdm (0.2.1-1) unstable; urgency=low
+lightdm (0.2.2-1) unstable; urgency=low
 
-  * Initial release.                                        closes: #
+  * Initial release.                                        closes: #111111
 
- -- Yves-Alexis Perez <corsac@debian.org>  Fri, 03 Dec 2010 23:29:38 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 08 Jan 2011 11:52:12 +0100

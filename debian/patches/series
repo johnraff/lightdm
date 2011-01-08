@@ -1,6 +1,3 @@
 01_initgroups.patch
 02_default-config.patch
-03_fix-xauthority-perms.patch
 04_fix_xauthority-path.patch
-05_fix-ownership-dmrc.patch
-06_use-pam-envvar.patch
