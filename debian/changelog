@@ -1,5 +1,5 @@
 lightdm (0.2.3-1) unstable; urgency=low
 
-  * Initial release.                                        closes: #111111
+  * Initial release.                                            closes: #615591
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sat, 08 Jan 2011 11:52:12 +0100
