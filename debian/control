@@ -7,9 +7,9 @@ Uploaders: Evgeni Golov <evgeni@debian.org>,
  Simon Huggins <huggie@earth.li>          
 Build-Depends: debhelper (>= 7.0.50~), intltool, pkg-config, libglib2.0-dev, 
  libdbus-glib-1-dev, libxcb1-dev, libxdmcp-dev, libpam-dev, libxklavier-dev, 
- libgtk2.0-dev, libwebkit-dev, libck-connector-dev, gnome-doc-utils, libqt4-dev,
- hardening-includes
-Standards-Version: 3.9.1
+ libgtk2.0-dev, libck-connector-dev, gnome-doc-utils, libqt4-dev,
+ hardening-includes, valac, gobject-introspection
+Standards-Version: 3.9.2
 Homepage: https://launchpad.net/lightdm
 Vcs-Svn: svn://svn.debian.org/pkg-xfce/goodies/trunk/lightdm
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-xfce/goodies/trunk/lightdm
@@ -19,28 +19,46 @@ Package: lightdm
 Section: xfce
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, 
- lightdm-gtk | lightdm-webkit | lightdm-qt, dbus, consolekit, adduser
+ lightdm-gtk | lightdm-greeter, dbus, consolekit, adduser
 Description: simple display manager
  An X display manager that:
   * Has a lightweight codebase
   * Is standards compliant (PAM, ConsoleKit, etc)
   * Has a well defined interface between the server and user interface
-  * Fully themeable (easiest with the webkit interface)
+  * Fully themeable
   * Cross-desktop (greeters can be written in any toolkit)
 
 Package: lightdm-gtk
+Provides: lightdm-greeter
 Section: xfce
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (GTK+ greeter)
  This package contains the GTK+ greeter for the lightdm display manager
 
-Package: lightdm-webkit
-Section: x11
+Package: lightdm-vala
+Provides: lightdm-greeter
+Section: xfce
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: simple display manager (webkit greeter)
- This package contains the webkit greeter for the lightdm display manager
+Description: simple display manager (Vala greeter)
+ This package contains the Vala greeter for the lightdm display manager
+
+Package: lightdm-qt
+Provides: lightdm-greeter
+Section: xfce
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: simple display manager (Qt greeter)
+ This package contains the Qt greeter for the lightdm display manager
+
+Package: lightdm-python-gtk
+Provides: lightdm-greeter
+Section: xfce
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python
+Description: simple display manager (PyGTK+ greeter)
+ This package contains the PyGTK+ greeter for the lightdm display manager
 
 Package: liblightdm-gobject-0-0
 Section: libdevel

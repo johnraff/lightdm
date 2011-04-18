@@ -1,6 +1,8 @@
 === modified file 'data/lightdm.conf'
---- lightdm/data/lightdm.conf	2010-11-17 03:23:08 +0000
-+++ lightdm/data/lightdm.conf	2010-12-04 16:05:01 +0000
+Index: lightdm-0.3.0/data/lightdm.conf
+===================================================================
+--- lightdm-0.3.0.orig/data/lightdm.conf	2011-04-16 10:16:26.000000000 +0200
++++ lightdm-0.3.0/data/lightdm.conf	2011-04-18 14:44:13.498641953 +0200
 @@ -9,9 +9,9 @@
  #
  [LightDM]
@@ -13,6 +15,15 @@
  displays=default-display
  
  #
+@@ -31,7 +31,7 @@
+ # key = Authentication key to use
+ #
+ [default-display]
+-#vt=
++vt=7
+ #layout=us
+ #greeter-theme=example-gtk-gnome
+ #greeter-user=lightdm
 @@ -54,7 +54,7 @@
  # hidden-shells = Shells that indicate a user cannot login
  #
@@ -30,4 +41,3 @@
 +enabled=false
  #port=177
  #key=0x0123456789ABCD
-

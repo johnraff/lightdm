@@ -1,2 +1,2 @@
-usr/lib/lightdm/ldm-gtk-greeter
-usr/share/lightdm/themes/gnome
+usr/lib/lightdm/lightdm-gtk-greeter
+usr/share/lightdm/themes/example-gtk-gnome
