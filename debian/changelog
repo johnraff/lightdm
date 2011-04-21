@@ -1,5 +1,5 @@
-lightdm (0.3.0-1) UNRELEASED; urgency=low
+lightdm (0.3.2-1) UNRELEASED; urgency=low
 
   * Initial release.                                            closes: #615591
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sat, 08 Jan 2011 11:52:12 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 21 Apr 2011 13:23:44 +0200

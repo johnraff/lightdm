@@ -1,29 +1,18 @@
 === modified file 'data/lightdm.conf'
-Index: lightdm-0.3.0/data/lightdm.conf
-===================================================================
---- lightdm-0.3.0.orig/data/lightdm.conf	2011-04-16 10:16:26.000000000 +0200
-+++ lightdm-0.3.0/data/lightdm.conf	2011-04-18 14:44:13.498641953 +0200
+--- old/data/lightdm.conf	2011-04-18 05:06:03 +0000
++++ new/data/lightdm.conf	2011-04-21 11:25:50 +0000
 @@ -9,9 +9,9 @@
  #
  [LightDM]
  #xserver=/usr/bin/X
 -#authorization-directory=/var/cache/lightdm/authority
-+authorization-directory=/var/lib/lightdm/authority
++authorization-directory=/var/cache/lightdm/authority
  #log-directory=/var/log/lightdm
 -#session-wrapper=/etc/X11/Xsession
 +session-wrapper=/etc/X11/Xsession
  displays=default-display
  
  #
-@@ -31,7 +31,7 @@
- # key = Authentication key to use
- #
- [default-display]
--#vt=
-+vt=7
- #layout=us
- #greeter-theme=example-gtk-gnome
- #greeter-user=lightdm
 @@ -54,7 +54,7 @@
  # hidden-shells = Shells that indicate a user cannot login
  #
@@ -41,3 +30,4 @@ Index: lightdm-0.3.0/data/lightdm.conf
 +enabled=false
  #port=177
  #key=0x0123456789ABCD
+

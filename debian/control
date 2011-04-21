@@ -1,5 +1,5 @@
 Source: lightdm
-Section: xfce
+Section: x11
 Priority: optional
 Maintainer: Debian Xfce Maintainers <pkg-xfce-devel@lists.alioth.debian.org>
 Uploaders: Evgeni Golov <evgeni@debian.org>, 
@@ -16,7 +16,7 @@ Vcs-Browser: http://svn.debian.org/wsvn/pkg-xfce/goodies/trunk/lightdm
 
 
 Package: lightdm
-Section: xfce
+Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, 
  lightdm-gtk | lightdm-greeter, dbus, consolekit, adduser
@@ -30,7 +30,7 @@ Description: simple display manager
 
 Package: lightdm-gtk
 Provides: lightdm-greeter
-Section: xfce
+Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (GTK+ greeter)
@@ -38,7 +38,7 @@ Description: simple display manager (GTK+ greeter)
 
 Package: lightdm-vala
 Provides: lightdm-greeter
-Section: xfce
+Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (Vala greeter)
@@ -46,7 +46,7 @@ Description: simple display manager (Vala greeter)
 
 Package: lightdm-qt
 Provides: lightdm-greeter
-Section: xfce
+Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (Qt greeter)
@@ -54,7 +54,7 @@ Description: simple display manager (Qt greeter)
 
 Package: lightdm-python-gtk
 Provides: lightdm-greeter
-Section: xfce
+Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, python
 Description: simple display manager (PyGTK+ greeter)
