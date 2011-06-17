@@ -1,8 +1,8 @@
-Index: lightdm-0.3.0/src/display-manager.c
+Index: lightdm-0.4.0/src/display-manager.c
 ===================================================================
---- lightdm-0.3.0.orig/src/display-manager.c	2011-04-16 10:16:26.000000000 +0200
-+++ lightdm-0.3.0/src/display-manager.c	2011-04-18 15:23:49.470536842 +0200
-@@ -144,14 +144,6 @@
+--- lightdm-0.4.0.orig/src/display-manager.c	2011-06-17 04:04:18.000000000 +0200
++++ lightdm-0.4.0/src/display-manager.c	2011-06-17 08:38:37.778236133 +0200
+@@ -137,14 +137,6 @@
      }
  
      authorization = xserver_get_authorization (display_get_xserver (display));
@@ -17,7 +17,7 @@ Index: lightdm-0.3.0/src/display-manager.c
  
      if (is_greeter)
      {
-@@ -159,6 +151,14 @@
+@@ -152,11 +144,28 @@
          filename = g_strdup_printf ("%s-greeter.log", xserver_get_address (display_get_xserver (display)));
          log_filename = g_build_filename (manager->priv->log_dir, filename, NULL);
          g_free (filename);
@@ -32,18 +32,17 @@ Index: lightdm-0.3.0/src/display-manager.c
      }
      else
      {
-@@ -172,6 +172,14 @@
-                 log_filename = g_build_filename (user_info->pw_dir, ".xsession-errors", NULL);
-             else
-                 g_warning ("Failed to get user info for user '%s'", session_get_username (session));
-+            if (authorization)
-+            {
-+                gchar *path;
+         // FIXME: Copy old error file
+         log_filename = g_build_filename (user_get_home_directory (session_get_user (session)), ".xsession-errors", NULL);
++        if (authorization)
++        {
++            gchar *path;
 +
-+                path = g_build_filename(user_info->pw_dir, ".Xauthority", NULL);
-+                session_set_authorization (session, authorization, path);
-+                g_free (path);
-+            }
-         }
++            path = g_build_filename(user_get_home_directory (session_get_user (session)), ".Xauthority", NULL);
++            session_set_authorization (session, authorization, path);
++            g_free (path);
++        }
++
      }
-   
+ 
+     if (log_filename)

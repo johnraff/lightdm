@@ -1,19 +1,27 @@
 === modified file 'data/lightdm.conf'
---- old/data/lightdm.conf	2011-04-18 05:06:03 +0000
-+++ new/data/lightdm.conf	2011-04-21 11:25:50 +0000
-@@ -9,9 +9,9 @@
- #
+Index: lightdm-0.4.0/data/lightdm.conf
+===================================================================
+--- lightdm-0.4.0.orig/data/lightdm.conf	2011-06-10 03:35:30.000000000 +0200
++++ lightdm-0.4.0/data/lightdm.conf	2011-06-17 08:04:26.074134864 +0200
+@@ -17,7 +17,7 @@
  [LightDM]
- #xserver=/usr/bin/X
+ #xserver=default-xserver
+ #default-xserver-command=
 -#authorization-directory=/var/cache/lightdm/authority
 +authorization-directory=/var/cache/lightdm/authority
  #log-directory=/var/log/lightdm
+ #theme-directory=/usr/share/lightdm/themes
+ #theme-engine-directory=/usr/libexec/lightdm
+@@ -25,7 +25,7 @@
+ #cache-directory=/var/cache/lightdm
+ #xsessions-directory=/usr/share/xsessions
+ #default-xsession=
 -#session-wrapper=/etc/X11/Xsession
 +session-wrapper=/etc/X11/Xsession
- displays=default-display
+ seats=seat-0
  
  #
-@@ -54,7 +54,7 @@
+@@ -78,7 +78,7 @@
  # hidden-shells = Shells that indicate a user cannot login
  #
  [UserManager]
@@ -22,7 +30,7 @@
  #minimum-uid=500
  #hidden-users=nobody nobody4 noaccess
  #hidden-shells=/bin/false /usr/sbin/nologin
-@@ -70,6 +70,6 @@
+@@ -106,6 +106,6 @@
  # it can be a word and the first 7 characters are used as the key.
  #
  [xdmcp]
@@ -30,4 +38,3 @@
 +enabled=false
  #port=177
  #key=0x0123456789ABCD
-
