@@ -1,8 +1,8 @@
 === modified file 'data/lightdm.conf'
 Index: lightdm-0.4.0/data/lightdm.conf
 ===================================================================
---- lightdm-0.4.0.orig/data/lightdm.conf	2011-06-10 03:35:30.000000000 +0200
-+++ lightdm-0.4.0/data/lightdm.conf	2011-06-17 08:04:26.074134864 +0200
+--- lightdm-0.4.0.orig/data/lightdm.conf	2011-06-27 18:43:17.805498735 +0200
++++ lightdm-0.4.0/data/lightdm.conf	2011-06-27 18:43:43.112623806 +0200
 @@ -17,7 +17,7 @@
  [LightDM]
  #xserver=default-xserver
@@ -21,6 +21,15 @@ Index: lightdm-0.4.0/data/lightdm.conf
  seats=seat-0
  
  #
+@@ -55,7 +55,7 @@
+ # key = Authentication key to use
+ #
+ [seat-0]
+-vt=active
++vt=7
+ #greeter-theme=example-gtk-gnome
+ #greeter-user=lightdm
+ #session=gnome
 @@ -78,7 +78,7 @@
  # hidden-shells = Shells that indicate a user cannot login
  #
