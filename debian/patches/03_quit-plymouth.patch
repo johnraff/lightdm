@@ -1,0 +1,13 @@
+diff --git a/src/display-manager.c b/src/display-manager.c
+index c8f5f32..5191fcc 100644
+--- a/src/display-manager.c
++++ b/src/display-manager.c
+@@ -616,7 +616,7 @@ display_manager_start (DisplayManager *manager)
+         plymouth_on_active_vt = plymouth_command_returns_true ("--has-active-vt");
+ 
+         /* Deactivate stops Plymouth from drawing, as we are about to start an X server to replace it */
+-        plymouth_run_command ("deactivate", NULL);
++        plymouth_run_command ("quit", NULL);
+     }
+ 
+     /* Start each static display */
