@@ -1,4 +1,3 @@
-01_fix-ld-z,defs.patch
 02_default-config.patch
 03_quit-plymouth.patch
 04_fix_xauthority-path.patch
