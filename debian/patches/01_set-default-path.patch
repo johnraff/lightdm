@@ -1,0 +1,45 @@
+diff --git a/src/session.c b/src/session.c
+index 61267f0..c4b1971 100644
+--- a/src/session.c
++++ b/src/session.c
+@@ -104,6 +104,7 @@ session_start (Session *session, gboolean create_pipe)
+     //gint session_stdin, session_stdout, session_stderr;
+     gboolean result;
+     GError *error = NULL;
++		gchar *env_path = NULL;
+ 
+     g_return_val_if_fail (session != NULL, FALSE);
+     g_return_val_if_fail (session->priv->user != NULL, FALSE);
+@@ -114,6 +115,18 @@ session_start (Session *session, gboolean create_pipe)
+     child_process_set_env (CHILD_PROCESS (session), "HOME", user_get_home_directory (session->priv->user));
+     child_process_set_env (CHILD_PROCESS (session), "SHELL", user_get_shell (session->priv->user));
+ 
++    env_path = g_hash_table_lookup (session->priv->env, "PATH");
++		if (env_path == NULL)
++		{
++        if (user_get_uid (session->priv->user) == 0)
++						env_path = g_strdup (DEF_ROOTPATH);
++        else
++						env_path = g_strdup (DEF_PATH);
++
++			child_process_set_env(CHILD_PROCESS (session), "PATH", env_path);
++		}
++		g_free(env_path);
++
+     if (session->priv->authorization)
+     {
+         g_debug ("Writing session authority to %s", session->priv->authorization_path);
+diff --git a/src/session.h b/src/session.h
+index 7383e74..e819932 100644
+--- a/src/session.h
++++ b/src/session.h
+@@ -21,6 +21,9 @@ G_BEGIN_DECLS
+ #define SESSION_TYPE (session_get_type())
+ #define SESSION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), SESSION_TYPE, Session))
+ 
++#define DEF_PATH "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
++#define DEF_ROOTPATH "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
++
+ typedef struct SessionPrivate SessionPrivate;
+ 
+ typedef struct
