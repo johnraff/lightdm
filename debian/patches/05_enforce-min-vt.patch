@@ -1,3 +1,8 @@
+Author: Yves-Alexis Perez <corsac@debian.org>
+Description: enforce minimum vt configuration
+Even if plymouth is running and has an active vt, when minimum-vt is defined
+enforce it.
+Bug: https://bugs.launchpad.net/lightdm/+bug/801880
 diff --git a/src/vt.c b/src/vt.c
 index 66f4802..b461bc2 100644
 --- a/src/vt.c

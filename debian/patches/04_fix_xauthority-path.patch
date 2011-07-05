@@ -1,3 +1,6 @@
+Author: Yves-Alexis Perez <corsac@debian.org>
+Description: put xauthority file in user homedir
+Bug: https://bugs.launchpad.net/lightdm/+bug/685194
 Index: lightdm-0.4.0/src/display-manager.c
 ===================================================================
 --- lightdm-0.4.0.orig/src/display-manager.c	2011-06-17 04:04:18.000000000 +0200

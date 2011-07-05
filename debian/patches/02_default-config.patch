@@ -1,3 +1,13 @@
+Author: Yves-Alexis Perez <corsac@debian.org>
+Author: Lionel Le Folgoc <mrpouit@gmail.com>
+Description: adapt config to Debian
+Especially:
+
+* use X11 session wraper
+* start on vt7
+* don't show userlist
+* disable DMCP
+
 === modified file 'data/lightdm.conf'
 Index: lightdm-0.4.0/data/lightdm.conf
 ===================================================================

@@ -1,3 +1,9 @@
+Author: Yves-Alexis Perez <corsac@debian.org>
+Description: quit plymouth instead of deactivating it
+plymouth is quitted from the /etc/init.d/plymouth script, but it'll hang if
+plymouth has been deactivated before, so just quit it for now.
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=632737
+Bug: https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/799069
 diff --git a/src/display-manager.c b/src/display-manager.c
 index c8f5f32..5191fcc 100644
 --- a/src/display-manager.c
