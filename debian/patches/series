@@ -2,3 +2,4 @@
 02_default-config.patch
 03_quit-plymouth.patch
 04_fix_xauthority-path.patch
+05_enforce-min-vt.patch

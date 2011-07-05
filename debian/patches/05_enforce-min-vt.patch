@@ -1,0 +1,62 @@
+diff --git a/src/vt.c b/src/vt.c
+index 66f4802..b461bc2 100644
+--- a/src/vt.c
++++ b/src/vt.c
+@@ -40,6 +40,7 @@ vt_get_active (void)
+ #ifdef __linux__
+     gint console_fd;
+     gint active = -1;
++    gint min = 1;
+ 
+     console_fd = open_console ();
+     if (console_fd >= 0)
+@@ -52,6 +53,10 @@ vt_get_active (void)
+         close (console_fd);
+     }
+ 
++    min = vt_get_min ();
++    if (active < min)
++      active = min;
++
+     return active;
+ #else
+     return -1;
+@@ -74,7 +79,7 @@ vt_is_used (gint number)
+ }
+ 
+ gint
+-vt_get_unused (void)
++vt_get_min (void)
+ {
+     gint number;
+ 
+@@ -82,6 +87,16 @@ vt_get_unused (void)
+     if (number < 1)
+         number = 1;
+ 
++    return number;
++}
++
++gint
++vt_get_unused (void)
++{
++    gint number;
++
++    number = vt_get_min ();
++
+     while (vt_is_used (number))
+         number++;
+ 
+diff --git a/src/vt.h b/src/vt.h
+index 31766f3..4396f1a 100644
+--- a/src/vt.h
++++ b/src/vt.h
+@@ -18,6 +18,8 @@ gint vt_get_active (void);
+ 
+ gint vt_get_unused (void);
+ 
++gint vt_get_min (void);
++
+ void vt_release (gint number);
+ 
+ void vt_set_active (gint number);
