@@ -13,27 +13,19 @@ Index: lightdm-0.4.0/data/lightdm.conf
 ===================================================================
 --- lightdm-0.4.0.orig/data/lightdm.conf	2011-06-27 18:43:17.805498735 +0200
 +++ lightdm-0.4.0/data/lightdm.conf	2011-06-27 18:43:43.112623806 +0200
-@@ -18,7 +18,7 @@
- [LightDM]
- #xserver=default-xserver
- #default-xserver-command=
--#authorization-directory=/var/cache/lightdm/authority
-+authorization-directory=/var/cache/lightdm/authority
- #log-directory=/var/log/lightdm
- #theme-directory=/usr/share/lightdm/themes
- #theme-engine-directory=/usr/libexec/lightdm
-@@ -26,8 +26,8 @@
+@@ -28,9 +28,9 @@
  #cache-directory=/var/cache/lightdm
  #xsessions-directory=/usr/share/xsessions
  #default-xsession=
 -#session-wrapper=/etc/X11/Xsession
--#minimum-vt=7
 +session-wrapper=/etc/X11/Xsession
+ #minimum-display-number=0
+-#minimum-vt=7
 +minimum-vt=7
+ #user-authority-in-system-dir=false
  seats=seat-0
  
- #
-@@ -78,7 +78,7 @@
+@@ -82,7 +82,7 @@ seats=seat-0
  # hidden-shells = Shells that indicate a user cannot login
  #
  [UserManager]
@@ -42,11 +34,11 @@ Index: lightdm-0.4.0/data/lightdm.conf
  #minimum-uid=500
  #hidden-users=nobody nobody4 noaccess
  #hidden-shells=/bin/false /usr/sbin/nologin
-@@ -108,6 +108,6 @@
+@@ -112,6 +112,6 @@ seats=seat-0
  # it can be a word and the first 7 characters are used as the key.
  #
  [xdmcp]
--#enabled=true
+-#enabled=false
 +enabled=false
  #port=177
  #key=0x0123456789ABCD
