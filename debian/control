@@ -7,7 +7,7 @@ Uploaders: Evgeni Golov <evgeni@debian.org>,
  Simon Huggins <huggie@earth.li>          
 Build-Depends: debhelper (>= 7.0.50~), intltool, pkg-config, libglib2.0-dev, 
  libdbus-glib-1-dev, libxcb1-dev, libxdmcp-dev, libpam-dev, libxklavier-dev, 
- libgtk2.0-dev, libck-connector-dev, gnome-doc-utils, libqt4-dev,
+ libgtk-3-dev, libck-connector-dev, gnome-doc-utils, libqt4-dev,
  hardening-includes, valac, gobject-introspection
 Standards-Version: 3.9.2
 Homepage: https://launchpad.net/lightdm
@@ -41,8 +41,8 @@ Provides: lightdm-greeter
 Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: simple display manager (Vala greeter)
- This package contains the Vala greeter for the lightdm display manager
+Description: simple display manager (Vala files)
+ This package contains the Vala files for the lightdm display manager
 
 Package: lightdm-qt
 Provides: lightdm-greeter
@@ -51,14 +51,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (Qt greeter)
  This package contains the Qt greeter for the lightdm display manager
-
-Package: lightdm-python-gtk
-Provides: lightdm-greeter
-Section: x11
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, python
-Description: simple display manager (PyGTK+ greeter)
- This package contains the PyGTK+ greeter for the lightdm display manager
 
 Package: liblightdm-gobject-0-0
 Section: libdevel

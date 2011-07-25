@@ -4,16 +4,16 @@ plymouth is quitted from the /etc/init.d/plymouth script, but it'll hang if
 plymouth has been deactivated before, so just quit it for now.
 Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=632737
 Bug: https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/799069
-diff --git a/src/display-manager.c b/src/display-manager.c
-index c8f5f32..5191fcc 100644
---- a/src/display-manager.c
-+++ b/src/display-manager.c
-@@ -616,7 +616,7 @@ display_manager_start (DisplayManager *manager)
-         plymouth_on_active_vt = plymouth_command_returns_true ("--has-active-vt");
- 
-         /* Deactivate stops Plymouth from drawing, as we are about to start an X server to replace it */
--        plymouth_run_command ("deactivate", NULL);
-+        plymouth_run_command ("quit", NULL);
-     }
- 
-     /* Start each static display */
+Index: lightdm-0.9.0/src/xserver-local.c
+===================================================================
+--- lightdm-0.9.0.orig/src/xserver-local.c	2011-07-25 07:55:08.527604600 +0200
++++ lightdm-0.9.0/src/xserver-local.c	2011-07-25 07:55:14.207707242 +0200
+@@ -115,7 +115,7 @@
+             g_debug ("X server %s will replace Plymouth", xserver_get_address (XSERVER (self)));
+             self->priv->replacing_plymouth = TRUE;
+             self->priv->vt = active_vt;
+-            plymouth_deactivate ();
++            plymouth_quit (FALSE);
+         }
+         else
+             g_debug ("Plymouth is running on VT %d, but this is less than the configured minimum of %d so not replacing it", active_vt, vt_get_min ());

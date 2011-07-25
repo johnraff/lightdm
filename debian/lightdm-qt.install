@@ -1,2 +1,2 @@
-usr/lib/lightdm/lightdm-example-qt-greeter
-usr/share/lightdm/themes/example-qt-kde
+usr/sbin/lightdm-qt-greeter
+usr/share/xgreeters/lightdm-qt-greeter.desktop

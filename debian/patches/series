@@ -1,4 +1,2 @@
-01_set-default-path.patch
 02_default-config.patch
 03_quit-plymouth.patch
-05_enforce-min-vt.patch

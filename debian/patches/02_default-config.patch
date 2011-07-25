@@ -3,42 +3,27 @@ Author: Lionel Le Folgoc <mrpouit@gmail.com>
 Description: adapt config to Debian
 Especially:
 
-* use X11 session wraper
+* use X11 session wrapper
 * start on vt7
 * don't show userlist
-* disable DMCP
 
 === modified file 'data/lightdm.conf'
-Index: lightdm-0.4.0/data/lightdm.conf
+Index: lightdm-0.9.0/data/lightdm.conf
 ===================================================================
---- lightdm-0.4.0.orig/data/lightdm.conf	2011-06-27 18:43:17.805498735 +0200
-+++ lightdm-0.4.0/data/lightdm.conf	2011-06-27 18:43:43.112623806 +0200
-@@ -28,9 +28,9 @@
- #cache-directory=/var/cache/lightdm
+--- lightdm-0.9.0.orig/data/lightdm.conf	2011-07-24 09:23:56.000000000 +0200
++++ lightdm-0.9.0/data/lightdm.conf	2011-07-25 07:51:02.771167808 +0200
+@@ -54,11 +54,11 @@
  #xsessions-directory=/usr/share/xsessions
- #default-xsession=
--#session-wrapper=/etc/X11/Xsession
+ #xgreeters-directory=/usr/share/xgreeters
+ #greeter-session=example-gtk-gnome
+-#greeter-hide-users=false
+-#user-session=default
++greeter-hide-users=true
++user-session=xfce
+ #allow-guest=true
+ #guest-session=UNIMPLEMENTED
+-#session-wrapper=lightdm-session
 +session-wrapper=/etc/X11/Xsession
- #minimum-display-number=0
--#minimum-vt=7
-+minimum-vt=7
- #user-authority-in-system-dir=false
- seats=seat-0
- 
-@@ -82,7 +82,7 @@ seats=seat-0
- # hidden-shells = Shells that indicate a user cannot login
- #
- [UserManager]
--#load-users=true
-+load-users=false
- #minimum-uid=500
- #hidden-users=nobody nobody4 noaccess
- #hidden-shells=/bin/false /usr/sbin/nologin
-@@ -112,6 +112,6 @@ seats=seat-0
- # it can be a word and the first 7 characters are used as the key.
- #
- [xdmcp]
--#enabled=false
-+enabled=false
- #port=177
- #key=0x0123456789ABCD
+ #autologin-guest=false
+ #autologin-user=
+ #autologin-user-timeout=0
