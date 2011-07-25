@@ -68,7 +68,7 @@ Description: simple display manager (gobject development files)
  This package contains the development files for lightdm.
  They can be used to build new greeters applications GTK+ based.
 
-Package: liblightdm-qt-0-0
+Package: liblightdm-qt-1-0
 Section: libdevel
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
