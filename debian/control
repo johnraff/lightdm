@@ -52,7 +52,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (Qt greeter)
  This package contains the Qt greeter for the lightdm display manager
 
-Package: liblightdm-gobject-0-0
+Package: liblightdm-gobject-1-0
 Section: libdevel
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
