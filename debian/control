@@ -36,14 +36,7 @@ Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (GTK+ greeter)
- This package contains the GTK+ greeter for the lightdm display manager
-
-Package: lightdm-vala
-Section: x11
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: simple display manager (Vala files)
- This package contains the Vala files for the lightdm display manager
+ A LightDM greeter that uses the GTK+ toolkit.
 
 Package: lightdm-qt-greeter
 Provides: lightdm-greeter
@@ -53,7 +46,14 @@ Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (Qt greeter)
- This package contains the Qt greeter for the lightdm display manager
+ A LightDM greeter that uses the Qt toolkit.
+
+Package: lightdm-vala
+Section: x11
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: simple display manager (Vala files)
+ This package contains the Vala files for the lightdm display manager
 
 Package: liblightdm-gobject-1-0
 Section: libdevel
