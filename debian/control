@@ -19,7 +19,7 @@ Package: lightdm
 Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, 
- lightdm-gtk | lightdm-greeter, dbus, consolekit, adduser
+ lightdm-gtk-greeter | lightdm-greeter, dbus, consolekit, adduser
 Description: simple display manager
  An X display manager that:
   * Has a lightweight codebase
