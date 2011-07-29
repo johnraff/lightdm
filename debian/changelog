@@ -10,6 +10,8 @@ lightdm (0.9.2-1) UNRELEASED; urgency=low
   	- lightdm-vala doesn't provide a greeter anymore.
   * debian/lightdm{,-gtk-greeter}.install:
     - ship GTK+ greeter config file in the lightdm-gtk-greeter package.
+  * debian/lightdm.{config,templates} and debian/po debconf files added from
+    Ubuntu package.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Fri, 29 Jul 2011 07:54:33 +0200
 
