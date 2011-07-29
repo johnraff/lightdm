@@ -13,7 +13,7 @@ LDFLAGS+=$(HARDENING_LDFLAGS)
 export CFLAGS CXXFLAGS LDFLAGS
 
 override_dh_auto_configure:
-	dh_auto_configure -- --with-user-session=xfce
+	dh_auto_configure -- --with-user-session=xfce --with-greeter-user=lightdm
 
 override_dh_installinit:
 	dh_installinit --noscripts
