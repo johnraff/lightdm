@@ -14,12 +14,12 @@ Homepage: https://launchpad.net/lightdm
 Vcs-Svn: svn://svn.debian.org/pkg-xfce/goodies/trunk/lightdm
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-xfce/goodies/trunk/lightdm
 
-
 Package: lightdm
 Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, 
  lightdm-gtk-greeter | lightdm-greeter, dbus, consolekit, adduser
+Recommends: xserver-xorg
 Description: simple display manager
  An X display manager that:
   * Has a lightweight codebase
