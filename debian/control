@@ -28,8 +28,10 @@ Description: simple display manager
   * Fully themeable
   * Cross-desktop (greeters can be written in any toolkit)
 
-Package: lightdm-gtk
+Package: lightdm-gtk-greeter
 Provides: lightdm-greeter
+Replaces: lightdm-gtk
+Breaks: lightdm-gtk
 Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -37,15 +39,16 @@ Description: simple display manager (GTK+ greeter)
  This package contains the GTK+ greeter for the lightdm display manager
 
 Package: lightdm-vala
-Provides: lightdm-greeter
 Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (Vala files)
  This package contains the Vala files for the lightdm display manager
 
-Package: lightdm-qt
+Package: lightdm-qt-greeter
 Provides: lightdm-greeter
+Replaces: lightdm-qt
+Breaks: lightdm-qt
 Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
