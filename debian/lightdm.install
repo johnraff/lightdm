@@ -3,8 +3,6 @@ usr/share/man
 usr/share/locale
 etc/dbus-1
 etc/init
-etc/pam.d
-etc/init.d
 etc/lightdm/users.conf
 etc/lightdm/lightdm.conf
 etc/lightdm/keys.conf
