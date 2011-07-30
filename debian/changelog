@@ -1,4 +1,4 @@
-lightdm (0.9.2-2) UNRELEASED; urgency=low
+lightdm (0.9.2-2) unstable; urgency=low
 
   * debian/control;
     - use real package name in greeter dependency.              closes: #636020
@@ -8,7 +8,7 @@ lightdm (0.9.2-2) UNRELEASED; urgency=low
     - 04_default-gtk-greeter-config added, tune GTK+ greeter config to match
       Debian themes.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sat, 30 Jul 2011 17:38:01 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 30 Jul 2011 20:03:59 +0200
 
 lightdm (0.9.2-1) unstable; urgency=low
 
