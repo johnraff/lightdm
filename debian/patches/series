@@ -2,3 +2,4 @@
 02_default-config.patch
 03_quit-plymouth.patch
 04_default-gtk-greeter-config.patch
+05_always-export-XAUTHORITY.patch
