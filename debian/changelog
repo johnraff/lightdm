@@ -1,11 +1,11 @@
-lightdm (0.9.2-3) UNRELEASED; urgency=low
+lightdm (0.9.2-3) unstable; urgency=low
 
   * debian/patches:
     - 05_always-export-XAUTHORITY added, always export path to xauth file.
   * debian/lightdm-xsession.desktop:
     - provide a default xsession desktop file.                  closes: #636111
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 03 Aug 2011 10:18:20 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 06 Aug 2011 11:34:57 +0200
 
 lightdm (0.9.2-2) unstable; urgency=low
 
