@@ -19,7 +19,7 @@ Index: lightdm-0.9.0/data/lightdm.conf
 -#greeter-hide-users=false
 -#user-session=default
 +greeter-hide-users=true
-+user-session=xfce
++user-session=lightdm-xsession
  #allow-guest=true
  #guest-session=UNIMPLEMENTED
 -#session-wrapper=lightdm-session

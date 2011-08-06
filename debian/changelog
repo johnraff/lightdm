@@ -2,6 +2,8 @@ lightdm (0.9.2-3) UNRELEASED; urgency=low
 
   * debian/patches:
     - 05_always-export-XAUTHORITY added, always export path to xauth file.
+  * debian/lightdm-xsession.desktop:
+    - provide a default xsession desktop file.                  closes: #636111
 
  -- Yves-Alexis Perez <corsac@debian.org>  Wed, 03 Aug 2011 10:18:20 +0200
 
