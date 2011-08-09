@@ -4,6 +4,11 @@ lightdm (0.9.3-1) UNRELEASED; urgency=low
   * debian/patches:
     - 01_set-default-path refreshed.
     - 05_always-export-XAUTHORITY dropped, included upstream. 
+    - 05_dont-add-pkglibexecdir-path added, don't add /usr/lib/lightdm/lightdm
+      to the PATH, it's ugly.
+  * debian/lightdm.install:
+    - don't install gdmflexiserver script for now until the PATH issue is
+      solved.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Tue, 09 Aug 2011 20:55:24 +0200
 

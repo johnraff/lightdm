@@ -1,0 +1,23 @@
+Index: lightdm-0.9.3/src/display.c
+===================================================================
+--- lightdm-0.9.3.orig/src/display.c	2011-08-09 22:23:49.615974286 +0200
++++ lightdm-0.9.3/src/display.c	2011-08-09 22:23:57.380022642 +0200
+@@ -613,18 +613,6 @@
+     process_set_env (PROCESS (session), "DESKTOP_SESSION", session_name); // FIXME: Apparently deprecated?
+     process_set_env (PROCESS (session), "GDMSESSION", session_name); // FIXME: Not cross-desktop
+ 
+-    /* Insert our own utility directory to PATH
+-     * This is to provide gdmflexiserver which provides backwards compatibility with GDM.
+-     * This can be removed when this is no longer required.
+-     */
+-    orig_path = process_get_env (PROCESS (session), "PATH");
+-    if (orig_path)
+-    {
+-        path = g_strdup_printf ("%s:%s", PKGLIBEXEC_DIR, orig_path);
+-        process_set_env (PROCESS (session), "PATH", path);
+-        g_free (path);
+-    }
+-
+     process_set_log_file (PROCESS (session), log_filename);
+ 
+     /* Open ConsoleKit session */

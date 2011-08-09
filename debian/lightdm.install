@@ -6,4 +6,5 @@ etc/init
 etc/lightdm/users.conf
 etc/lightdm/lightdm.conf
 etc/lightdm/keys.conf
+usr/lib/lightdm/lightdm/gdmflexiserver /dev/null
 debian/lightdm-xsession.desktop /usr/share/xsessions
