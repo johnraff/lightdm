@@ -2,19 +2,19 @@ Author: Yves-Alexis Perez <corsac@debian.org>
 Author: Lionel Le Folgoc <mrpouit@gmail.com>
 Bug: https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/798277
 Description: Fix default PATH environment variable
-Index: lightdm-0.9.0/src/session.c
+Index: lightdm-0.9.3/src/session.c
 ===================================================================
---- lightdm-0.9.0.orig/src/session.c	2011-07-25 10:04:17.574295273 +0200
-+++ lightdm-0.9.0/src/session.c	2011-07-25 10:05:20.008107795 +0200
-@@ -47,7 +47,10 @@
-         g_object_unref (session->priv->user);
-     session->priv->user = g_object_ref (user);
+--- lightdm-0.9.3.orig/src/session.c	2011-08-08 09:34:42.000000000 +0200
++++ lightdm-0.9.3/src/session.c	2011-08-09 21:38:31.987026176 +0200
+@@ -179,7 +179,10 @@
+     g_debug ("Launching session");
  
+     user = pam_session_get_user (session->priv->authentication);
 -    process_set_env (PROCESS (session), "PATH", "/usr/local/bin:/usr/bin:/bin");
-+		if (user_get_uid (user) == 0)
-+	    process_set_env (PROCESS (session), "PATH", "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin");
-+		else
-+	    process_set_env (PROCESS (session), "PATH", "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games");
++    if (user_get_uid (user) == 0)
++      process_set_env (PROCESS (session), "PATH", "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin");
++    else
++      process_set_env (PROCESS (session), "PATH", "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games");
      process_set_env (PROCESS (session), "USER", user_get_name (user));
      process_set_env (PROCESS (session), "USERNAME", user_get_name (user)); // FIXME: Is this required?
      process_set_env (PROCESS (session), "HOME", user_get_home_directory (user));
