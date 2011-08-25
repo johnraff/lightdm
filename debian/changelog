@@ -11,6 +11,10 @@ lightdm (0.9.4-1) UNRELEASED; urgency=low
       solved.
   * debian/lightdm.install
     - install lightdm-set-default and dm-tool there.
+  * debian/lightdm-{gtk,qt}-greeter.{config,templates,postinst,prerm}:
+    - provide a way to select the current greeter through debconf. Other
+      packages providing a greeter use the same templates/config to register
+      themselves in debconf.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Tue, 09 Aug 2011 20:55:24 +0200
 
