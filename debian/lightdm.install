@@ -1,3 +1,4 @@
+usr/bin/dm-tool
 usr/sbin/lightdm
 usr/share/man
 usr/share/locale
@@ -7,3 +8,4 @@ etc/lightdm/users.conf
 etc/lightdm/lightdm.conf
 etc/lightdm/keys.conf
 debian/lightdm-xsession.desktop /usr/share/xsessions
+usr/lib/lightdm/lightdm-set-defaults

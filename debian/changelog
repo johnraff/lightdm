@@ -1,14 +1,16 @@
-lightdm (0.9.3-1) UNRELEASED; urgency=low
+lightdm (0.9.4-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * debian/patches:
-    - 01_set-default-path refreshed.
+    - 01_set-default-path, 02_default-config, 03_quit-plymouth refreshed.
     - 05_always-export-XAUTHORITY dropped, included upstream. 
     - 05_dont-add-pkglibexecdir-path added, don't add /usr/lib/lightdm/lightdm
       to the PATH, it's ugly.
   * debian/rules:
     - don't install gdmflexiserver script for now until the PATH issue is
       solved.
+  * debian/lightdm.install
+    - install lightdm-set-default and dm-tool there.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Tue, 09 Aug 2011 20:55:24 +0200
 
