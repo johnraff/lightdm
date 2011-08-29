@@ -6,6 +6,9 @@ lightdm (0.9.4-1) UNRELEASED; urgency=low
     - 05_always-export-XAUTHORITY dropped, included upstream. 
     - 05_dont-add-pkglibexecdir-path added, don't add /usr/lib/lightdm/lightdm
       to the PATH, it's ugly.
+    - 06_fix-gtk-greeter-cancel-button added, cherry-picked from upstream, fix
+      cancel button in GTK+ greeter which prevented cancelling authentication
+      when a wrong username was entered.
   * debian/rules:
     - don't install gdmflexiserver script for now until the PATH issue is
       solved.
@@ -15,6 +18,7 @@ lightdm (0.9.4-1) UNRELEASED; urgency=low
     - provide a way to select the current greeter through debconf. Other
       packages providing a greeter use the same templates/config to register
       themselves in debconf.
+  * 
 
  -- Yves-Alexis Perez <corsac@debian.org>  Tue, 09 Aug 2011 20:55:24 +0200
 
