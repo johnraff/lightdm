@@ -1,5 +1,7 @@
---- lightdm/greeters/gtk/lightdm-gtk-greeter.c	2011-08-16 04:36:26 +0000
-+++ lightdm/greeters/gtk/lightdm-gtk-greeter.c	2011-08-26 01:02:43 +0000
+Index: lightdm-0.9.4/greeters/gtk/lightdm-gtk-greeter.c
+===================================================================
+--- lightdm-0.9.4.orig/greeters/gtk/lightdm-gtk-greeter.c	2011-08-16 06:33:11.000000000 +0200
++++ lightdm-0.9.4/greeters/gtk/lightdm-gtk-greeter.c	2011-08-29 16:52:19.528140298 +0200
 @@ -110,19 +110,22 @@
  static void
  cancel_authentication (void)
@@ -29,4 +31,3 @@
      }
  }
  
-
