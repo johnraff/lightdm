@@ -8,11 +8,11 @@ Especially:
 * don't show userlist
 
 === modified file 'data/lightdm.conf'
-Index: lightdm-0.9.4/data/lightdm.conf
+Index: lightdm-0.9.5/data/lightdm.conf
 ===================================================================
---- lightdm-0.9.4.orig/data/lightdm.conf	2011-08-16 09:34:04.000000000 +0200
-+++ lightdm-0.9.4/data/lightdm.conf	2011-08-25 17:50:16.171381802 +0200
-@@ -54,11 +54,11 @@
+--- lightdm-0.9.5.orig/data/lightdm.conf	2011-09-05 04:41:55.000000000 +0200
++++ lightdm-0.9.5/data/lightdm.conf	2011-09-07 09:23:02.784668233 +0200
+@@ -59,11 +59,11 @@
  #xdmcp-port=177
  #xdmcp-key=
  #greeter-session=example-gtk-gnome
@@ -24,6 +24,6 @@ Index: lightdm-0.9.4/data/lightdm.conf
  #guest-session=UNIMPLEMENTED
 -#session-wrapper=lightdm-session
 +session-wrapper=/etc/X11/Xsession
- #autologin-guest=false
- #autologin-user=
- #autologin-user-timeout=0
+ #display-setup-script=
+ #greeter-setup-script=
+ #session-setup-script=

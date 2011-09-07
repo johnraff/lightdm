@@ -7,7 +7,7 @@ Bug: https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/799069
 Index: lightdm-0.9.4/src/xserver-local.c
 ===================================================================
 --- lightdm-0.9.4.orig/src/xserver-local.c	2011-07-25 13:36:24.000000000 +0200
-+++ lightdm-0.9.4/src/xserver-local.c	2011-08-25 17:50:19.955409416 +0200
++++ lightdm-0.9.4/src/xserver-local.c	2011-09-07 09:21:02.463925039 +0200
 @@ -115,7 +115,7 @@
              g_debug ("X server %s will replace Plymouth", xserver_get_address (XSERVER (self)));
              self->priv->replacing_plymouth = TRUE;

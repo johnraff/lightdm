@@ -1,8 +1,8 @@
-diff --git a/src/session.c b/src/session.c
-index 4372195..52af4e8 100644
---- a/src/session.c
-+++ b/src/session.c
-@@ -207,19 +207,6 @@ session_start (Session *session)
+Index: lightdm-0.9.5/src/session.c
+===================================================================
+--- lightdm-0.9.5.orig/src/session.c	2011-09-07 09:21:36.280133903 +0200
++++ lightdm-0.9.5/src/session.c	2011-09-07 09:23:14.224738886 +0200
+@@ -209,19 +209,6 @@
      process_set_env (PROCESS (session), "SHELL", user_get_shell (user));
      set_env_from_authentication (session, session->priv->authentication);
  
