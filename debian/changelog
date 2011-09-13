@@ -7,6 +7,9 @@ lightdm (0.9.5-1) UNRELEASED; urgency=low
     - 05_always-export-XAUTHORITY dropped, included upstream. 
     - 05_dont-add-pkglibexecdir-path added, don't add /usr/lib/lightdm/lightdm
       to the PATH, it's ugly.
+    - 06_drop-privileges-before-writing-user-files cherry-picked from Martin
+      Pitt merge request. Don't write user files as root to prevent symlinks
+      attacks [CVE-2011-3349]                                   closes: #639151
   * debian/rules:
     - don't install gdmflexiserver script for now until the PATH issue is
       solved.
