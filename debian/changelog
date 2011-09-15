@@ -1,4 +1,4 @@
-lightdm (0.9.6-1) UNRELEASED; urgency=low
+lightdm (0.9.6-1) unstable; urgency=low
 
   * New upstream release:
     - don't write user files as root to prevent symlinks attacks
@@ -21,7 +21,7 @@ lightdm (0.9.6-1) UNRELEASED; urgency=low
   * debian/control:
     - add suggests on accountsservice.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Tue, 09 Aug 2011 20:55:24 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 15 Sep 2011 11:36:21 +0200
 
 lightdm (0.9.2-3) unstable; urgency=low
 
