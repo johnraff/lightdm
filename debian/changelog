@@ -1,4 +1,4 @@
-lightdm (0.9.5-1) UNRELEASED; urgency=low
+lightdm (0.9.6-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * debian/patches:
