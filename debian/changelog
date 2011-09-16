@@ -1,9 +1,9 @@
-lightdm (0.9.7-1) UNRELEASED; urgency=low
+lightdm (0.9.7-1) unstable; urgency=low
 
   * New upstream release.
     - fix consolekit session issues.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Fri, 16 Sep 2011 07:49:57 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 16 Sep 2011 08:01:12 +0200
 
 lightdm (0.9.6-1) unstable; urgency=low
 
