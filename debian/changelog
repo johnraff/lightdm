@@ -13,6 +13,7 @@ lightdm (1.0.0-1) UNRELEASED; urgency=low
     - dropped hardening-includes from build-depends, now superseded
     - update debhelper build-dep to 8.9.4 for compat mode v9.
     - add Pre-Depends: ${misc:Pre-Depends} to the lib packages.
+    - add Recommends: on gnome-icon-theme to gtk greeter.       closes: #643291
   * debian/liblightdm-gobject-1-0.install,
     debian/liblightdm-gobject-dev.install, debian/liblightdm-qt-1-0.install,
     debian/liblightdm-qt-dev.install, debian/lightdm.install:
