@@ -1,3 +1,9 @@
+lightdm (1.0.0-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 28 Sep 2011 12:19:56 +0200
+
 lightdm (0.9.7-1) unstable; urgency=low
 
   * New upstream release.
