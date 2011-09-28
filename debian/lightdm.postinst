@@ -61,7 +61,7 @@ fi
 
 if [ "$1" = "configure" ];
 then
-  invoke-rc.d dbus reload
+  invoke-rc.d dbus reload || true
 fi
 
 #DEBHELPER#
