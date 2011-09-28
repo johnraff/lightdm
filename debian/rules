@@ -1,17 +1,5 @@
 #!/usr/bin/make -f
 
-include /usr/share/hardening-includes/hardening.make
-
-CFLAGS=$(shell dpkg-buildflags --get CFLAGS)
-CXXFLAGS=$(shell dpkg-buildflags --get CXXFLAGS)
-LDFLAGS=$(shell dpkg-buildflags --get LDFLAGS)
-#LDFLAGS += -Wl,-O1 -Wl,-z,defs -Wl,--as-needed
-CFLAGS+=$(HARDENING_CFLAGS)
-CXXFLAGS+=$(HARDENING_CFLAGS)
-LDFLAGS+=$(HARDENING_LDFLAGS)
-
-export CFLAGS CXXFLAGS LDFLAGS
-
 override_dh_auto_configure:
 	dh_auto_configure -- --with-greeter-user=lightdm --with-user-session=lightdm-xsession
 
@@ -20,7 +8,7 @@ override_dh_installinit:
 
 override_dh_install:
 	find debian/tmp -name '*.la' -delete
-	rm debian/tmp/usr/lib/lightdm/lightdm/gdmflexiserver
+	rm debian/tmp/usr/lib/*/lightdm/gdmflexiserver
 	dh_install --fail-missing
 
 %:

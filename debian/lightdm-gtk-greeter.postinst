@@ -12,7 +12,7 @@ fi
 
 if [ -n "${GREETER}" ];
 then
-  LIGHTDM_SET_DEFAULTS=/usr/lib/lightdm/lightdm-set-defaults
+  LIGHTDM_SET_DEFAULTS=/usr/lib/*/lightdm-set-defaults
   if [ -x "${LIGHTDM_SET_DEFAULTS}" ];
   then
     "${LIGHTDM_SET_DEFAULTS}" --greeter "${GREETER}"

@@ -9,7 +9,7 @@
 set -e
 
 THIS_PACKAGE="lightdm-gtk-greeter"
-LIGHTDM_SET_DEFAULTS=/usr/lib/lightdm/lightdm-set-defaults
+LIGHTDM_SET_DEFAULTS=/usr/lib/*/lightdm-set-defaults
 
 if [ "$1" = "remove" -o "$1" = "deconfigure" ]; then
   if [ -e /usr/share/debconf/confmodule ]; then

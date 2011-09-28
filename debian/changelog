@@ -3,6 +3,23 @@ lightdm (1.0.0-1) UNRELEASED; urgency=low
   * New upstream release.
   * debian/patches:
     - all patches refreshed
+  * debian/rules:
+    - drop all hardening rules now done by dh in compat mode 9.
+    - update gdmflexiserver path for multi-arch paths.
+  * debian/compat bumped to 9.
+  * debian/control:
+    - added build-deb on dpkg-dev (>= 1.16.1) for hardening support.
+    - dropped hardening-includes from build-depends, now superseeded
+    - update debhelper build-dep to 8.9.4 for compat mode v9.
+  * debian/liblightdm-gobject-1-0.install,
+    debian/liblightdm-gobject-dev.install, debian/liblightdm-qt-1-0.install,
+    debian/liblightdm-qt-dev.install, debian/lightdm.install:
+    - update to use multi-arch folders.
+  * debian/lightdm.install:
+    - in v9 compat mode, libexecdir doesn't have the package name added so
+      update in consequence
+  * debian/*.{postinst,prerm}:
+    - update path to lightdm-set-defaults.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Wed, 28 Sep 2011 12:19:56 +0200
 
