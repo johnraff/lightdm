@@ -11,8 +11,14 @@ Especially:
 Index: lightdm-1.0.0/data/lightdm.conf
 ===================================================================
 --- lightdm-1.0.0.orig/data/lightdm.conf	2011-09-20 05:41:07.000000000 +0200
-+++ lightdm-1.0.0/data/lightdm.conf	2011-09-28 13:17:00.709048867 +0200
-@@ -61,11 +61,11 @@
++++ lightdm-1.0.0/data/lightdm.conf	2011-09-28 15:06:06.875716076 +0200
+@@ -56,16 +56,16 @@
+ #xserver-command=X
+ #xserver-layout=
+ #xserver-config=
+-#xserver-allow-tcp=false
++xserver-allow-tcp=false
+ #xdmcp-manager=
  #xdmcp-port=177
  #xdmcp-key=
  #greeter-session=example-gtk-gnome
