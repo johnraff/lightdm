@@ -1,14 +1,15 @@
-Index: lightdm-0.9.4/greeters/gtk/lightdm-gtk-greeter.conf
+Index: lightdm-1.0.0/greeters/gtk/lightdm-gtk-greeter.conf
 ===================================================================
---- lightdm-0.9.4.orig/greeters/gtk/lightdm-gtk-greeter.conf	2011-07-22 05:24:36.000000000 +0200
-+++ lightdm-0.9.4/greeters/gtk/lightdm-gtk-greeter.conf	2011-09-07 09:21:05.291942506 +0200
-@@ -8,10 +8,10 @@
+--- lightdm-1.0.0.orig/greeters/gtk/lightdm-gtk-greeter.conf	2011-09-20 03:45:23.000000000 +0200
++++ lightdm-1.0.0/greeters/gtk/lightdm-gtk-greeter.conf	2011-09-28 13:18:07.865571415 +0200
+@@ -8,11 +8,11 @@
  # xft-rgba = Type of subpixel antialiasing (none, rgb, bgr, vrgb or vbgr)
  #
  [greeter]
 -#background=
--#theme-name=
 +background=/usr/share/images/desktop-base/desktop-background
+ #show-language-selector=false
+-#theme-name=
 +theme-name=Adwaita
  #font-name=
 -#xft-antialias=
