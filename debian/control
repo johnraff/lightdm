@@ -60,6 +60,7 @@ Description: simple display manager (Vala files)
 Package: liblightdm-gobject-1-0
 Section: libdevel
 Architecture: any
+Pre-depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (gobject library)
  This package contains the gobject library for lightdm, used by the GTK+
@@ -68,6 +69,7 @@ Description: simple display manager (gobject library)
 Package: liblightdm-qt-1-0
 Section: libdevel
 Architecture: any
+Pre-depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: simple display manager (Qt library)
  This package contains the Qt library for lightdm.
