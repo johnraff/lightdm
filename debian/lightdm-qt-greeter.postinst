@@ -13,7 +13,7 @@ fi
 
 if [ -n "${GREETER}" ];
 then
-  LIGHTDM_SET_DEFAULTS=/usr/lib/$(DEB_HOST_MULTIARCH)/lightdm/lightdm-set-defaults
+  LIGHTDM_SET_DEFAULTS=/usr/lib/${DEB_HOST_MULTIARCH}/lightdm/lightdm-set-defaults
   if [ -x "${LIGHTDM_SET_DEFAULTS}" ];
   then
     "${LIGHTDM_SET_DEFAULTS}" --greeter "${GREETER}"

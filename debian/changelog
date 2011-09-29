@@ -1,3 +1,10 @@
+lightdm (1.0.0-3) UNRELEASED; urgency=low
+
+  * debian/lightdm-{gtk,qt}.{postinst,prerm}:
+    - fix DEB_HOST_MULTIARCH variable use ${} instead of $()
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 29 Sep 2011 20:02:17 +0200
+
 lightdm (1.0.0-2) unstable; urgency=low
 
   * debian/rules:
