@@ -3,7 +3,7 @@ lightdm (1.0.0-1) UNRELEASED; urgency=low
   * New upstream release.
   * debian/patches:
     - all patches refreshed
-    - 02_default-config: explicitely disable tcp listen.
+    - 02_default-config: explicitly disable tcp listen.
   * debian/rules:
     - drop all hardening rules now done by dh in compat mode 9, but manually
       add pie and bindnow.
