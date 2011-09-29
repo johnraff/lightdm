@@ -1,7 +1,7 @@
 lightdm (1.0.0-3) UNRELEASED; urgency=low
 
   * debian/lightdm-{gtk,qt}.{postinst,prerm}:
-    - fix DEB_HOST_MULTIARCH variable use ${} instead of $()
+    - don't use dpkg-architecture since it's in dpkg-dev.       closes: #643792
 
  -- Yves-Alexis Perez <corsac@debian.org>  Thu, 29 Sep 2011 20:02:17 +0200
 
