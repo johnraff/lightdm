@@ -6,13 +6,14 @@ set -e
 
 # using this greeter?
 GREETER=
+DEB_HOST_MULTIARCH=$(dpkg-architecture -qDEB_HOST_MULTIARCH)
 if db_get shared/lightdm-greeter; then
   GREETER="$RET"
 fi
 
 if [ -n "${GREETER}" ];
 then
-  LIGHTDM_SET_DEFAULTS=/usr/lib/*/lightdm-set-defaults
+  LIGHTDM_SET_DEFAULTS=/usr/lib/$(DEB_HOST_MULTIARCH)/lightdm-set-defaults
   if [ -x "${LIGHTDM_SET_DEFAULTS}" ];
   then
     "${LIGHTDM_SET_DEFAULTS}" --greeter "${GREETER}"

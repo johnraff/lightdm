@@ -3,6 +3,8 @@ lightdm (1.0.0-2) UNRELEASED; urgency=low
   * debian/rules:
     - correctly enable pie and bindnow.
     - use a variable for multi-arch path instead of *.
+  * debian/lightdm-{gtk,qt}-greeter.postinst:
+    - use variable for multi-arch path instead of *.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Thu, 29 Sep 2011 10:52:54 +0200
 
