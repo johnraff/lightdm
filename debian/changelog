@@ -7,6 +7,7 @@ lightdm (1.0.0-1) UNRELEASED; urgency=low
   * debian/rules:
     - drop all hardening rules now done by dh in compat mode 9, but manually
       add pie and bindnow.
+    - add -Wl,--as-needed -Wl,-O1 to LDFLAGS.
     - update gdmflexiserver path for multi-arch paths.
   * debian/compat bumped to 9.
   * debian/control:

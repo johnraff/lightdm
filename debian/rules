@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
-export DEB_BUILD_MAINT_OPTIONS = hardening=+pie,+bindnow
+export DEB_LDFLAGS_APPEND=-Wl,--as-needed -Wl,-O1
+export DEB_BUILD_MAINT_OPTIONS="hardening=+pie,+bindnow"
 
 override_dh_auto_configure:
 	dh_auto_configure -- --with-greeter-user=lightdm --with-user-session=lightdm-xsession
