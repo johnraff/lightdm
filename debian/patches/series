@@ -3,3 +3,4 @@
 03_quit-plymouth.patch
 04_default-gtk-greeter-config.patch
 05_dont-add-pkglibexecdir-path.patch
+06_move-lightdm-set-defaults-to-pkglibexecdir.patch

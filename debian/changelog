@@ -3,8 +3,15 @@ lightdm (1.0.0-2) UNRELEASED; urgency=low
   * debian/rules:
     - correctly enable pie and bindnow.
     - use a variable for multi-arch path instead of *.
-  * debian/lightdm-{gtk,qt}-greeter.postinst:
+    - use autoreconf dh addon
+  * debian/control:
+    - add build-dep on dh-autoreconf and gtk-doc-tools
+  * debian/patches:
+    - 06_move-lightdm-set-defaults-to-pkglibexecdir added, move
+      lightdm-set-defaults to pkglibexecdir instead of libexecdir.
+  * debian/lightdm-{gtk,qt}-greeter.{postinst,prerm}:
     - use variable for multi-arch path instead of *.
+    - update lightdm-set-defaults path to re-add lightdm folder.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Thu, 29 Sep 2011 10:52:54 +0200
 

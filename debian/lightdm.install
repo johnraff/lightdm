@@ -8,4 +8,4 @@ etc/lightdm/users.conf
 etc/lightdm/lightdm.conf
 etc/lightdm/keys.conf
 debian/lightdm-xsession.desktop /usr/share/xsessions
-usr/lib/*/lightdm-set-defaults
+usr/lib/*/lightdm/lightdm-set-defaults
