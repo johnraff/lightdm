@@ -1,4 +1,4 @@
-lightdm (1.0.0-1) UNRELEASED; urgency=low
+lightdm (1.0.0-1) unstable; urgency=low
 
   * New upstream release.
   * debian/patches:
@@ -28,7 +28,7 @@ lightdm (1.0.0-1) UNRELEASED; urgency=low
   * debian/lightdm.postinst:
     - don't fail if one can't reload dbus, like in a chroot.    closes: #642295
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 28 Sep 2011 12:19:56 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 29 Sep 2011 07:39:18 +0200
 
 lightdm (0.9.7-1) unstable; urgency=low
 
