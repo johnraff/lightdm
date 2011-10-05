@@ -1,8 +1,8 @@
-Index: lightdm-1.0.0/src/session.c
+Index: lightdm-1.0.1/src/session.c
 ===================================================================
---- lightdm-1.0.0.orig/src/session.c	2011-09-28 12:21:52.000000000 +0200
-+++ lightdm-1.0.0/src/session.c	2011-09-28 13:18:55.821939827 +0200
-@@ -297,19 +297,6 @@
+--- lightdm-1.0.1.orig/src/session.c	2011-10-05 22:15:10.864382047 +0200
++++ lightdm-1.0.1/src/session.c	2011-10-05 22:15:22.708609110 +0200
+@@ -310,19 +310,6 @@
      process_set_command (PROCESS (session), absolute_command);
      g_free (absolute_command);
  
