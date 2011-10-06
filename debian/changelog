@@ -1,9 +1,11 @@
-lightdm (1.0.1-1) UNRELEASED; urgency=low
+lightdm (1.0.2-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * debian/control:
     - add recommends on policykit-1 to greeters.                closes: #643292
   * debian/lightdm-autologin.pam added, fix startup.            closes: #643844
+  * debian/patches:
+    - 05_dont-add-pkglibexecdir-path refreshed for new upstream release.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Wed, 05 Oct 2011 22:15:58 +0200
 
