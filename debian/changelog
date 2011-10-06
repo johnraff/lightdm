@@ -1,4 +1,4 @@
-lightdm (1.0.2-1) UNRELEASED; urgency=low
+lightdm (1.0.2-1) unstable; urgency=low
 
   * New upstream release.
     - don't use autologin pam service, fix startup.             closes: #643844
@@ -7,7 +7,7 @@ lightdm (1.0.2-1) UNRELEASED; urgency=low
   * debian/patches:
     - 05_dont-add-pkglibexecdir-path refreshed for new upstream release.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 05 Oct 2011 22:15:58 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 06 Oct 2011 07:41:40 +0200
 
 lightdm (1.0.0-3) unstable; urgency=low
 
