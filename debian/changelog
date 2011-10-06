@@ -1,9 +1,9 @@
 lightdm (1.0.2-1) UNRELEASED; urgency=low
 
   * New upstream release.
+    - don't use autologin pam service, fix startup.             closes: #643844
   * debian/control:
     - add recommends on policykit-1 to greeters.                closes: #643292
-  * debian/lightdm-autologin.pam added, fix startup.            closes: #643844
   * debian/patches:
     - 05_dont-add-pkglibexecdir-path refreshed for new upstream release.
 
