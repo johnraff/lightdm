@@ -1,8 +1,8 @@
-Index: lightdm-1.0.2/src/session.c
+Index: lightdm-1.0.3/src/session.c
 ===================================================================
---- lightdm-1.0.2.orig/src/session.c	2011-10-06 07:28:51.660678486 +0200
-+++ lightdm-1.0.2/src/session.c	2011-10-06 07:28:58.712733068 +0200
-@@ -216,26 +216,6 @@
+--- lightdm-1.0.3.orig/src/session.c	2011-10-08 13:29:42.102575779 +0200
++++ lightdm-1.0.3/src/session.c	2011-10-08 13:29:55.526679659 +0200
+@@ -217,26 +217,6 @@
      }
  }
  
@@ -29,7 +29,7 @@ Index: lightdm-1.0.2/src/session.c
  gboolean
  session_start (Session *session)
  {
-@@ -435,7 +415,6 @@
+@@ -436,7 +416,6 @@
      pam_session_setup (session->priv->authentication);
      set_env_from_authentication (session, session->priv->authentication);
      set_locale (session);

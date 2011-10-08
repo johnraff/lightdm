@@ -2,11 +2,11 @@ Author: Yves-Alexis Perez <corsac@debian.org>
 Author: Lionel Le Folgoc <mrpouit@gmail.com>
 Bug: https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/798277
 Description: Fix default PATH environment variable
-Index: lightdm-1.0.1/src/session.c
+Index: lightdm-1.0.3/src/session.c
 ===================================================================
---- lightdm-1.0.1.orig/src/session.c	2011-10-04 08:53:53.000000000 +0200
-+++ lightdm-1.0.1/src/session.c	2011-10-05 22:15:10.864382047 +0200
-@@ -282,7 +282,10 @@
+--- lightdm-1.0.3.orig/src/session.c	2011-10-08 00:56:51.000000000 +0200
++++ lightdm-1.0.3/src/session.c	2011-10-08 13:29:42.102575779 +0200
+@@ -249,7 +249,10 @@
      g_debug ("Launching session");
  
      user = pam_session_get_user (session->priv->authentication);
