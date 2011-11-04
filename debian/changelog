@@ -1,9 +1,9 @@
-lightdm (1.0.6-1) UNRELEASED; urgency=low
+lightdm (1.0.6-1) unstable; urgency=high
 
-  * New upstream release.
+  * New upstream release, urgency=high for security fix.
     - fix .Xauthority ownership using lchown() (CVE-2011-4105)
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 02 Nov 2011 16:49:56 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 04 Nov 2011 20:54:52 +0100
 
 lightdm (1.0.4-1) unstable; urgency=low
 
