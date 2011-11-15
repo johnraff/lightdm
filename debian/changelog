@@ -1,3 +1,14 @@
+lightdm (1.0.6-2) UNRELEASED; urgency=high
+
+  * urgency=high for security fixes.
+  * debian/patches:
+    - 07_CVE-2011-4105 added, make sure the file is not a link when chowning
+      it. (CVE-2011-4105)
+    - 08_CVE-2011-3153 added, fix information disclosure by droping privileges
+      before reading and re-writing ~/.dmrc.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 15 Nov 2011 21:21:28 +0100
+
 lightdm (1.0.6-1) unstable; urgency=high
 
   * New upstream release, urgency=high for security fix.
