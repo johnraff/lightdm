@@ -3,6 +3,9 @@ lightdm (1.0.6-3) UNRELEASED; urgency=low
   * debian/patches:
     - 07_CVE-2011-4105 refreshed, use AC_USE_SYSTEM_EXTENSIONS in configure.ac
       so GNU extensions are used even on kFreeBSD.              closes: #649633
+  * debian/rules:
+    - explicitly disable introspection. It seems only enabled on kFreeBSD
+      builds for some reason.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Wed, 23 Nov 2011 22:10:59 +0100
 
