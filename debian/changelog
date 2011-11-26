@@ -1,4 +1,4 @@
-lightdm (1.0.6-3) UNRELEASED; urgency=low
+lightdm (1.0.6-3) unstable; urgency=low
 
   * debian/patches:
     - 07_CVE-2011-4105 refreshed, use AC_USE_SYSTEM_EXTENSIONS in configure.ac
@@ -7,7 +7,7 @@ lightdm (1.0.6-3) UNRELEASED; urgency=low
     - explicitly disable introspection. It seems only enabled on kFreeBSD
       builds for some reason.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 23 Nov 2011 22:10:59 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 26 Nov 2011 09:34:47 +0100
 
 lightdm (1.0.6-2) unstable; urgency=high
 
