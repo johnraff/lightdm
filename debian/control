@@ -22,6 +22,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
  lightdm-gtk-greeter | lightdm-qt-greeter, dbus, consolekit, adduser
 Recommends: xserver-xorg
 Suggests: accountsservice
+Provides: x-display-manager
 Description: simple display manager
  An X display manager that:
   * Has a lightweight codebase
