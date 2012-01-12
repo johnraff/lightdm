@@ -4,7 +4,7 @@ lightdm (1.0.6-4) UNRELEASED; urgency=low
     - da.po updated, thanks to “Joe Dalton”.                    closes: #650946
   * debian/control:
     - add Provides: on x-display-manager.                       closes: #654343
-    - liblightdm-gobject-dev requires libdbus-glib-1-dev and libxklavier12-dev
+    - liblightdm-gobject-dev requires libdbus-glib-1-dev and libxklavier-dev
       so add dependencies.
   * debian/watch updated for new tarballs location.
 

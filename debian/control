@@ -81,7 +81,7 @@ Package: liblightdm-gobject-dev
 Section: libdevel
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libdbus-glib-1-dev, 
- libxklavier12-dev
+ libxklavier-dev
 Description: simple display manager (gobject development files)
  This package contains the development files for lightdm.
  They can be used to build new greeters applications GTK+ based.
