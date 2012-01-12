@@ -4,6 +4,7 @@ lightdm (1.0.6-4) UNRELEASED; urgency=low
     - da.po updated, thanks to “Joe Dalton”.                    closes: #650946
   * debian/control:
     - add Provides: on x-display-manager.                       closes: #654343
+  * debian/watch updated for new tarballs location.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sun, 04 Dec 2011 15:07:43 +0100
 
