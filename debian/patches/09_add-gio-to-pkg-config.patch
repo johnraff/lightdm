@@ -1,0 +1,15 @@
+Author: Yves-Alexis Perez <corsac@debian.org>
+Bug: https://bugs.launchpad.net/lightdm/+bug/916477
+Description: Add gio-2.0 to linker flags of lightdm-gobject
+Index: lightdm-1.1.0/liblightdm-gobject/liblightdm-gobject-1.pc.in
+===================================================================
+--- lightdm-1.1.0.orig/liblightdm-gobject/liblightdm-gobject-1.pc.in	2011-07-19 02:16:28.000000000 +0200
++++ lightdm-1.1.0/liblightdm-gobject/liblightdm-gobject-1.pc.in	2012-01-14 14:32:57.788085233 +0100
+@@ -6,6 +6,6 @@
+ Name: liblightdm-gobject
+ Description: LightDM client library
+ Version: @VERSION@
+-Requires: glib-2.0 dbus-glib-1 libxklavier
++Requires: gio-2.0 glib-2.0 dbus-glib-1 libxklavier 
+ Libs: -L${libdir} -llightdm-gobject-1
+ Cflags: -I${includedir}/lightdm-gobject-1

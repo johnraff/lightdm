@@ -6,3 +6,4 @@
 06_move-progs-to-pkglibexecdir.patch
 07_fix-test-missing-lightdm-session.patch
 08_CVE-2011-3153.patch
+09_add-gio-to-pkg-config.patch
