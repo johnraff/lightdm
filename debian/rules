@@ -14,6 +14,7 @@ override_dh_installinit:
 override_dh_install:
 	find debian/tmp -name '*.la' -delete
 	rm debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/lightdm/gdmflexiserver
+	rm debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsystem.*
 	dh_install --fail-missing
 
 %:
