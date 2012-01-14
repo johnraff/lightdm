@@ -1,3 +1,5 @@
+Author: Yves-Alexis Perez <corsac@debian.org>
+Description: don't add PKGLIBEXEC_DIR to the user PATH
 Index: lightdm-1.0.3/src/session.c
 ===================================================================
 --- lightdm-1.0.3.orig/src/session.c	2011-10-08 13:29:42.102575779 +0200

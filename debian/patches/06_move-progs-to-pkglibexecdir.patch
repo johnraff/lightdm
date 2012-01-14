@@ -1,3 +1,7 @@
+Author: Yves-Alexis Perez <corsac@debian.org>
+Description: put programs in pkglibexecdir instead of libexecdir
+With debhelper 9, the package name is not added to libexecdir, so force the use of pkglibexecdir
+Bug: https://bugs.launchpad.net/lightdm/+bug/861371
 Index: lightdm-1.0.3/src/Makefile.am
 ===================================================================
 --- lightdm-1.0.3.orig/src/Makefile.am	2011-10-08 01:04:12.000000000 +0200

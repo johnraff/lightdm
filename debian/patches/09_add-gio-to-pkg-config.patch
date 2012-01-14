@@ -1,6 +1,6 @@
 Author: Yves-Alexis Perez <corsac@debian.org>
-Bug: https://bugs.launchpad.net/lightdm/+bug/916477
 Description: Add gio-2.0 to linker flags of lightdm-gobject
+Bug: https://bugs.launchpad.net/lightdm/+bug/916477
 Index: lightdm-1.1.0/liblightdm-gobject/liblightdm-gobject-1.pc.in
 ===================================================================
 --- lightdm-1.1.0.orig/liblightdm-gobject/liblightdm-gobject-1.pc.in	2011-07-19 02:16:28.000000000 +0200

@@ -1,3 +1,7 @@
+Author: Yves-Alexis Perez <corsac@debian.org>
+Description: lightdm-session doesn't seem to be built by anything, so remove it
+frome targets or else lightdm FTBFS.
+Bug: https://bugs.launchpad.net/lightdm/+bug/916482
 Index: lightdm-1.1.0/tests/src/Makefile.am
 ===================================================================
 --- lightdm-1.1.0.orig/tests/src/Makefile.am	2012-01-14 13:30:41.415305420 +0100

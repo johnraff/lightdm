@@ -1,3 +1,11 @@
+Author: Yves-Alexis Perez <corsac@debian.org>
+Author: Lionel Le Folgoc <mrpouit@gmail.com>
+Description: adapt GTK+ greeter config to Debian
+Especially:
+
+* use background from desktop-base
+* force the use of default GTK+ 3 theme (Adwaita)
+* use some hinting
 Index: lightdm-1.0.1/greeters/gtk/lightdm-gtk-greeter.conf
 ===================================================================
 --- lightdm-1.0.1.orig/greeters/gtk/lightdm-gtk-greeter.conf	2011-09-28 09:11:35.000000000 +0200
