@@ -1,26 +1,30 @@
-lightdm (1.1.0-1) UNRELEASED; urgency=low
+lightdm (1.1.1-1) UNRELEASED; urgency=low
 
-  * New upstream release.
+  * New upstream development release.
   * debian/po:
     - da.po updated, thanks to “Joe Dalton”.                    closes: #650946
   * debian/control:
     - add Provides: on x-display-manager.                       closes: #654343
     - liblightdm-gobject-dev requires libdbus-glib-1-dev and libxklavier-dev
       so add dependencies.
+    - drop lightdm-{gtk,qt}-greeter packages since they have been moved to
+      standalone packages.
+    - rename lightdm-qt-1-0 package to -2-0 to follow soname bump.
   * debian/watch updated for new tarballs location.
   * debian/patches:
     - 01_set-default-path refreshed.
-    - 06_move-progs-to-pkglibexecdir refreshed, only needed for
-      lightdm-guest-session-wrapper now
+    - 04_default-gtk-greeter-config dropped since lightm-gtk-greeter has been
+      moved to standalone package.
+    - 05_dont-add-pkglibexecdir-path refreshed.
+    - 06_move-progs-to-pkglibexecdir dropped, included upstream.
     - 07_CVE-2011-4105 dropped, code doesn't exist anymore.
-    - 07_fix-test-missing-lightdm-session added, remove lightdm-session from
-      test targets.
-    - 09_add-gio-to-pkg-config added, add gio-2.0 to libs
-      liblightdm-gobject-1.pc.
+    - 08_CVE-2011-3153 dropped, included upstream.
   * debian/rules:
     - don't install libsystem as it's only useful for tests.
+  * debian/lightdm-{gtk,qt}-greeter.{config.install.templates,postinst,prerm}
+    dropped.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sat, 14 Jan 2012 12:55:03 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 17 Jan 2012 09:48:10 +0100
 
 lightdm (1.0.6-3) unstable; urgency=low
 

@@ -31,28 +31,6 @@ Description: simple display manager
   * Fully themeable
   * Cross-desktop (greeters can be written in any toolkit)
 
-Package: lightdm-gtk-greeter
-Provides: lightdm-greeter
-Replaces: lightdm-gtk, lightdm (<< 0.9.2-1)
-Breaks: lightdm-gtk, lightdm (<< 0.9.2-1)
-Section: x11
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: desktop-base, gnome-themes-standard, gnome-icon-theme, policykit-1
-Description: simple display manager (GTK+ greeter)
- A LightDM greeter that uses the GTK+ toolkit.
-
-Package: lightdm-qt-greeter
-Provides: lightdm-greeter
-Replaces: lightdm-qt
-Breaks: lightdm-qt
-Section: x11
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: policykit-1
-Description: simple display manager (Qt greeter)
- A LightDM greeter that uses the Qt toolkit.
-
 Package: lightdm-vala
 Section: x11
 Architecture: any
@@ -69,7 +47,7 @@ Description: simple display manager (gobject library)
  This package contains the gobject library for lightdm, used by the GTK+
  greeter.
 
-Package: liblightdm-qt-1-0
+Package: liblightdm-qt-2-0
 Section: libdevel
 Architecture: any
 Pre-depends: ${misc:Pre-Depends}
