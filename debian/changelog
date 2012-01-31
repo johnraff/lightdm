@@ -10,6 +10,7 @@ lightdm (1.1.1-1) UNRELEASED; urgency=low
     - drop lightdm-{gtk,qt}-greeter packages since they have been moved to
       standalone packages.
     - rename lightdm-qt-1-0 package to -2-0 to follow soname bump.
+    - drop dh-autoreconf build-dep.
   * debian/watch updated for new tarballs location.
   * debian/patches:
     - 01_set-default-path refreshed.
@@ -21,6 +22,7 @@ lightdm (1.1.1-1) UNRELEASED; urgency=low
     - 08_CVE-2011-3153 dropped, included upstream.
   * debian/rules:
     - don't install libsystem as it's only useful for tests.
+    - drop autoreconf since we don't need it anymore.
   * debian/lightdm-{gtk,qt}-greeter.{config.install.templates,postinst,prerm}
     dropped.
 
