@@ -11,6 +11,7 @@ lightdm (1.1.1-1) UNRELEASED; urgency=low
       standalone packages.
     - rename lightdm-qt-1-0 package to -2-0 to follow soname bump.
     - drop dh-autoreconf build-dep.
+    - fix liblightdm*-dev package not depending on the library package itself.
   * debian/watch updated for new tarballs location.
   * debian/patches:
     - 01_set-default-path refreshed.

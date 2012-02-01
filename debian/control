@@ -58,8 +58,8 @@ Description: simple display manager (Qt library)
 Package: liblightdm-gobject-dev
 Section: libdevel
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libdbus-glib-1-dev, 
- libxklavier-dev
+Depends: liblightdm-gobject-1-0 (= ${binary:Version}), ${shlibs:Depends},
+ ${misc:Depends}, libdbus-glib-1-dev, libxklavier-dev
 Description: simple display manager (gobject development files)
  This package contains the development files for lightdm.
  They can be used to build new greeters applications GTK+ based.
@@ -67,7 +67,8 @@ Description: simple display manager (gobject development files)
 Package: liblightdm-qt-dev
 Section: libdevel
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: liblightdm-qt-2-0 (= ${binary:Version}), ${shlibs:Depends}, 
+ ${misc:Depends}
 Description: simple display manager (Qt development files)
  This package contains the development files for lightdm.
  They can be used to build new greeters applications Qt based.
