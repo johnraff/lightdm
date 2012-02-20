@@ -7,6 +7,8 @@ Especially:
 * start on vt7
 * don't show userlist
 
+Forwarded: not-needed
+
 === modified file 'data/lightdm.conf'
 Index: lightdm-1.0.1/data/lightdm.conf
 ===================================================================
