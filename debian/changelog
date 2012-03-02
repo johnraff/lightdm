@@ -1,4 +1,4 @@
-lightdm (1.1.3-1) UNRELEASED; urgency=low
+lightdm (1.1.4-1) UNRELEASED; urgency=low
 
   [ Yves-Alexis Perez ]
   * New upstream development release.
@@ -18,7 +18,7 @@ lightdm (1.1.3-1) UNRELEASED; urgency=low
     - 01_set-default-path refreshed.
     - 04_default-gtk-greeter-config dropped since lightm-gtk-greeter has been
       moved to standalone package.
-    - 05_dont-add-pkglibexecdir-path refreshed.
+    - 05_dont-add-pkglibexecdir-path dropped.
     - 06_move-progs-to-pkglibexecdir dropped, included upstream.
     - 07_CVE-2011-4105 dropped, code doesn't exist anymore.
     - 08_CVE-2011-3153 dropped, included upstream.
@@ -136,7 +136,7 @@ lightdm (1.0.0-1) unstable; urgency=low
   * debian/control:
     - added build-deb on dpkg-dev (>= 1.16.1) for hardening support.
     - dropped hardening-includes from build-depends, now superseded
-    - update debhelper build-dep to 8.9.4 for compat mode v9.
+    - update debhelper build-dep to 9 for compat mode v9.
     - add Pre-Depends: ${misc:Pre-Depends} to the lib packages.
     - add Recommends: on gnome-icon-theme to gtk greeter.       closes: #643291
   * debian/liblightdm-gobject-1-0.install,
