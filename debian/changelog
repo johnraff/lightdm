@@ -1,7 +1,8 @@
-lightdm (1.1.4-1) UNRELEASED; urgency=low
+lightdm (1.1.5-1) UNRELEASED; urgency=low
 
   [ Yves-Alexis Perez ]
   * New upstream development release.
+    - don't leak fds to child processes.                        closes: #658678
   * debian/po:
     - da.po updated, thanks to “Joe Dalton”.                    closes: #650946
   * debian/control:
