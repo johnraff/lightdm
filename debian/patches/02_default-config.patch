@@ -10,11 +10,11 @@ Especially:
 Forwarded: not-needed
 
 === modified file 'data/lightdm.conf'
-Index: lightdm-1.0.1/data/lightdm.conf
+Index: lightdm-1.1.7/data/lightdm.conf
 ===================================================================
---- lightdm-1.0.1.orig/data/lightdm.conf	2011-09-28 09:11:35.000000000 +0200
-+++ lightdm-1.0.1/data/lightdm.conf	2011-10-05 22:15:15.872478075 +0200
-@@ -56,16 +56,16 @@
+--- lightdm-1.1.7.orig/data/lightdm.conf	2012-03-08 05:53:30.000000000 +0100
++++ lightdm-1.1.7/data/lightdm.conf	2012-03-09 08:09:49.675647981 +0100
+@@ -58,18 +58,18 @@
  #xserver-command=X
  #xserver-layout=
  #xserver-config=
@@ -25,8 +25,10 @@ Index: lightdm-1.0.1/data/lightdm.conf
  #xdmcp-key=
  #greeter-session=example-gtk-gnome
 -#greeter-hide-users=false
--#user-session=default
 +greeter-hide-users=true
+ #greeter-show-guest=true
+ #greeter-show-manual-login=false
+-#user-session=default
 +user-session=lightdm-xsession
  #allow-guest=true
  #guest-session=UNIMPLEMENTED

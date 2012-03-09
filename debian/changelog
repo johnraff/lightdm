@@ -1,4 +1,4 @@
-lightdm (1.1.5-1) UNRELEASED; urgency=low
+lightdm (1.1.7-1) UNRELEASED; urgency=low
 
   [ Yves-Alexis Perez ]
   * New upstream development release.
@@ -17,6 +17,7 @@ lightdm (1.1.5-1) UNRELEASED; urgency=low
   * debian/watch updated for new tarballs location.
   * debian/patches:
     - 01_set-default-path refreshed.
+    - 02_default-config.patch refreshed.
     - 04_default-gtk-greeter-config dropped since lightm-gtk-greeter has been
       moved to standalone package.
     - 05_dont-add-pkglibexecdir-path dropped.
