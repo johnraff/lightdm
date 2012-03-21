@@ -29,6 +29,8 @@ lightdm (1.1.9-1) UNRELEASED; urgency=low
     - drop autoreconf since we don't need it anymore.
   * debian/lightdm-{gtk,qt}-greeter.{config.install.templates,postinst,prerm}
     dropped.
+  * debian/lightdm.pam:
+     - add selinux lines, thanks Laurent Bigonville.            closes: #664805
 
   [ Lionel Le Folgoc ]
   * debian/patches: add missing DEP3 headers.
