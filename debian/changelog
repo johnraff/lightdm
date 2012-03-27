@@ -17,7 +17,9 @@ lightdm (1.1.9-1) UNRELEASED; urgency=low
   * debian/watch updated for new tarballs location.
   * debian/patches:
     - 01_set-default-path refreshed.
-    - 02_default-config.patch refreshed.
+    - 02_default-config.patch refreshed
+      + use lightdm-greeter as greeter name, which is provided as an
+        alternative by the various greeters.
     - 04_default-gtk-greeter-config dropped since lightm-gtk-greeter has been
       moved to standalone package.
     - 05_dont-add-pkglibexecdir-path dropped.
