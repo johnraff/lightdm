@@ -22,7 +22,6 @@ lightdm (1.2.0-1) UNRELEASED; urgency=low
         alternative by the various greeters.
     - 04_default-gtk-greeter-config dropped since lightm-gtk-greeter has been
       moved to standalone package.
-    - 05_dont-add-pkglibexecdir-path dropped.
     - 06_move-progs-to-pkglibexecdir dropped, included upstream.
     - 07_CVE-2011-4105 dropped, code doesn't exist anymore.
     - 08_CVE-2011-3153 dropped, included upstream.
