@@ -1,4 +1,4 @@
-lightdm (1.2.0-1) UNRELEASED; urgency=low
+lightdm (1.2.0-1) experimental; urgency=low
 
   [ Yves-Alexis Perez ]
   * New upstream release.
@@ -37,7 +37,7 @@ lightdm (1.2.0-1) UNRELEASED; urgency=low
   [ Lionel Le Folgoc ]
   * debian/patches: add missing DEP3 headers.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Tue, 17 Jan 2012 09:48:10 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 06 Apr 2012 21:32:13 +0200
 
 lightdm (1.0.6-3) unstable; urgency=low
 
