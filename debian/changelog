@@ -5,7 +5,7 @@ lightdm (1.2.2-1) UNRELEASED; urgency=low
     - build with --parallel.
     - disable silent rules so build logs are useful.
     - disable building test for now since it fails with gcc-4.7.
-  * debian/lightdm.lintian-overrides added, override warning for hardening
+  * debian/*.lintian-overrides added, override warning for hardening
     checks, we do enable build flags.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Tue, 15 May 2012 21:11:43 +0200
