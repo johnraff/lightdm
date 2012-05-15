@@ -1,5 +1,6 @@
-lightdm (1.2.2-1) UNRELEASED; urgency=low
+lightdm (1.2.2-1) unstable; urgency=low
 
+  * Upload to unstable.
   * New upstream release.                                       closes: #673036
   * debian/rules:
     - build with --parallel.
@@ -8,7 +9,7 @@ lightdm (1.2.2-1) UNRELEASED; urgency=low
   * debian/*.lintian-overrides added, override warning for hardening
     checks, we do enable build flags.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Tue, 15 May 2012 21:11:43 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 15 May 2012 22:44:04 +0200
 
 lightdm (1.2.0-1) experimental; urgency=low
 
