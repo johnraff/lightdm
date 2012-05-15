@@ -1,3 +1,9 @@
+lightdm (1.2.2-1) UNRELEASED; urgency=low
+
+  * New upstream release.                                       closes: #673036
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 15 May 2012 21:11:43 +0200
+
 lightdm (1.2.0-1) experimental; urgency=low
 
   [ Yves-Alexis Perez ]
