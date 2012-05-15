@@ -1,0 +1,6 @@
+# we do use -fstack-protector and FORTIFY
+liblightdm-gobject-1-0: hardening-no-fortify-functions usr/lib/x86_64-linux-gnu/liblightdm-gobject-1.so.0.0.0
+liblightdm-qt-2-0: hardening-no-stackprotector usr/lib/x86_64-linux-gnu/liblightdm-qt-2.so.0.0.0
+lightdm: hardening-no-stackprotector usr/bin/dm-tool
+lightdm: hardening-no-stackprotector usr/lib/x86_64-linux-gnu/lightdm/lightdm-guest-session-wrapper
+lightdm: hardening-no-stackprotector usr/lib/x86_64-linux-gnu/lightdm/lightdm-set-defaults
