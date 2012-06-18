@@ -2,6 +2,10 @@ lightdm (1.2.2-3) UNRELEASED; urgency=low
 
   * debian/lightdm.pam:
     - enable pam_loginuid.                                      closes: #677435
+  * debian/lightdm.lightdm-autologin.pam added, support auto-login when
+    configured in /etc/lightdm/lightdm.conf.                    closes: #636104
+  * debian/rules:
+    - install both pam files.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Mon, 18 Jun 2012 17:43:57 +0200
 
