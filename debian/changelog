@@ -1,4 +1,4 @@
-lightdm (1.2.2-3) UNRELEASED; urgency=low
+lightdm (1.2.2-3) unstable; urgency=low
 
   * debian/lightdm.pam:
     - enable pam_loginuid.                                      closes: #677435
@@ -7,7 +7,7 @@ lightdm (1.2.2-3) UNRELEASED; urgency=low
   * debian/rules:
     - install both pam files.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Mon, 18 Jun 2012 17:43:57 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 18 Jun 2012 21:13:57 +0200
 
 lightdm (1.2.2-2) unstable; urgency=low
 
