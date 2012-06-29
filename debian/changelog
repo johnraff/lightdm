@@ -1,3 +1,10 @@
+lightdm (1.2.2-4) UNRELEASED; urgency=low
+
+  * debian/control:
+    - suggests upower.                                          closes: #679538
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 29 Jun 2012 17:16:58 +0200
+
 lightdm (1.2.2-3) unstable; urgency=low
 
   * debian/lightdm.pam:
