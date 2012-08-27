@@ -2,6 +2,8 @@ lightdm (1.2.2-4) UNRELEASED; urgency=low
 
   * debian/control:
     - suggests upower.                                          closes: #679538
+    - make lightdm depends on lightdm-gtk-greeter | lightdm-greeter, thanks
+      Ralf Jung for the report.                                 closes: #684714
 
  -- Yves-Alexis Perez <corsac@debian.org>  Fri, 29 Jun 2012 17:16:58 +0200
 
