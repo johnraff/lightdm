@@ -1,4 +1,3 @@
-06_readd-locale-set.patch
 01_set-default-path.patch
 02_default-config.patch
 03_quit-plymouth.patch
