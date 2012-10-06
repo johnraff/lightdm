@@ -2,3 +2,4 @@
 02_default-config.patch
 03_quit-plymouth.patch
 04_dont-add-pkglibexecdir-path.patch
+05_debianize-pam-files.patch

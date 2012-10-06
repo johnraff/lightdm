@@ -4,6 +4,8 @@ lightdm (1.4.0-1) UNRELEASED; urgency=low
   * debian/patches:
     - 01_set-default-path, 02_default-config and
       04_dont-add-pkglibexecdir-path refreshed for new release.
+    - 05_debianize-pam-files added, Debianize the lightdm and
+      lightdm-autologin pam config files.
   * debian/control:
     - suggests upower.                                          closes: #679538
     - make lightdm depends on lightdm-gtk-greeter | lightdm-greeter, thanks
@@ -12,6 +14,10 @@ lightdm (1.4.0-1) UNRELEASED; urgency=low
   * debian/lightdm.install:
     - stop installing lightdm upstart script since it's broken. closes: #679409
     - install /u/s/help.* 
+    - install PAM files
+  * debian/rules:
+    - stop installing own PAM files.
+  * debian/*.pam: drop obsolete PAM files.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sat, 06 Oct 2012 16:42:26 +0200
 
