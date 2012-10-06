@@ -10,11 +10,9 @@ Especially:
 Forwarded: not-needed
 
 === modified file 'data/lightdm.conf'
-Index: lightdm-1.2.0/data/lightdm.conf
-===================================================================
---- lightdm-1.2.0.orig/data/lightdm.conf	2012-04-04 07:17:25.000000000 +0200
-+++ lightdm-1.2.0/data/lightdm.conf	2012-04-05 19:10:50.378808312 +0200
-@@ -58,18 +58,18 @@
+--- a/data/lightdm.conf
++++ b/data/lightdm.conf
+@@ -65,19 +65,19 @@
  #xserver-command=X
  #xserver-layout=
  #xserver-config=
@@ -29,6 +27,7 @@ Index: lightdm-1.2.0/data/lightdm.conf
 +greeter-hide-users=true
  #greeter-allow-guest=true
  #greeter-show-manual-login=false
+ #greeter-show-remote-login=true
  #user-session=default
  #allow-guest=true
  #guest-session=UNIMPLEMENTED

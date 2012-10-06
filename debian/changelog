@@ -1,6 +1,9 @@
 lightdm (1.4.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * debian/patches:
+    - 01_set-default-path, 02_default-config and
+      04_dont-add-pkglibexecdir-path refreshed for new release.
   * debian/control:
     - suggests upower.                                          closes: #679538
     - make lightdm depends on lightdm-gtk-greeter | lightdm-greeter, thanks
