@@ -1,5 +1,6 @@
-lightdm (1.2.2-4) UNRELEASED; urgency=low
+lightdm (1.4.0-1) UNRELEASED; urgency=low
 
+  * New upstream release.
   * debian/control:
     - suggests upower.                                          closes: #679538
     - make lightdm depends on lightdm-gtk-greeter | lightdm-greeter, thanks
@@ -7,7 +8,7 @@ lightdm (1.2.2-4) UNRELEASED; urgency=low
   * debian/lightdm.install:
     - stop installing lightdm upstart script since it's broken. closes: #679409
 
- -- Yves-Alexis Perez <corsac@debian.org>  Fri, 29 Jun 2012 17:16:58 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 06 Oct 2012 16:42:26 +0200
 
 lightdm (1.2.2-3) unstable; urgency=low
 
