@@ -8,6 +8,7 @@ lightdm (1.4.0-1) UNRELEASED; urgency=low
     - suggests upower.                                          closes: #679538
     - make lightdm depends on lightdm-gtk-greeter | lightdm-greeter, thanks
       Ralf Jung for the report.                                 closes: #684714
+    - add build-dep on itstool.
   * debian/lightdm.install:
     - stop installing lightdm upstart script since it's broken. closes: #679409
 
