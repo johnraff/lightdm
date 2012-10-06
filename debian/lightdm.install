@@ -2,6 +2,7 @@ usr/bin/dm-tool
 usr/sbin/lightdm
 usr/share/man
 usr/share/locale
+usr/share/help
 etc/dbus-1
 etc/lightdm/users.conf
 etc/lightdm/lightdm.conf

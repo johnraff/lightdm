@@ -11,6 +11,7 @@ lightdm (1.4.0-1) UNRELEASED; urgency=low
     - add build-dep on itstool.
   * debian/lightdm.install:
     - stop installing lightdm upstart script since it's broken. closes: #679409
+    - install /u/s/help.* 
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sat, 06 Oct 2012 16:42:26 +0200
 
