@@ -1,4 +1,4 @@
-lightdm (1.4.0-1) UNRELEASED; urgency=low
+lightdm (1.4.0-1) experimental; urgency=low
 
   * New upstream release.
   * debian/patches:
@@ -19,7 +19,7 @@ lightdm (1.4.0-1) UNRELEASED; urgency=low
     - stop installing own PAM files.
   * debian/*.pam: drop obsolete PAM files.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sat, 06 Oct 2012 16:42:26 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 07 Oct 2012 09:16:34 +0200
 
 lightdm (1.2.2-3) unstable; urgency=low
 
