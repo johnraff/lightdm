@@ -10,12 +10,14 @@ Especially:
 Forwarded: not-needed
 
 === modified file 'data/lightdm.conf'
-Index: lightdm-1.2.0/data/lightdm.conf
-===================================================================
---- lightdm-1.2.0.orig/data/lightdm.conf	2012-04-04 07:17:25.000000000 +0200
-+++ lightdm-1.2.0/data/lightdm.conf	2012-04-05 19:10:50.378808312 +0200
-@@ -58,18 +58,18 @@
- #xserver-command=X
+--- a/data/lightdm.conf
++++ b/data/lightdm.conf
+@@ -55,21 +55,21 @@
+ # exit-on-failure = True if the daemon should exit if this seat fails
+ #
+ [SeatDefaults]
+-#xserver-command=X
++xserver-command=Xorg
  #xserver-layout=
  #xserver-config=
 -#xserver-allow-tcp=false

@@ -1,3 +1,10 @@
+lightdm (1.2.2-5) UNRELEASED; urgency=low
+
+  * debian/patches:
+    02_default-config updated, use Xorg as default X command.   closes: #688756
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 16 Oct 2012 22:11:44 +0200
+
 lightdm (1.2.2-4) unstable; urgency=low
 
   * debian/control:
