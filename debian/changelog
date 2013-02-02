@@ -2,10 +2,13 @@ lightdm (1.2.3-1) UNRELEASED; urgency=low
 
   [ Yves-Alexis Perez ]
   * New upstream release.
+   - correctly set utmp records.                                closes: #648604
+   - fix autologin timeouts.                                    closes: #682473
   * debian/patches:
     - 02_default-config updated, use Xorg as default X command. closes: #688756
     - 01_set-default-path and 04_dont-add-pkglibexecdir-path refreshed.
   * debian/watch updated to track 1.2 branch.
+  * 
 
   [ Daniel Echeverry ]
   * Upstream changelog is bogus.                                closes: #689870
