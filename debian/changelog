@@ -1,3 +1,11 @@
+lightdm (1.4.0-2) UNRELEASED; urgency=low
+
+  * debian/docs: ship NEWS file.                                closes: #689870
+  * debian/watch:
+    - support .xz tarballs.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 08 Oct 2012 08:03:29 +0200
+
 lightdm (1.4.0-1) experimental; urgency=low
 
   * New upstream release.
