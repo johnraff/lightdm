@@ -1,4 +1,4 @@
-lightdm (1.2.3-1) UNRELEASED; urgency=low
+lightdm (1.2.3-1) unstable; urgency=low
 
   [ Yves-Alexis Perez ]
   * New upstream release.
@@ -8,12 +8,11 @@ lightdm (1.2.3-1) UNRELEASED; urgency=low
     - 02_default-config updated, use Xorg as default X command. closes: #688756
     - 01_set-default-path and 04_dont-add-pkglibexecdir-path refreshed.
   * debian/watch updated to track 1.2 branch.
-  * 
 
   [ Daniel Echeverry ]
   * Upstream changelog is bogus.                                closes: #689870
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sat, 02 Feb 2013 10:31:39 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 02 Feb 2013 11:21:58 +0100
 
 lightdm (1.2.2-4) unstable; urgency=low
 
