@@ -1,10 +1,16 @@
-lightdm (1.4.0-2) UNRELEASED; urgency=low
+lightdm (1.5.0-1) UNRELEASED; urgency=low
 
   * debian/docs: ship NEWS file.                                closes: #689870
   * debian/watch:
     - support .xz tarballs.
+  * New upstream unstable release.
+  * debian/patches:
+    - 01_set-default-path, 03_quit-plymouth, 04_dont-add-pkglibexecdir-path
+      and 05_debianize-pam-files refreshed.
+  * debian/control:
+    - add build-dep on libgcrypt11-dev.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Mon, 08 Oct 2012 08:03:29 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 02 Feb 2013 14:01:22 +0100
 
 lightdm (1.4.0-1) experimental; urgency=low
 
