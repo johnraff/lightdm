@@ -5,7 +5,7 @@ lightdm (1.2.2-5) UNRELEASED; urgency=low
     02_default-config updated, use Xorg as default X command.   closes: #688756
 
   [ Daniel Echeverry ]
-  * Upstream changelog is bogus.				closes: #689870
+  * Upstream changelog is bogus.                                closes: #689870
 
  -- Daniel Echeverry <epsilon77@gmail.com>  Sun, 21 Oct 2012 22:55:27 -0500
 
