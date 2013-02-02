@@ -3,6 +3,7 @@ lightdm (1.2.2-5) UNRELEASED; urgency=low
   [ Yves-Alexis Perez ]
   * debian/patches:
     02_default-config updated, use Xorg as default X command.   closes: #688756
+  * debian/watch updated to track 1.2 branch.
 
   [ Daniel Echeverry ]
   * Upstream changelog is bogus.                                closes: #689870
