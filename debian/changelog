@@ -9,6 +9,8 @@ lightdm (1.5.0-1) UNRELEASED; urgency=low
       and 05_debianize-pam-files refreshed.
   * debian/control:
     - add build-dep on libgcrypt11-dev.
+  * debian/rules:
+    - enable all hardening flags.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sat, 02 Feb 2013 14:01:22 +0100
 
