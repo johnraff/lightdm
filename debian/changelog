@@ -11,7 +11,7 @@ lightdm (1.5.1-1) UNRELEASED; urgency=low
     - add build-dep on libgcrypt11-dev.
   * debian/rules:
     - enable all hardening flags.
-    - don't remove gdmflexiserver, not installed anymore.
+    - fix gdmflexiserver removal
   * debian/lightdm.install:
     - install apparmor profiles.
 
