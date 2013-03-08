@@ -12,6 +12,7 @@ lightdm (1.5.1-1) UNRELEASED; urgency=low
   * debian/rules:
     - enable all hardening flags.
     - fix gdmflexiserver removal
+    - fix permissions on apparmor profiles.
   * debian/lightdm.install:
     - install apparmor profiles.
 
