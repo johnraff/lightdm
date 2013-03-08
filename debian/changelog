@@ -1,9 +1,9 @@
-lightdm (1.5.0-1) UNRELEASED; urgency=low
+lightdm (1.5.1-1) UNRELEASED; urgency=low
 
+  * New upstream unstable release.
   * debian/docs: ship NEWS file.                                closes: #689870
   * debian/watch:
     - support .xz tarballs.
-  * New upstream unstable release.
   * debian/patches:
     - 01_set-default-path, 03_quit-plymouth, 04_dont-add-pkglibexecdir-path
       and 05_debianize-pam-files refreshed.
@@ -11,8 +11,11 @@ lightdm (1.5.0-1) UNRELEASED; urgency=low
     - add build-dep on libgcrypt11-dev.
   * debian/rules:
     - enable all hardening flags.
+    - don't remove gdmflexiserver, not installed anymore.
+  * debian/lightdm.install:
+    - install apparmor profiles.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sat, 02 Feb 2013 14:01:22 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 08 Mar 2013 07:41:46 +0100
 
 lightdm (1.4.0-1) experimental; urgency=low
 
