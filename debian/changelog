@@ -10,7 +10,7 @@ lightdm (1.5.3-1) UNRELEASED; urgency=low
   * debian/control:
     - add build-dep on libgcrypt11-dev.
   * debian/rules:
-    - enable all hardening flags.
+    - disable pie hardening flags for now, it segfaults at startup.
     - fix gdmflexiserver removal
     - fix permissions on apparmor profiles.
   * debian/lightdm.install:
