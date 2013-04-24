@@ -1,3 +1,10 @@
+lightdm (1.6.0-2) UNRELEASED; urgency=low
+
+  [ Niv Sardi ]
+  * Build with GIR
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 24 Apr 2013 21:53:09 +0200
+
 lightdm (1.6.0-1) experimental; urgency=low
 
   * New upstream release.
