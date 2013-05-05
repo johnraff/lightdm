@@ -7,6 +7,8 @@ lightdm (1.6.0-2) UNRELEASED; urgency=low
   * Upload to unstable.
   * debian/rules:
     - hardening=+pie segfaults but +bindnow does work so keep it enabled.
+  * debian/docs removed: stop shipping NEWS file since it's the same as
+    changelog.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Wed, 24 Apr 2013 21:53:09 +0200
 
