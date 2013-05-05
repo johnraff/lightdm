@@ -18,7 +18,7 @@ Description: Fix default PATH environment variable
      {
 --- a/src/session-child.c
 +++ b/src/session-child.c
-@@ -307,7 +307,10 @@ session_child_run (int argc, char **argv
+@@ -329,7 +329,10 @@ session_child_run (int argc, char **argv
          else
          {
              /* Set POSIX variables */

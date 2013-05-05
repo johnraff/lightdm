@@ -1,29 +1,61 @@
-lightdm (1.2.3-1) unstable; urgency=low
+lightdm (1.6.0-2) UNRELEASED; urgency=low
+
+  [ Niv Sardi ]
+  * Build with GIR
 
   [ Yves-Alexis Perez ]
+  * Upload to unstable.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 24 Apr 2013 21:53:09 +0200
+
+lightdm (1.6.0-1) experimental; urgency=low
+
   * New upstream release.
-   - correctly set utmp records.                                closes: #648604
-   - fix autologin timeouts.                                    closes: #682473
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 17 Apr 2013 22:06:36 +0200
+
+lightdm (1.5.3-1) experimental; urgency=low
+
+  * New upstream unstable release.
+  * debian/docs: ship NEWS file.                                closes: #689870
+  * debian/watch:
+    - support .xz tarballs.
   * debian/patches:
-    - 02_default-config updated, use Xorg as default X command. closes: #688756
-    - 01_set-default-path and 04_dont-add-pkglibexecdir-path refreshed.
-  * debian/watch updated to track 1.2 branch.
+    - 01_set-default-path, 03_quit-plymouth, 04_dont-add-pkglibexecdir-path
+      and 05_debianize-pam-files refreshed.
+  * debian/control:
+    - add build-dep on libgcrypt11-dev.
+  * debian/rules:
+    - disable pie hardening flags for now, it segfaults at startup.
+    - fix gdmflexiserver removal
+    - fix permissions on apparmor profiles.
+  * debian/lightdm.install:
+    - install apparmor profiles.
 
-  [ Daniel Echeverry ]
-  * Upstream changelog is bogus.                                closes: #689870
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 07 Apr 2013 14:30:05 +0200
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sat, 02 Feb 2013 11:21:58 +0100
+lightdm (1.4.0-1) experimental; urgency=low
 
-lightdm (1.2.2-4) unstable; urgency=low
-
+  * New upstream release.
+  * debian/patches:
+    - 01_set-default-path, 02_default-config and
+      04_dont-add-pkglibexecdir-path refreshed for new release.
+    - 05_debianize-pam-files added, Debianize the lightdm and
+      lightdm-autologin pam config files.
   * debian/control:
     - suggests upower.                                          closes: #679538
     - make lightdm depends on lightdm-gtk-greeter | lightdm-greeter, thanks
       Ralf Jung for the report.                                 closes: #684714
+    - add build-dep on itstool.
   * debian/lightdm.install:
     - stop installing lightdm upstart script since it's broken. closes: #679409
+    - install /u/s/help.* 
+    - install PAM files
+  * debian/rules:
+    - stop installing own PAM files.
+  * debian/*.pam: drop obsolete PAM files.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Thu, 11 Oct 2012 12:44:37 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 07 Oct 2012 09:16:34 +0200
 
 lightdm (1.2.2-3) unstable; urgency=low
 

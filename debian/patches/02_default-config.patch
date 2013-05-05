@@ -12,12 +12,8 @@ Forwarded: not-needed
 === modified file 'data/lightdm.conf'
 --- a/data/lightdm.conf
 +++ b/data/lightdm.conf
-@@ -55,21 +55,21 @@
- # exit-on-failure = True if the daemon should exit if this seat fails
- #
- [SeatDefaults]
--#xserver-command=X
-+xserver-command=Xorg
+@@ -65,19 +65,19 @@
+ #xserver-command=X
  #xserver-layout=
  #xserver-config=
 -#xserver-allow-tcp=false
@@ -31,6 +27,7 @@ Forwarded: not-needed
 +greeter-hide-users=true
  #greeter-allow-guest=true
  #greeter-show-manual-login=false
+ #greeter-show-remote-login=true
  #user-session=default
  #allow-guest=true
  #guest-session=UNIMPLEMENTED
