@@ -1,3 +1,11 @@
+lightdm (1.6.0-3) UNRELEASED; urgency=low
+
+  * debian/control:
+    - drop valac-0.18 dependency for now since it's not available in sid
+      anyway.                                                   closes: #707176
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 11 May 2013 23:29:18 +0200
+
 lightdm (1.6.0-2) unstable; urgency=low
 
   [ Niv Sardi ]
