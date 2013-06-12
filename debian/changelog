@@ -1,3 +1,10 @@
+lightdm (1.6.0-4) UNRELEASED; urgency=low
+
+  * debian/po:
+    - update pl.po, thanks Michał Kułach.                       closes: #711378
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 12 Jun 2013 17:15:37 +0200
+
 lightdm (1.6.0-3) unstable; urgency=low
 
   * debian/control:
