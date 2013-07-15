@@ -1,7 +1,11 @@
 lightdm (1.6.0-4) UNRELEASED; urgency=low
 
+  [ Yves-Alexis Perez ]
   * debian/po:
     - update pl.po, thanks Michał Kułach.                       closes: #711378
+
+  [ Evgeni Golov ]
+  * Correct Vcs-* URLs to point to anonscm.debian.org
 
  -- Yves-Alexis Perez <corsac@debian.org>  Wed, 12 Jun 2013 17:15:37 +0200
 

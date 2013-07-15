@@ -12,8 +12,8 @@ Build-Depends: debhelper (>= 9), intltool, pkg-config, libglib2.0-dev,
  gtk-doc-tools, itstool, libgcrypt11-dev, libgirepository1.0-dev
 Standards-Version: 3.9.3
 Homepage: https://launchpad.net/lightdm
-Vcs-Svn: svn://svn.debian.org/pkg-xfce/goodies/trunk/lightdm
-Vcs-Browser: http://svn.debian.org/wsvn/pkg-xfce/goodies/trunk/lightdm
+Vcs-Svn: svn://anonscm.debian.org/pkg-xfce/goodies/trunk/lightdm
+Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-xfce/goodies/trunk/lightdm
 
 Package: lightdm
 Section: x11
