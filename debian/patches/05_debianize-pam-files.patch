@@ -25,6 +25,7 @@
  
 -# Setup session
 -session   required pam_unix.so
+-session   optional pam_systemd.so
 +# SELinux needs to be the first session rule. This ensures that any
 +# lingering context has been cleared. Without out this it is possible
 +# that a module could execute code in the wrong domain.
@@ -89,6 +90,7 @@
  
 -# Setup session
 -session   required pam_unix.so
+-session   optional pam_systemd.so
 +@include common-password
 --- a/data/pam/lightdm-greeter
 +++ b/data/pam/lightdm-greeter

@@ -1,8 +1,10 @@
 Author: Yves-Alexis Perez <corsac@debian.org>
 Description: don't add PKGLIBEXEC_DIR to the user PATH
---- a/src/session-child.c
-+++ b/src/session-child.c
-@@ -479,11 +479,6 @@ session_child_run (int argc, char **argv
+Index: lightdm/src/session-child.c
+===================================================================
+--- lightdm.orig/src/session-child.c	2013-08-24 19:57:06.794387646 +1000
++++ lightdm/src/session-child.c	2013-08-24 19:57:06.782387587 +1000
+@@ -534,11 +534,6 @@
          g_free (value);
      }
  
