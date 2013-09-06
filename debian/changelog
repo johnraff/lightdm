@@ -5,6 +5,8 @@ lightdm (1.6.1-1) UNRELEASED; urgency=low
     - update pl.po, thanks Michał Kułach.                       closes: #711378
   * New upstream release.
   * debian/watch updated to track 1.6 branch.
+  * debian/control:
+    - update standards version to 3.9.4.
 
   [ Evgeni Golov ]
   * Correct Vcs-* URLs to point to anonscm.debian.org
