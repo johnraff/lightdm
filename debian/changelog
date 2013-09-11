@@ -1,9 +1,11 @@
-lightdm (1.6.1-1) UNRELEASED; urgency=low
+lightdm (1.6.2-1) UNRELEASED; urgency=low
 
   [ Yves-Alexis Perez ]
   * debian/po:
     - update pl.po, thanks Michał Kułach.                       closes: #711378
   * New upstream release.
+    - fix wrong permissions on .Xauthority file and don't pollute homedir with
+      temporary files.                                          closes: #721744
   * debian/watch updated to track 1.6 branch.
   * debian/control:
     - update standards version to 3.9.4.
@@ -11,7 +13,7 @@ lightdm (1.6.1-1) UNRELEASED; urgency=low
   [ Evgeni Golov ]
   * Correct Vcs-* URLs to point to anonscm.debian.org
 
- -- Yves-Alexis Perez <corsac@debian.org>  Thu, 05 Sep 2013 23:22:55 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 11 Sep 2013 07:25:23 +0200
 
 lightdm (1.6.0-3) unstable; urgency=low
 
