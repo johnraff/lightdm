@@ -6,6 +6,8 @@ lightdm (1.8.1-1) UNRELEASED; urgency=low
       refreshed.
     - 03_quit-plymouth disabled for now, to check if problem is really fixed
       upstream.
+  * debian/control:
+    - rename liblightdm-qt-2-0 to liblightdm-qt-3-0 to match updated soname.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sat, 12 Oct 2013 08:32:05 +0200
 
