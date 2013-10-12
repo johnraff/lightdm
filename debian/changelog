@@ -1,3 +1,14 @@
+lightdm (1.8.1-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+  * debian/patches:
+    - 01_set-default-path, 02_default-config, 05_debianize-pam-files
+      refreshed.
+    - 03_quit-plymouth disabled for now, to check if problem is really fixed
+      upstream.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 12 Oct 2013 08:32:05 +0200
+
 lightdm (1.6.3-1) unstable; urgency=low
 
   * New upstream release.
