@@ -1,4 +1,4 @@
-lightdm (1.8.2-1) UNRELEASED; urgency=low
+lightdm (1.8.2-1) unstable; urgency=low
 
   * New upstream release.
   * debian/patches:
@@ -9,7 +9,7 @@ lightdm (1.8.2-1) UNRELEASED; urgency=low
   * debian/control:
     - rename liblightdm-qt-2-0 to liblightdm-qt-3-0 to match updated soname.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 16 Oct 2013 22:46:09 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 20 Oct 2013 20:45:55 +0200
 
 lightdm (1.6.3-1) unstable; urgency=low
 
