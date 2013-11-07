@@ -1,4 +1,3 @@
 01_set-default-path.patch
-02_default-config.patch
 04_dont-add-pkglibexecdir-path.patch
 05_debianize-pam-files.patch

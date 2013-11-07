@@ -2,7 +2,11 @@ lightdm (1.8.5-1) UNRELEASED; urgency=low
 
   * New upstream bugfix release.
   * debian/patches:
-    - 02_default-config refreshed.
+    - 02_default-config removed, replaced by a config snippet.
+  * debian/01_debian.conf:
+    - add config snippet for Debian specific config
+  * debian/lightdm.install:
+    - install 01_debian.conf to /usr/share/lightdm/lightdm.conf.d/
 
  -- Yves-Alexis Perez <corsac@debian.org>  Thu, 07 Nov 2013 07:23:22 +0100
 
