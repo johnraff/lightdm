@@ -12,7 +12,7 @@ Forwarded: not-needed
 === modified file 'data/lightdm.conf'
 --- a/data/lightdm.conf
 +++ b/data/lightdm.conf
-@@ -85,15 +85,15 @@
+@@ -84,15 +84,15 @@
  #xdmcp-key=
  #unity-compositor-command=unity-system-compositor
  #unity-compositor-timeout=60
@@ -29,5 +29,5 @@ Forwarded: not-needed
 -#session-wrapper=lightdm-session
 +session-wrapper=/etc/X11/Xsession
  #greeter-wrapper=
+ #guest-wrapper=
  #display-setup-script=
- #greeter-setup-script=
