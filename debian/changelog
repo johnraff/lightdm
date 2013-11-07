@@ -1,4 +1,4 @@
-lightdm (1.8.5-1) UNRELEASED; urgency=low
+lightdm (1.8.5-1) unstable; urgency=low
 
   * New upstream bugfix release.
   * debian/patches:
@@ -8,7 +8,7 @@ lightdm (1.8.5-1) UNRELEASED; urgency=low
   * debian/lightdm.install:
     - install 01_debian.conf to /usr/share/lightdm/lightdm.conf.d/
 
- -- Yves-Alexis Perez <corsac@debian.org>  Thu, 07 Nov 2013 07:23:22 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 07 Nov 2013 10:20:11 +0100
 
 lightdm (1.8.3-1) unstable; urgency=low
 
