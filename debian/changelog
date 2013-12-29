@@ -1,4 +1,4 @@
-lightdm (1.9.5-1) UNRELEASED; urgency=medium
+lightdm (1.9.5-1) experimental; urgency=medium
 
   * New upstream development release.
   * debian/watch updated to track 1.9 branch.
@@ -14,7 +14,7 @@ lightdm (1.9.5-1) UNRELEASED; urgency=medium
     - drop install of lightdm-set-defaults.
     - rename lightdm-guest-session-wrapper to lightdm-guest-session.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sun, 29 Dec 2013 15:39:12 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 29 Dec 2013 22:28:33 +0100
 
 lightdm (1.8.5-3) unstable; urgency=low
 
