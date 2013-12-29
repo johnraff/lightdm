@@ -2,6 +2,9 @@ lightdm (1.9.5-1) UNRELEASED; urgency=medium
 
   * New upstream development release.
   * debian/watch updated to track 1.9 branch.
+  * debian/patches:
+    - 04_dont-add-pkglibexecdir-path dropped, gdm-flexiserver script has been
+      dropped from LightDM so the PATH addition was dropped as well.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sun, 29 Dec 2013 15:39:12 +0100
 
