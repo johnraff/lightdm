@@ -7,6 +7,8 @@ lightdm (1.9.5-1) UNRELEASED; urgency=medium
       dropped from LightDM so the PATH addition was dropped as well.
     - 01_set-default-path and 06_allow_libpamsystemd_and_ck_together
       refreshed.
+  * debian/rules:
+    - stop removing gdmflexiserver since it doesn't exist anymore.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sun, 29 Dec 2013 15:39:12 +0100
 

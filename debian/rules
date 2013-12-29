@@ -16,7 +16,6 @@ override_dh_installinit:
 
 override_dh_install:
 	find debian/tmp -name '*.la' -delete
-	find debian/tmp/usr/lib/ -name gdmflexiserver -delete
 	find debian/tmp/etc/apparmor.d -type f -exec chmod 0644 '{}' \;
 	dh_install --fail-missing -X etc/init/lightdm.conf
 
