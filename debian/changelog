@@ -9,6 +9,10 @@ lightdm (1.9.5-1) UNRELEASED; urgency=medium
       refreshed.
   * debian/rules:
     - stop removing gdmflexiserver since it doesn't exist anymore.
+    - configure libexecdir to be /u/l/*/lightdm.
+  * debian/lightdm.install:
+    - drop install of lightdm-set-defaults.
+    - rename lightdm-guest-session-wrapper to lightdm-guest-session.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sun, 29 Dec 2013 15:39:12 +0100
 
