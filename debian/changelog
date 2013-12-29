@@ -1,6 +1,8 @@
 lightdm (1.8.5-3) UNRELEASED; urgency=low
 
   * debian/lightdm.postrm: warn if user/group deletion failed.  closes: #731220
+  * debian/control:
+    - update standards version to 3.9.5.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Wed, 04 Dec 2013 11:15:36 +0100
 
