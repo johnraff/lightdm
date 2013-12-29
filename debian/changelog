@@ -1,3 +1,10 @@
+lightdm (1.9.5-1) UNRELEASED; urgency=medium
+
+  * New upstream development release.
+  * debian/watch updated to track 1.9 branch.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 29 Dec 2013 15:39:12 +0100
+
 lightdm (1.8.5-3) unstable; urgency=low
 
   * debian/lightdm.postrm: warn if user/group deletion failed.  closes: #731220
