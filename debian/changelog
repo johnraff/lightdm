@@ -1,10 +1,10 @@
-lightdm (1.8.5-3) UNRELEASED; urgency=low
+lightdm (1.8.5-3) unstable; urgency=low
 
   * debian/lightdm.postrm: warn if user/group deletion failed.  closes: #731220
   * debian/control:
     - update standards version to 3.9.5.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 04 Dec 2013 11:15:36 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 29 Dec 2013 14:55:54 +0100
 
 lightdm (1.8.5-2) unstable; urgency=medium
 
