@@ -1,0 +1,53 @@
+--- a/src/session.c	2013-10-30 21:41:46.000000000 +0100
++++ b/src/session.c	2013-11-28 19:59:37.218510065 +0100
+@@ -766,8 +766,8 @@
+ 
+     if (login1_is_running ())
+         session->priv->login1_session = read_string_from_child (session);
+-    if (!session->priv->login1_session)
+-        session->priv->console_kit_cookie = read_string_from_child (session);
++
++    session->priv->console_kit_cookie = read_string_from_child (session);
+ }
+ 
+ void
+@@ -778,7 +778,7 @@
+     {
+         if (session->priv->login1_session)
+             login1_lock_session (session->priv->login1_session);
+-        else if (session->priv->console_kit_cookie)
++        if (session->priv->console_kit_cookie)
+             ck_lock_session (session->priv->console_kit_cookie);
+     }
+ }
+@@ -791,7 +791,7 @@
+     {
+         if (session->priv->login1_session)
+             login1_unlock_session (session->priv->login1_session);
+-        else if (session->priv->console_kit_cookie)
++        if (session->priv->console_kit_cookie)
+             ck_unlock_session (session->priv->console_kit_cookie);
+     }
+ }
+--- a/src/session-child.c	2013-11-28 20:24:07.000000000 +0100
++++ b/src/session-child.c	2013-11-28 20:01:55.738515458 +0100
+@@ -476,8 +476,8 @@
+         write_string (login1_session);
+     }
+ 
+-    if (!login1_session)
+-    {
++
++
+         /* Open a Console Kit session */
+         g_variant_builder_init (&ck_parameters, G_VARIANT_TYPE ("(a(sv))"));
+         g_variant_builder_open (&ck_parameters, G_VARIANT_TYPE ("a(sv)"));
+@@ -506,7 +506,7 @@
+             pam_putenv (pam_handle, value);
+             g_free (value);
+         }
+-    }
++
+ 
+     /* Write X authority */
+     if (x_authority)

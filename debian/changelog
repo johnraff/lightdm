@@ -1,18 +1,76 @@
-lightdm (1.7.9-1) UNRELEASED; urgency=low
+lightdm (1.8.5-3) unstable; urgency=low
+
+  * debian/lightdm.postrm: warn if user/group deletion failed.  closes: #731220
+  * debian/control:
+    - update standards version to 3.9.5.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 29 Dec 2013 14:55:54 +0100
+
+lightdm (1.8.5-2) unstable; urgency=medium
+
+  * debian/patches:
+    - 06_allow_libpamsystemd_and_ck_together added. Create a ConsoleKit
+      session, even if a logind session already exists. That makes transition
+      from ConsoleKit to systemd/logind somehow easier, but means some events
+      might happen twice.                                       closes: #728361
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 02 Dec 2013 21:15:54 +0100
+
+lightdm (1.8.5-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+  * debian/patches:
+    - 02_default-config removed, replaced by a config snippet.
+  * debian/01_debian.conf:
+    - add config snippet for Debian specific config
+  * debian/lightdm.install:
+    - install 01_debian.conf to /usr/share/lightdm/lightdm.conf.d/
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 07 Nov 2013 10:20:11 +0100
+
+lightdm (1.8.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules:
+    - enable all hardening flags.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 31 Oct 2013 09:31:16 +0100
+
+lightdm (1.8.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches:
+    - 01_set-default-path, 02_default-config, 05_debianize-pam-files
+      refreshed.
+    - 03_quit-plymouth disabled for now, to check if problem is really fixed
+      upstream.
+  * debian/control:
+    - rename liblightdm-qt-2-0 to liblightdm-qt-3-0 to match updated soname.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 20 Oct 2013 20:45:55 +0200
+
+lightdm (1.6.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 09 Oct 2013 21:22:43 +0200
+
+lightdm (1.6.2-1) unstable; urgency=low
 
   [ Yves-Alexis Perez ]
   * debian/po:
     - update pl.po, thanks Michał Kułach.                       closes: #711378
+  * New upstream release.
+    - fix wrong permissions on .Xauthority file and don't pollute homedir with
+      temporary files.                                          closes: #721744
+  * debian/watch updated to track 1.6 branch.
+  * debian/control:
+    - update standards version to 3.9.4.
 
   [ Evgeni Golov ]
   * Correct Vcs-* URLs to point to anonscm.debian.org
 
-  [ Jackson Doak ]
-  * New upstream release
-  * debian/patches/:
-    * drop 03_quit-plymouth.patch, fixed in upstream
-
- -- Jackson Doak <noskcaj@ubuntu.com>  Sat, 24 Aug 2013 19:41:01 +1000
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 11 Sep 2013 07:41:13 +0200
 
 lightdm (1.6.0-3) unstable; urgency=low
 

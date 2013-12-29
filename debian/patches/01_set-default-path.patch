@@ -2,11 +2,9 @@ Author: Yves-Alexis Perez <corsac@debian.org>
 Author: Lionel Le Folgoc <mrpouit@gmail.com>
 Bug: https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/798277
 Description: Fix default PATH environment variable
-Index: lightdm/src/seat.c
-===================================================================
---- lightdm.orig/src/seat.c	2013-08-24 19:45:09.358830075 +1000
-+++ lightdm/src/seat.c	2013-08-24 19:45:09.354830059 +1000
-@@ -241,7 +241,10 @@
+--- a/src/seat.c
++++ b/src/seat.c
+@@ -267,7 +267,10 @@ run_script (Seat *seat, DisplayServer *d
          process_set_env (script, "PATH", g_getenv ("PATH"));
      }
      else
@@ -18,11 +16,9 @@ Index: lightdm/src/seat.c
  
      if (user)
      {
-Index: lightdm/src/session-child.c
-===================================================================
---- lightdm.orig/src/session-child.c	2013-08-24 19:45:09.358830075 +1000
-+++ lightdm/src/session-child.c	2013-08-24 19:45:09.354830059 +1000
-@@ -355,7 +355,10 @@
+--- a/src/session-child.c
++++ b/src/session-child.c
+@@ -355,7 +355,10 @@ session_child_run (int argc, char **argv
          else
          {
              /* Set POSIX variables */
