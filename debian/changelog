@@ -1,10 +1,11 @@
-lightdm (1.8.5-4) UNRELEASED; urgency=medium
+lightdm (1.8.6-1) UNRELEASED; urgency=medium
 
+  * New upstream release.
   * debian/patches:
     - 02_fix-apparmor-profile added: remove inclusion of an AppArmor
       abstraction not available in Debian.                      closes: #736075
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sun, 19 Jan 2014 16:55:32 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 22 Jan 2014 08:02:54 +0100
 
 lightdm (1.8.5-3) unstable; urgency=low
 
