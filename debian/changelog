@@ -1,10 +1,10 @@
-lightdm (1.8.7-1) UNRELEASED; urgency=medium
+lightdm (1.8.7-1) unstable; urgency=medium
 
   * New upstream release.
   * debian/patches:
     - 03_fix-pam_chauthtok-call dropped, included upstream.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Thu, 06 Feb 2014 21:25:10 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 06 Feb 2014 21:41:24 +0100
 
 lightdm (1.8.6-2) unstable; urgency=medium
 
