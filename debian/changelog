@@ -1,12 +1,12 @@
-lightdm (1.9.9-1) UNRELEASED; urgency=medium
+lightdm (1.9.9-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream development release.
   * debian/liblightdm-gobject-1-0.symbols, debian/liblightdm-qt-3-0.symbols:
     - add a symbol file to handle library dependencies more carefully.
   * debian/patches:
     - 02_fix-build-glib-before-2.40 added, fix FTBFS with glib before 2.40.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 12 Mar 2014 09:56:47 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 12 Mar 2014 11:00:42 +0100
 
 lightdm (1.9.8-1) experimental; urgency=medium
 
