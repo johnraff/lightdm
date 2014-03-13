@@ -1,8 +1,8 @@
-lightdm (1.8.8-1) UNRELEASED; urgency=medium
+lightdm (1.8.8-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Thu, 13 Mar 2014 09:10:04 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 13 Mar 2014 09:35:36 +0100
 
 lightdm (1.8.7-1) unstable; urgency=medium
 
