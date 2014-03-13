@@ -3,7 +3,7 @@ lightdm (1.9.11-1) UNRELEASED; urgency=medium
   * New upstream development release.
   * debian/watch updated to track versions over 10.
   * debian/patches:
-    - 02_fix-build-glib-before-2.40 removed, included yupstream.
+    - 02_fix-build-glib-before-2.40 removed, included upstream.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Thu, 13 Mar 2014 09:08:03 +0100
 
