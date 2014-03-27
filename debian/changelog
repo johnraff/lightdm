@@ -1,8 +1,8 @@
-lightdm (1.9.13-1) UNRELEASED; urgency=medium
+lightdm (1.9.13-1) experimental; urgency=medium
 
   * New upstream development release.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Tue, 25 Mar 2014 08:57:30 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 25 Mar 2014 22:04:52 +0100
 
 lightdm (1.9.11-1) experimental; urgency=medium
 
