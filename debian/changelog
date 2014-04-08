@@ -1,9 +1,9 @@
-lightdm (1.10.0-1) UNRELEASED; urgency=medium
+lightdm (1.10.0-1) experimental; urgency=medium
 
   * New upstream stable release.
   * debian/watch updated to track 1.10 branch.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Tue, 08 Apr 2014 07:48:55 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 08 Apr 2014 22:54:47 +0200
 
 lightdm (1.9.13-1) experimental; urgency=medium
 
