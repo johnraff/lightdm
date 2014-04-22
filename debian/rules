@@ -1,12 +1,13 @@
 #!/usr/bin/make -f
 
+include /usr/share/dpkg/pkg-info.mk
+include /usr/share/dpkg/architecture.mk
+
 export DEB_LDFLAGS_MAINT_APPEND=-Wl,--as-needed -Wl,-O1
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
-DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
-
 override_dh_auto_configure:
-	dh_auto_configure -- --with-greeter-user=lightdm --with-user-session=lightdm-xsession --enable-introspection=yes --disable-silent-rules
+	dh_auto_configure -- --with-greeter-user=lightdm --with-user-session=lightdm-xsession --enable-introspection=yes --disable-silent-rules --libexecdir=/usr/lib/$(DEB_HOST_MULTIARCH)/$(DEB_SOURCE)/
 
 override_dh_installchangelogs:
 	dh_installchangelogs -- NEWS
@@ -16,7 +17,6 @@ override_dh_installinit:
 
 override_dh_install:
 	find debian/tmp -name '*.la' -delete
-	find debian/tmp/usr/lib/ -name gdmflexiserver -delete
 	find debian/tmp/etc/apparmor.d -type f -exec chmod 0644 '{}' \;
 	dh_install --fail-missing -X etc/init/lightdm.conf
 

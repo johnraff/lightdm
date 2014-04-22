@@ -1,3 +1,65 @@
+lightdm (1.10.0-1) experimental; urgency=medium
+
+  * New upstream stable release.
+  * debian/watch updated to track 1.10 branch.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 08 Apr 2014 22:54:47 +0200
+
+lightdm (1.9.13-1) experimental; urgency=medium
+
+  * New upstream development release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 25 Mar 2014 22:04:52 +0100
+
+lightdm (1.9.11-1) experimental; urgency=medium
+
+  * New upstream development release.
+  * debian/watch updated to track versions over 10.
+  * debian/patches:
+    - 02_fix-build-glib-before-2.40 removed, included upstream.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 13 Mar 2014 09:19:21 +0100
+
+lightdm (1.9.9-1) experimental; urgency=medium
+
+  * New upstream development release.
+  * debian/liblightdm-gobject-1-0.symbols, debian/liblightdm-qt-3-0.symbols:
+    - add a symbol file to handle library dependencies more carefully.
+  * debian/patches:
+    - 02_fix-build-glib-before-2.40 added, fix FTBFS with glib before 2.40.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 12 Mar 2014 11:00:42 +0100
+
+lightdm (1.9.8-1) experimental; urgency=medium
+
+  * New upstream development release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 21 Feb 2014 22:05:10 +0100
+
+lightdm (1.9.6-1) experimental; urgency=medium
+
+  * New upstream development release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 22 Jan 2014 21:18:16 +0100
+
+lightdm (1.9.5-1) experimental; urgency=medium
+
+  * New upstream development release.
+  * debian/watch updated to track 1.9 branch.
+  * debian/patches:
+    - 04_dont-add-pkglibexecdir-path dropped, gdm-flexiserver script has been
+      dropped from LightDM so the PATH addition was dropped as well.
+    - 01_set-default-path and 06_allow_libpamsystemd_and_ck_together
+      refreshed.
+  * debian/rules:
+    - stop removing gdmflexiserver since it doesn't exist anymore.
+    - configure libexecdir to be /u/l/*/lightdm.
+  * debian/lightdm.install:
+    - drop install of lightdm-set-defaults.
+    - rename lightdm-guest-session-wrapper to lightdm-guest-session.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 29 Dec 2013 22:28:33 +0100
+
 lightdm (1.8.8-1) unstable; urgency=medium
 
   * New upstream release.
