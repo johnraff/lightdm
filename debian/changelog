@@ -1,3 +1,18 @@
+lightdm (1.10.0-3) UNRELEASED; urgency=medium
+
+  * debian/control:
+    - add build-dep on dh-systemd.
+  * debian/lightdm.postinst:
+    - handle symlinks for systemd service files according to the currently
+      selected display manager.
+  * debian/lightdm.service:
+    - add systemd service file, thanks Martin Pitt for the work.closes: #733220
+  * debian/rules:
+    - use dh systemd addon and configure it to not start the lightdm service
+      at once.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 27 Apr 2014 00:09:13 +0200
+
 lightdm (1.10.0-2) unstable; urgency=medium
 
   * Upload to unstable.
