@@ -8,3 +8,19 @@
    #include <abstractions/nameservice>
    #include <abstractions/wutmp>
    /etc/compizconfig/config rw, # bug in compiz https://launchpad.net/bugs/697678
+@@ -74,10 +73,11 @@
+   capability ipc_lock,
+ 
+   # allow processes in the guest session to signal and ptrace each other
+-  signal peer=@{profile_name},
+-  ptrace peer=@{profile_name},
+-  # needed when logging out of the guest session
+-  signal (receive) peer=unconfined,
++  # this doesn't work with the current Debian apparmor
++  #signal peer=@{profile_name},
++  #ptrace peer=@{profile_name},
++  ## needed when logging out of the guest session
++  #signal (receive) peer=unconfined,
+ 
+   # silence warnings for stuff that we really don't want to grant
+   deny capability dac_override,
