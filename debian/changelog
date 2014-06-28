@@ -1,3 +1,11 @@
+lightdm (1.10.1-4) UNRELEASED; urgency=medium
+
+  * debian/lightdm.service:
+    - add an [Install] section so systemctl can toggle the service.
+                                                                closes: #752932
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 28 Jun 2014 10:40:07 +0200
+
 lightdm (1.10.1-3) unstable; urgency=medium
 
   * debian/rules:
