@@ -1,8 +1,5 @@
 lightdm (1.10.1-4) UNRELEASED; urgency=medium
 
-  * debian/lightdm.service:
-    - add an [Install] section so systemctl can toggle the service.
-                                                                closes: #752932
   * debian/patches:
     - 06_allow_libpamsystemd_and_ck_together dropped, ConsoleKit is now
       deprecated (wether we're using init=systemd or not).
