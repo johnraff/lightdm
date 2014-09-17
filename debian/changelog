@@ -1,4 +1,4 @@
-lightdm (1.10.2-1) UNRELEASED; urgency=medium
+lightdm (1.10.2-1) unstable; urgency=medium
 
   * debian/patches:
     - 06_allow_libpamsystemd_and_ck_together dropped, ConsoleKit is now
@@ -7,7 +7,7 @@ lightdm (1.10.2-1) UNRELEASED; urgency=medium
   * debian/liblightdm-gobject-1-0.symbols:
     - update symbol file, add lightdm_user_get_uid.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 17 Sep 2014 08:03:18 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 17 Sep 2014 21:48:07 +0200
 
 lightdm (1.10.1-3) unstable; urgency=medium
 
