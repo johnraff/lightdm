@@ -20,7 +20,7 @@ Package: lightdm
 Section: x11
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, 
- lightdm-gtk-greeter | lightdm-greeter, dbus, consolekit | libpam-systemd [linux-any], adduser
+ lightdm-gtk-greeter | lightdm-greeter, dbus, libpam-systemd [linux-any] |consolekit, adduser
 Recommends: xserver-xorg
 Suggests: accountsservice, upower
 Provides: x-display-manager

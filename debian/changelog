@@ -3,6 +3,8 @@ lightdm (1.10.2-2) UNRELEASED; urgency=medium
   * debian/patches:
     - 05_debianize-pam-files edited, don't log an error if
     libpam-gnome-keyring is not installed.                      closes: #683508
+  * debian/control:
+    - put lipam-systemd before consolekit in alternative.       closes: #763187
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sun, 28 Sep 2014 21:48:53 +0200
 
