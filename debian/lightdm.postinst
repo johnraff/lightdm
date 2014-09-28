@@ -21,10 +21,9 @@ if ! getent passwd lightdm >/dev/null; then
         usermod -s "/bin/false"            lightdm
 fi
 
-if [ -d /var/lib/lightdm ]; then
-  chown -R lightdm:lightdm /var/lib/lightdm
-  chmod 0750 /var/lib/lightdm
-fi
+mkdir -p /var/lib/lightdm
+chown -R lightdm:lightdm /var/lib/lightdm
+chmod 0750 /var/lib/lightdm
 
 # debconf is not a registry, so we only fiddle with the default file if it
 # does not exist
