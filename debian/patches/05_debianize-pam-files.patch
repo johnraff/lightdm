@@ -17,7 +17,7 @@
  
 -# Check account is active, change password if required
 -account   required pam_unix.so
-+auth  optional pam_gnome_keyring.so
++-auth  optional pam_gnome_keyring.so
  
 -# Allow password to be changed
 -password  required pam_unix.so
@@ -44,7 +44,7 @@
 +# When the module is present, "required" would be sufficient (When SELinux
 +# is disabled, this returns success.)
 +
-+session optional        pam_gnome_keyring.so auto_start
++-session optional        pam_gnome_keyring.so auto_start
 +
 +@include common-password
 --- a/data/pam/lightdm-greeter
