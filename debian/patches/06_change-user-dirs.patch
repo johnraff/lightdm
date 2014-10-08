@@ -1,0 +1,22 @@
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -78,7 +78,7 @@ lightdm_CFLAGS = \
+ 	$(LIGHTDM_CFLAGS) \
+ 	-I"$(top_srcdir)/common" \
+ 	-DSBIN_DIR=\"$(sbindir)\" \
+-	-DUSERS_DIR=\"$(localstatedir)/lib/lightdm-data\" \
++	-DUSERS_DIR=\"$(localstatedir)/lib/lightdm\" \
+ 	-DLOG_DIR=\"$(localstatedir)/log/lightdm\" \
+ 	-DRUN_DIR=\"$(localstatedir)/run/lightdm\" \
+ 	-DCACHE_DIR=\"$(localstatedir)/cache/lightdm\" \
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -476,7 +476,7 @@ lightdm_CFLAGS = \
+ 	$(LIGHTDM_CFLAGS) \
+ 	-I"$(top_srcdir)/common" \
+ 	-DSBIN_DIR=\"$(sbindir)\" \
+-	-DUSERS_DIR=\"$(localstatedir)/lib/lightdm-data\" \
++	-DUSERS_DIR=\"$(localstatedir)/lib/lightdm\" \
+ 	-DLOG_DIR=\"$(localstatedir)/log/lightdm\" \
+ 	-DRUN_DIR=\"$(localstatedir)/run/lightdm\" \
+ 	-DCACHE_DIR=\"$(localstatedir)/cache/lightdm\" \

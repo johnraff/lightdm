@@ -2,3 +2,4 @@
 02_fix-apparmor-profile.patch
 04_fix-double-free-configuration-key-source.patch
 05_debianize-pam-files.patch
+06_change-user-dirs.patch
