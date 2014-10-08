@@ -1,0 +1,13 @@
+=== modified file 'common/configuration.c'
+--- lightdm/common/configuration.c	2014-09-07 23:28:20 +0000
++++ lightdm/common/configuration.c	2014-10-08 19:52:42 +0000
+@@ -311,7 +311,7 @@
+ {
+     config->priv = G_TYPE_INSTANCE_GET_PRIVATE (config, CONFIGURATION_TYPE, ConfigurationPrivate);
+     config->priv->key_file = g_key_file_new ();
+-    config->priv->key_sources = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
++    config->priv->key_sources = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
+ }
+ 
+ static void
+
