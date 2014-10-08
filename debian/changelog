@@ -3,6 +3,8 @@ lightdm (1.10.2-3) UNRELEASED; urgency=medium
   * debian/patches:
     - 04_fix-double-free-configuration-key-source added, fix crash when
       key sources are defined twice in config files.            closes: #762211
+  * debian/control:
+    - update standards version to 3.9.6.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Wed, 08 Oct 2014 22:09:00 +0200
 
