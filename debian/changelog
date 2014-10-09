@@ -1,4 +1,4 @@
-lightdm (1.10.3-1) UNRELEASED; urgency=medium
+lightdm (1.10.3-1) unstable; urgency=medium
 
   * New upstream release.
   * debian/patches:
@@ -7,7 +7,7 @@ lightdm (1.10.3-1) UNRELEASED; urgency=medium
     (0x18EAA1890F7C882E).
   * debian/watch updated, add mangle option to check PGP signatures.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Thu, 09 Oct 2014 11:04:30 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 09 Oct 2014 13:01:51 +0200
 
 lightdm (1.10.2-3) unstable; urgency=medium
 
