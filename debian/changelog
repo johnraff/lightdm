@@ -1,6 +1,8 @@
 lightdm (1.10.3-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * debian/patches:
+    - 04_fix-double-free-configuration-key-source dropped, included upstream.
   * debian/upstream/signing-key.pgp added, add PGP key for Robert Ancell
     (0x18EAA1890F7C882E).
   * debian/watch updated, add mangle option to check PGP signatures.
