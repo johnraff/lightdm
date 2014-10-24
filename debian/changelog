@@ -1,3 +1,12 @@
+lightdm (1.10.3-2) UNRELEASED; urgency=medium
+
+  * debian/patches:
+    - 03_use-desktopnames-properties added, from upstream bzr r1984, use
+    DesktopNames property in session .desktop file instead of
+    X-LightDM-DesktopName since GDM uses that key too.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 18 Oct 2014 15:29:32 +0200
+
 lightdm (1.10.3-1) unstable; urgency=medium
 
   * New upstream release.
