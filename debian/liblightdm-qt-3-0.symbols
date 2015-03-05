@@ -48,6 +48,8 @@ liblightdm-qt-3.so.0 liblightdm-qt-3-0 #MINVER#
  _ZN8QLightDM14GreeterPrivate14cb_showMessageEP14LightDMGreeterPKc18LightDMMessageTypePv@Base 1.8.7
  _ZN8QLightDM14GreeterPrivate19cb_autoLoginExpiredEP14LightDMGreeterPv@Base 1.8.7
  _ZN8QLightDM14GreeterPrivate25cb_authenticationCompleteEP14LightDMGreeterPv@Base 1.8.7
+ _ZN8QLightDM14GreeterPrivate7cb_idleEP14LightDMGreeterPv@Base 1.12.2
+ _ZN8QLightDM14GreeterPrivate8cb_resetEP14LightDMGreeterPv@Base 1.12.2
  _ZN8QLightDM14GreeterPrivateC1EPNS_7GreeterE@Base 1.8.7
  _ZN8QLightDM14GreeterPrivateC2EPNS_7GreeterE@Base 1.8.7
  _ZN8QLightDM14PowerInterface10canRestartEv@Base 1.8.7
@@ -84,15 +86,19 @@ liblightdm-qt-3.so.0 liblightdm-qt-3-0 #MINVER#
  _ZN8QLightDM7Greeter11setLanguageERK7QString@Base 1.8.7
  _ZN8QLightDM7Greeter11showMessageE7QStringNS0_11MessageTypeE@Base 1.8.7
  _ZN8QLightDM7Greeter12authenticateERK7QString@Base 1.8.7
+ _ZN8QLightDM7Greeter13setResettableEb@Base 1.12.2
  _ZN8QLightDM7Greeter16startSessionSyncERK7QString@Base 1.8.7
  _ZN8QLightDM7Greeter16staticMetaObjectE@Base 1.8.7
  _ZN8QLightDM7Greeter18authenticateRemoteERK7QStringS3_@Base 1.8.7
  _ZN8QLightDM7Greeter19authenticateAsGuestEv@Base 1.8.7
+ _ZN8QLightDM7Greeter19connectToDaemonSyncEv@Base 1.12.2
  _ZN8QLightDM7Greeter20cancelAuthenticationEv@Base 1.8.7
  _ZN8QLightDM7Greeter21authenticateAutologinEv@Base 1.8.7
  _ZN8QLightDM7Greeter21autologinTimerExpiredEv@Base 1.8.7
  _ZN8QLightDM7Greeter22authenticationCompleteEv@Base 1.8.7
  _ZN8QLightDM7Greeter23ensureSharedDataDirSyncERK7QString@Base 1.9.8
+ _ZN8QLightDM7Greeter4idleEv@Base 1.12.2
+ _ZN8QLightDM7Greeter5resetEv@Base 1.12.2
  _ZN8QLightDM7Greeter7respondERK7QString@Base 1.8.7
  _ZN8QLightDM7GreeterC1EP7QObject@Base 1.8.7
  _ZN8QLightDM7GreeterC2EP7QObject@Base 1.8.7

@@ -5,6 +5,7 @@ lightdm (1.12.2-1) UNRELEASED; urgency=medium
     - 01_set-default-path and 06_change-user-dirs refreshed for new release.
     - 03_use-desktopnames-properties dropped, included upstream.
   * debian/liblightdm-gobject-1-0.symbols updated for new symbols.
+  * debian/liblightdm-qt-3-0.symbols updated for new symbols.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Thu, 05 Mar 2015 21:10:01 +0100
 
