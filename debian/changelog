@@ -1,3 +1,12 @@
+lightdm (1.12.2-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+  * debian/patches:
+    - 01_set-default-path and 06_change-user-dirs refreshed for new release.
+    - 03_use-desktopnames-properties dropped, included upstream.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 05 Mar 2015 21:10:01 +0100
+
 lightdm (1.10.3-3) unstable; urgency=medium
 
   * debian/patches:

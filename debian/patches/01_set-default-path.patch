@@ -4,7 +4,7 @@ Bug: https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/798277
 Description: Fix default PATH environment variable
 --- a/src/seat.c
 +++ b/src/seat.c
-@@ -274,7 +274,10 @@ run_script (Seat *seat, DisplayServer *d
+@@ -306,7 +306,10 @@ run_script (Seat *seat, DisplayServer *d
          process_set_env (script, "PATH", g_getenv ("PATH"));
      }
      else
@@ -18,7 +18,7 @@ Description: Fix default PATH environment variable
      {
 --- a/src/session-child.c
 +++ b/src/session-child.c
-@@ -354,7 +354,10 @@ session_child_run (int argc, char **argv
+@@ -410,7 +410,10 @@ session_child_run (int argc, char **argv
          else
          {
              /* Set POSIX variables */

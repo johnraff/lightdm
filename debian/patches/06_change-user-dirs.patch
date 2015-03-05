@@ -1,6 +1,6 @@
 --- a/src/Makefile.am
 +++ b/src/Makefile.am
-@@ -78,7 +78,7 @@ lightdm_CFLAGS = \
+@@ -74,7 +74,7 @@ lightdm_CFLAGS = \
  	$(LIGHTDM_CFLAGS) \
  	-I"$(top_srcdir)/common" \
  	-DSBIN_DIR=\"$(sbindir)\" \
@@ -11,7 +11,7 @@
  	-DCACHE_DIR=\"$(localstatedir)/cache/lightdm\" \
 --- a/src/Makefile.in
 +++ b/src/Makefile.in
-@@ -476,7 +476,7 @@ lightdm_CFLAGS = \
+@@ -470,7 +470,7 @@ lightdm_CFLAGS = \
  	$(LIGHTDM_CFLAGS) \
  	-I"$(top_srcdir)/common" \
  	-DSBIN_DIR=\"$(sbindir)\" \
