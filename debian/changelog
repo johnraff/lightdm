@@ -1,4 +1,4 @@
-lightdm (1.12.2-1) UNRELEASED; urgency=medium
+lightdm (1.12.2-1) experimental; urgency=medium
 
   * New upstream release.
   * debian/patches:
@@ -7,7 +7,7 @@ lightdm (1.12.2-1) UNRELEASED; urgency=medium
   * debian/liblightdm-gobject-1-0.symbols updated for new symbols.
   * debian/liblightdm-qt-3-0.symbols updated for new symbols.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Thu, 05 Mar 2015 21:10:01 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 08 Mar 2015 22:06:41 +0100
 
 lightdm (1.10.3-3) unstable; urgency=medium
 
