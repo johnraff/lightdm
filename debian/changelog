@@ -1,11 +1,11 @@
-lightdm (1.12.3-1) UNRELEASED; urgency=medium
+lightdm (1.12.3-1) experimental; urgency=medium
 
   * New upstream release.
   * debian/patches:
     - 02_fix-apparmor-profile edited, dropped parts unneeded anymore with more
       recent AppArmor.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Tue, 10 Mar 2015 13:36:11 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 13 Mar 2015 22:36:14 +0100
 
 lightdm (1.12.2-1) experimental; urgency=medium
 
