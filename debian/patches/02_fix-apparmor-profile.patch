@@ -16,3 +16,22 @@
      /usr/lib/chromium-browser/chromium-browser-sandbox ix,
      /usr/lib/@{multiarch}/oxide-qt/chrome-sandbox ix,
      /opt/google/chrome-*/chrome-sandbox ix,
+--- a/data/apparmor/abstractions/lightdm
++++ b/data/apparmor/abstractions/lightdm
+@@ -27,7 +27,7 @@
+   owner /dev/shm/** rmw,
+   /etc/ r,
+   /etc/** rmk,
+-  /etc/gdm/Xsession ix,
++  /etc/X11/Xsession ix,
+   /lib/ r,
+   /lib/** rmixk,
+   /lib32/ r,
+@@ -68,6 +68,7 @@
+   # necessary for writing to sockets, etc.
+   /{,var/}run/** rmkix,
+   /{,var/}run/shm/** wl,
++  /{,var/}run/uuid/request w,
+   # libpam-xdg-support/logind
+   owner /{,var/}run/user/*/** rw,
+ 
