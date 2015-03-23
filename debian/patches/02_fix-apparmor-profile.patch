@@ -1,14 +1,14 @@
 --- a/data/apparmor/abstractions/lightdm_chromium-browser
 +++ b/data/apparmor/abstractions/lightdm_chromium-browser
-@@ -8,6 +8,7 @@
- # provided in abstractions/lightdm, this abstraction must be separate from
- # abstractions/lightdm.
+@@ -10,6 +10,7 @@
+ 
+ # Requires apparmor 2.9
  
 +  /usr/lib/chromium/chromium Cx -> chromium,
    /usr/lib/chromium-browser/chromium-browser Cx -> chromium,
    /usr/bin/webapp-container Cx -> chromium,
    /usr/bin/webbrowser-app Cx -> chromium,
-@@ -53,6 +54,7 @@
+@@ -64,6 +65,7 @@
  
      /selinux/ r,
  
@@ -18,7 +18,7 @@
      /opt/google/chrome-*/chrome-sandbox ix,
 --- a/data/apparmor/abstractions/lightdm
 +++ b/data/apparmor/abstractions/lightdm
-@@ -27,7 +27,7 @@
+@@ -32,7 +32,7 @@
    owner /dev/shm/** rmw,
    /etc/ r,
    /etc/** rmk,
@@ -27,11 +27,3 @@
    /lib/ r,
    /lib/** rmixk,
    /lib32/ r,
-@@ -68,6 +68,7 @@
-   # necessary for writing to sockets, etc.
-   /{,var/}run/** rmkix,
-   /{,var/}run/shm/** wl,
-+  /{,var/}run/uuid/request w,
-   # libpam-xdg-support/logind
-   owner /{,var/}run/user/*/** rw,
- 
