@@ -7,6 +7,7 @@ lightdm (1.14.0-1) UNRELEASED; urgency=medium
   * New upstream release.
   * debian/lightdm.install:
     - install bash completion files.
+  * debian/liblightdm-qt-3-0.symbols updated for new release.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Mon, 23 Mar 2015 23:13:38 +0100
 

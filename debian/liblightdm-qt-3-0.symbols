@@ -87,6 +87,7 @@ liblightdm-qt-3.so.0 liblightdm-qt-3-0 #MINVER#
  _ZN8QLightDM7Greeter11showMessageE7QStringNS0_11MessageTypeE@Base 1.8.7
  _ZN8QLightDM7Greeter12authenticateERK7QString@Base 1.8.7
  _ZN8QLightDM7Greeter13setResettableEb@Base 1.12.2
+ _ZN8QLightDM7Greeter15cancelAutologinEv@Base 1.14.0
  _ZN8QLightDM7Greeter16startSessionSyncERK7QString@Base 1.8.7
  _ZN8QLightDM7Greeter16staticMetaObjectE@Base 1.8.7
  _ZN8QLightDM7Greeter18authenticateRemoteERK7QStringS3_@Base 1.8.7
