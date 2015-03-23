@@ -1,11 +1,12 @@
-lightdm (1.12.3-2) UNRELEASED; urgency=medium
+lightdm (1.14.0-1) UNRELEASED; urgency=medium
 
   * debian/patches:
     - 02_fix-apparmor-profile updated, following information from Mathieu
       Parent.                                                   closes: #780456
   * debian/watch updated to follow 1.14 branch.
+  * New upstream release.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sat, 14 Mar 2015 17:09:36 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 23 Mar 2015 23:13:38 +0100
 
 lightdm (1.12.3-1) experimental; urgency=medium
 
