@@ -1,4 +1,4 @@
-lightdm (1.14.0-1) UNRELEASED; urgency=medium
+lightdm (1.14.0-1) unstable; urgency=medium
 
   * debian/patches:
     - 02_fix-apparmor-profile updated, following information from Mathieu
@@ -8,8 +8,9 @@ lightdm (1.14.0-1) UNRELEASED; urgency=medium
   * debian/lightdm.install:
     - install bash completion files.
   * debian/liblightdm-qt-3-0.symbols updated for new release.
+  * Upload to unstable.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Mon, 23 Mar 2015 23:13:38 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 06 May 2015 22:42:17 +0200
 
 lightdm (1.12.3-1) experimental; urgency=medium
 
