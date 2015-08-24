@@ -1,6 +1,4 @@
 liblightdm-qt-3.so.0 liblightdm-qt-3-0 #MINVER#
- _ZN10QByteArrayD1Ev@Base 1.8.7
- _ZN10QByteArrayD2Ev@Base 1.8.7
  _ZN10QDBusErrorD1Ev@Base 1.8.7
  _ZN10QDBusErrorD2Ev@Base 1.8.7
  _ZN10QDBusReplyI7QStringED1Ev@Base 1.8.7
@@ -13,19 +11,13 @@ liblightdm-qt-3.so.0 liblightdm-qt-3-0 #MINVER#
  _ZN5QHashIi10QByteArrayE11deleteNode2EPN9QHashData4NodeE@Base 1.8.7
  _ZN5QHashIi10QByteArrayE13detach_helperEv@Base 1.8.7
  _ZN5QHashIi10QByteArrayE13duplicateNodeEPN9QHashData4NodeEPv@Base 1.8.7
- _ZN5QHashIi10QByteArrayED1Ev@Base 1.8.7
- _ZN5QHashIi10QByteArrayED2Ev@Base 1.8.7
  _ZN5QListI11SessionItemE18detach_helper_growEii@Base 1.8.7
  _ZN5QListI11SessionItemE6appendERKS0_@Base 1.8.7
  _ZN5QListI8UserItemE13detach_helperEi@Base 1.8.7
  _ZN5QListI8UserItemE18detach_helper_growEii@Base 1.8.7
  _ZN5QListI8UserItemE6appendERKS0_@Base 1.8.7
- _ZN5QListI8UserItemED1Ev@Base 1.8.7
- _ZN5QListI8UserItemED2Ev@Base 1.8.7
  _ZN6QDebugD1Ev@Base 1.8.7
  _ZN6QDebugD2Ev@Base 1.8.7
- _ZN7QStringD1Ev@Base 1.8.7
- _ZN7QStringD2Ev@Base 1.8.7
  _ZN8QLightDM10UsersModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 1.8.7
  _ZN8QLightDM10UsersModel11qt_metacastEPKc@Base 1.8.7
  _ZN8QLightDM10UsersModel16staticMetaObjectE@Base 1.8.7
