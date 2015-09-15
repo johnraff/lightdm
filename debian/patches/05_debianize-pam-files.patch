@@ -1,6 +1,6 @@
 --- a/data/pam/lightdm
 +++ b/data/pam/lightdm
-@@ -1,20 +1,35 @@
+@@ -1,20 +1,36 @@
  #%PAM-1.0
  
  # Block login if they are globally disabled
@@ -9,7 +9,8 @@
  
  # Load environment from /etc/environment and ~/.pam_environment
 -auth      required pam_env.so
-+auth      required pam_env.so envfile=/etc/default/locale
++session      required pam_env.so readenv=1
++session      required pam_env.so readenv=1 envfile=/etc/default/locale
  
 -# Use /etc/passwd and /etc/shadow for passwords
 -auth      required pam_unix.so
@@ -49,18 +50,19 @@
 +@include common-password
 --- a/data/pam/lightdm-greeter
 +++ b/data/pam/lightdm-greeter
-@@ -1,7 +1,7 @@
+@@ -1,7 +1,8 @@
  #%PAM-1.0
  
  # Load environment from /etc/environment and ~/.pam_environment
 -auth      required pam_env.so
-+auth      required pam_env.so envfile=/etc/default/locale
++session      required pam_env.so readenv=1
++session      required pam_env.so readenv=1 envfile=/etc/default/locale
  
  # Always let the greeter start without authentication
  auth      required pam_permit.so
 --- a/data/pam/lightdm-autologin
 +++ b/data/pam/lightdm-autologin
-@@ -1,20 +1,35 @@
+@@ -1,20 +1,36 @@
  #%PAM-1.0
  
  # Block login if they are globally disabled
@@ -69,7 +71,8 @@
  
  # Load environment from /etc/environment and ~/.pam_environment
 -auth      required pam_env.so
-+auth      required pam_env.so envfile=/etc/default/locale
++session      required pam_env.so readenv=1
++session      required pam_env.so readenv=1 envfile=/etc/default/locale
  
  # Allow access without authentication
  auth      required pam_permit.so
