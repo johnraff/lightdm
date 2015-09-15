@@ -56,6 +56,8 @@ liblightdm-gobject-1.so.0 liblightdm-gobject-1-0 #MINVER#
  lightdm_layout_get_name@Base 1.2.2
  lightdm_layout_get_short_description@Base 1.2.2
  lightdm_layout_get_type@Base 1.2.2
+ lightdm_message_type_get_type@Base 1.16.0
+ lightdm_prompt_type_get_type@Base 1.16.0
  lightdm_restart@Base 1.2.2
  lightdm_session_get_comment@Base 1.2.2
  lightdm_session_get_key@Base 1.2.2

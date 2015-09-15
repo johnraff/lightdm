@@ -5,6 +5,7 @@ lightdm (1.16.0-1) UNRELEASED; urgency=medium
       load /etc/environment.                                    closes: #798967
   * debian/watch updated to track 1.16 branch.
   * New upstream release.
+  * debian/liblightdm-gobject-1-0.symbols updated for new release.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Tue, 15 Sep 2015 20:52:10 +0200
 
