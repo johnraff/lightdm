@@ -3,6 +3,7 @@ lightdm (1.14.2-3) UNRELEASED; urgency=medium
   * debian/patches:
     - 05_debianize-pam-files updated, fix pam_env configuration and correctly
       load /etc/environment.                                    closes: #798967
+  * debian/watch updated to track 1.16 branch.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Tue, 15 Sep 2015 20:49:49 +0200
 
