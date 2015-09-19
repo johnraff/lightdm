@@ -6,6 +6,8 @@ lightdm (1.16.2-1) UNRELEASED; urgency=medium
   * debian/watch updated to track 1.16 branch.
   * New upstream release.
   * debian/liblightdm-gobject-1-0.symbols updated for new release.
+  * debian/control:
+    - add build-dep on libaudit-dev for audit support.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sat, 19 Sep 2015 11:06:41 +0200
 
