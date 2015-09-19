@@ -1,4 +1,4 @@
-lightdm (1.16.0-1) UNRELEASED; urgency=medium
+lightdm (1.16.2-1) UNRELEASED; urgency=medium
 
   * debian/patches:
     - 05_debianize-pam-files updated, fix pam_env configuration and correctly
@@ -7,7 +7,7 @@ lightdm (1.16.0-1) UNRELEASED; urgency=medium
   * New upstream release.
   * debian/liblightdm-gobject-1-0.symbols updated for new release.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Tue, 15 Sep 2015 20:52:10 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 19 Sep 2015 11:06:41 +0200
 
 lightdm (1.14.2-2) unstable; urgency=medium
 
