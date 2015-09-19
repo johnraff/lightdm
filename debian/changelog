@@ -1,4 +1,4 @@
-lightdm (1.16.2-1) UNRELEASED; urgency=medium
+lightdm (1.16.2-1) unstable; urgency=medium
 
   * debian/patches:
     - 05_debianize-pam-files updated, fix pam_env configuration and correctly
@@ -9,7 +9,7 @@ lightdm (1.16.2-1) UNRELEASED; urgency=medium
   * debian/control:
     - add build-dep on libaudit-dev for audit support.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sat, 19 Sep 2015 11:06:41 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 19 Sep 2015 15:08:51 +0200
 
 lightdm (1.14.2-2) unstable; urgency=medium
 
