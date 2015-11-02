@@ -1,3 +1,9 @@
+lightdm (1.16.4-1) UNRELEASED; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 02 Nov 2015 09:30:10 +0100
+
 lightdm (1.16.3-1) unstable; urgency=medium
 
   * New upstream bugfix release.
