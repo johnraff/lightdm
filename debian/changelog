@@ -1,10 +1,10 @@
-lightdm (1.16.6-1) UNRELEASED; urgency=medium
+lightdm (1.16.6-1) unstable; urgency=medium
 
   * New upstream bugfix release.
     - fix crash when XDMCP is enabled and a packet with no address is received
     (CVE-2015-8316)
 
- -- Yves-Alexis Perez <corsac@debian.org>  Fri, 20 Nov 2015 08:56:28 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 24 Nov 2015 21:03:33 +0100
 
 lightdm (1.16.5-1) unstable; urgency=medium
 
