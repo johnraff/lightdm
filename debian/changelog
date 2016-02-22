@@ -1,6 +1,8 @@
 lightdm (1.16.7-1) UNRELEASED; urgency=medium
 
   * New upstream bugfix release.
+  * debian/control: make libaudit-dev build-dep linux-only, fix FTBFS on
+    !linux.                                                     closes: #815343
 
  -- Yves-Alexis Perez <corsac@debian.org>  Mon, 25 Jan 2016 13:08:56 +0100
 
