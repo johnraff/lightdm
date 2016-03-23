@@ -8,7 +8,7 @@
    /usr/lib/chromium-browser/chromium-browser Cx -> chromium,
    /usr/bin/webapp-container Cx -> chromium,
    /usr/bin/webbrowser-app Cx -> chromium,
-@@ -64,6 +65,7 @@
+@@ -68,6 +69,7 @@
  
      /selinux/ r,
  
@@ -24,6 +24,6 @@
    /etc/** rmk,
 -  /etc/gdm/Xsession ix,
 +  /etc/X11/Xsession ix,
+   /etc/X11/xdm/** ix, # needed for openSUSE's default session-wrapper
+   /etc/X11/xinit/** ix, # needed for openSUSE's default session-wrapper
    /lib/ r,
-   /lib/** rmixk,
-   /lib32/ r,

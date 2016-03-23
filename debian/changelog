@@ -2,6 +2,8 @@ lightdm (1.18.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * debian/watch updated for tracking 1.18 branch.
+  * debian/patches:
+    - 02_fix-apparmor-profile updated for new release.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Wed, 23 Mar 2016 13:38:34 +0100
 
