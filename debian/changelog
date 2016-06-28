@@ -1,6 +1,8 @@
 lightdm (1.18.2-1) UNRELEASED; urgency=medium
 
   * New upstream bugfix release.
+  * debian/control:
+    - update standards version to 3.9.8.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Tue, 28 Jun 2016 17:01:04 +0200
 
