@@ -62,7 +62,7 @@
  auth      required pam_permit.so
 --- a/data/pam/lightdm-autologin
 +++ b/data/pam/lightdm-autologin
-@@ -1,20 +1,36 @@
+@@ -1,20 +1,37 @@
  #%PAM-1.0
  
  # Block login if they are globally disabled
@@ -75,6 +75,7 @@
 +session      required pam_env.so readenv=1 envfile=/etc/default/locale
  
  # Allow access without authentication
++auth      required pam_succeed_if.so user != root quiet_success
  auth      required pam_permit.so
  
 -# Stop autologin if account requires action
