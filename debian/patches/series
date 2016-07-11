@@ -2,3 +2,4 @@
 02_fix-apparmor-profile.patch
 05_debianize-pam-files.patch
 06_change-user-dirs.patch
+07-Remove-unused-unititialized-file-descriptors-could-c.patch

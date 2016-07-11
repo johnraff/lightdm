@@ -1,7 +1,11 @@
 lightdm (1.18.2-2) UNRELEASED; urgency=medium
 
-  * debian/patches/05_debianize-pam-files.patch:
-    - disable autologin by default for root user (as with GDM3).
+  * debian/patches
+    - 05_debianize-pam-files added, disable autologin by default for root user
+      (as with GDM3).
+    - 07-Remove-unused-unititialized-file-descriptors-could-c added,
+      cherry-picked from upstream. Avoid closing stdin which triggers a bug in
+      dbus preventing dbus-daemon to start.                     closes: #829557
   * debian/01_debian.conf:
     - update section name from SeatDefaults to Seat:*.
 
