@@ -43,7 +43,7 @@ Depends: adduser,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: xserver-xorg
-Suggests: accountsservice, upower
+Suggests: accountsservice, upower, xserver-xephyr
 Provides: x-display-manager
 Description: simple display manager
  An X display manager that:
@@ -52,6 +52,11 @@ Description: simple display manager
   * Has a well defined interface between the server and user interface
   * Fully themeable
   * Cross-desktop (greeters can be written in any toolkit)
+ .
+ - xserver-xephyr can be used to add a nested X display by calling
+   'dm-tool add-nested-seat`
+ - upower can be used to suspend the computer from the display manager
+ - accountsservice is used to populate a user list with addition information.
 
 Package: lightdm-vala
 Section: x11
