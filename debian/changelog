@@ -2,6 +2,9 @@ lightdm (1.18.2-3) UNRELEASED; urgency=medium
 
   * debian/control:
     - add Suggests on xserver-xephyr.                           closes: #831298
+  * debian/patches:
+    - 08_reset-SIGPIPE-before-exec added, ignore SIGPIPE during LightDM life
+      but reset it before exec()ing children.                   closes: #823460
 
  -- Yves-Alexis Perez <corsac@debian.org>  Fri, 15 Jul 2016 21:44:54 +0200
 
