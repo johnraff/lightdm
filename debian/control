@@ -53,10 +53,11 @@ Description: simple display manager
   * Fully themeable
   * Cross-desktop (greeters can be written in any toolkit)
  .
- - xserver-xephyr can be used to add a nested X display by calling
+ Additional software can be useful along with LightDM:
+  * xserver-xephyr can be used to add a nested X display by calling
    'dm-tool add-nested-seat`
- - upower can be used to suspend the computer from the display manager
- - accountsservice is used to populate a user list with addition information.
+  * upower can be used to suspend the computer from the display manager
+  * accountsservice is used to populate a user list with addition information.
 
 Package: lightdm-vala
 Section: x11
