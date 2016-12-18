@@ -1,4 +1,4 @@
-lightdm (1.18.2-4) UNRELEASED; urgency=medium
+lightdm (1.18.2-4) unstable; urgency=medium
 
   * Update debian/liblightdm-qt-3-0.symbols, many thanks Hilko Bengen:
     - use demangled symbols
@@ -6,7 +6,7 @@ lightdm (1.18.2-4) UNRELEASED; urgency=medium
   * debian/control:
     - add dependency on lsb-base.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sun, 18 Dec 2016 16:06:34 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 18 Dec 2016 17:04:16 +0100
 
 lightdm (1.18.2-3) unstable; urgency=medium
 
