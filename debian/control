@@ -25,6 +25,7 @@ Build-Depends: debhelper (>= 9),
                libxcb1-dev,
                libxdmcp-dev,
                libxklavier-dev,
+               lsb-base (>= 3.0-6),
                pkg-config,
                valac
 Standards-Version: 3.9.8
