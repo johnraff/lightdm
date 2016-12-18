@@ -2,7 +2,7 @@ lightdm (1.18.2-4) UNRELEASED; urgency=medium
 
   * Update debian/liblightdm-qt-3-0.symbols, many thanks Hilko Bengen:
     - use demangled symbols
-    - add symbols only present on !x86 architectures 
+    - add symbols only present on !x86 architectures.           closes: #842675
   * debian/control:
     - add dependency on lsb-base.
 
