@@ -1,11 +1,11 @@
-lightdm (1.18.3-1) UNRELEASED; urgency=medium
+lightdm (1.18.3-1) unstable; urgency=medium
 
   * New upstream release.
   * debian/patches:
     - 07-Remove-unused-unititialized-file-descriptors-could-c dropped,
       included upstream.
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sun, 18 Dec 2016 17:50:37 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 19 Dec 2016 10:54:11 +0100
 
 lightdm (1.18.2-4) unstable; urgency=medium
 
