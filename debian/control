@@ -25,7 +25,6 @@ Build-Depends: debhelper (>= 9),
                libxcb1-dev,
                libxdmcp-dev,
                libxklavier-dev,
-               lsb-base (>= 3.0-6),
                pkg-config,
                valac
 Standards-Version: 3.9.8
@@ -40,6 +39,7 @@ Depends: adduser,
          dbus,
          libpam-systemd [linux-any] | consolekit,
          lightdm-gtk-greeter | lightdm-greeter,
+         lsb-base (>= 3.0-6),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: xserver-xorg
