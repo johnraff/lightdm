@@ -3,6 +3,9 @@ lightdm (1.18.3-3) UNRELEASED; urgency=medium
   * debian/control:
     - replace libgcrypt11-dev by libgcrypt20-dev.               closes: #864121
     - update standards version to 4.0.0.
+    - move gir1.2-lightdm-1 to section introspection.
+    - add dependency on gir1.2-lightdm-1 to liblightdm-gobject-dev. 
+    - add dependency on ${gir:Depends} to gir1.2-lightdm-1. 
 
  -- Yves-Alexis Perez <corsac@debian.org>  Mon, 05 Jun 2017 21:32:55 +0200
 
