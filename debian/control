@@ -27,7 +27,7 @@ Build-Depends: debhelper (>= 9),
                libxklavier-dev,
                pkg-config,
                valac
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Homepage: https://launchpad.net/lightdm
 Vcs-Svn: svn://anonscm.debian.org/pkg-xfce/goodies/trunk/lightdm
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-xfce/goodies/trunk/lightdm
