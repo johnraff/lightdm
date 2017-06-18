@@ -14,8 +14,6 @@ Build-Depends: debhelper (>= 9),
                intltool,
                itstool,
                libaudit-dev [linux-any],
-               libck-connector-dev,
-               libdbus-glib-1-dev,
                libgcrypt20-dev,
                libgirepository1.0-dev,
                libglib2.0-dev,
@@ -86,10 +84,11 @@ Description: simple display manager (Qt library)
 Package: liblightdm-gobject-dev
 Section: libdevel
 Architecture: any
-Depends: libdbus-glib-1-dev,
-         liblightdm-gobject-1-0 (= ${binary:Version}),
+Depends: liblightdm-gobject-1-0 (= ${binary:Version}),
          gir1.2-lightdm-1 (= ${binary:Version}),
+         libglib2.0-dev,
          libxklavier-dev,
+         libx11-dev,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: simple display manager (gobject development files)

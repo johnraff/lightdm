@@ -1,3 +1,13 @@
+lightdm (1.18.3-4) UNRELEASED; urgency=medium
+
+  * debian/control:
+    - drop build-dep on libck-connector-dev and libdbus-glib-1-dev, thanks
+      Michael Biebl.                                            closes: #865037
+    - add depends on libx11-dev and libglib2.0-dev to liblightdm-gobject-dev
+      and drop libdbus-glib-1-dev, thanks again Michael.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 18 Jun 2017 22:00:52 +0200
+
 lightdm (1.18.3-3) unstable; urgency=medium
 
   * debian/control:
