@@ -1,3 +1,5 @@
 01_set-default-path.patch
+02_fix-apparmor-profile.patch
 05_debianize-pam-files.patch
-06_allow_libpamsystemd_and_ck_together.patch
+06_change-user-dirs.patch
+08_reset-SIGPIPE-before-exec.patch

@@ -1,0 +1,45 @@
+=== modified file 'src/lightdm.c'
+--- lightdm/src/lightdm.c	2016-07-14 02:25:24 +0000
++++ lightdm/src/lightdm.c	2016-10-19 12:24:49 +0000
+@@ -1225,6 +1225,12 @@
+     };
+     GError *error = NULL;
+ 
++    /* Disable the SIGPIPE handler - this is a stupid Unix hangover behaviour.
++     * We will handle piples / sockets being closed instead of having the whole daemon be killed...
++     * http://stackoverflow.com/questions/8369506/why-does-sigpipe-exist
++     */
++    signal (SIGPIPE, SIG_IGN);
++
+     /* When lightdm starts sessions it needs to run itself in a new mode */
+     if (argc >= 2 && strcmp (argv[1], "--session-child") == 0)
+         return session_child_run (argc, argv);
+
+=== modified file 'src/process.c'
+--- lightdm/src/process.c	2015-10-20 07:50:44 +0000
++++ lightdm/src/process.c	2016-10-19 12:24:49 +0000
+@@ -236,6 +236,9 @@
+         for (i = 0; i < env_length; i++)
+             setenv (env_keys[i], env_values[i], TRUE);
+ 
++        /* Reset SIGPIPE handler so the child has default behaviour (we disabled it at LightDM start) */
++        signal (SIGPIPE, SIG_DFL);
++
+         execvp (argv[0], argv);
+         _exit (EXIT_FAILURE);
+     }
+
+=== modified file 'src/session-child.c'
+--- lightdm/src/session-child.c	2016-03-15 03:07:59 +0000
++++ lightdm/src/session-child.c	2016-10-19 12:24:49 +0000
+@@ -704,6 +704,9 @@
+             }
+         }
+ 
++        /* Reset SIGPIPE handler so the child has default behaviour (we disabled it at LightDM start) */
++        signal (SIGPIPE, SIG_DFL);
++
+         /* Run the command */
+         execve (command_argv[0], command_argv, pam_getenvlist (pam_handle));
+         _exit (EXIT_FAILURE);
+

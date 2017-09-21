@@ -3,6 +3,7 @@ usr/sbin/lightdm
 usr/share/man
 usr/share/locale
 usr/share/help
+usr/share/bash-completion
 etc/apparmor.d/abstractions/lightdm
 etc/apparmor.d/abstractions/lightdm_chromium-browser
 etc/dbus-1
