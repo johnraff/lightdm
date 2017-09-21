@@ -1,4 +1,4 @@
-lightdm (1.18.3-5) UNRELEASED; urgency=medium
+lightdm (1.18.3-5) experimental; urgency=medium
 
   * debian/control:
     - add liblightdm-qt5-3-0 and liblightdm-qt5-3-dev (packaging bits imported
@@ -14,7 +14,7 @@ lightdm (1.18.3-5) UNRELEASED; urgency=medium
   * debian/rules:
     - explicitly enable qt5 library
 
- -- Yves-Alexis Perez <corsac@debian.org>  Thu, 21 Sep 2017 15:43:01 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 21 Sep 2017 21:09:40 +0200
 
 lightdm (1.18.3-4) unstable; urgency=medium
 
