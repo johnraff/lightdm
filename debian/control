@@ -1,7 +1,7 @@
 Source: lightdm
 Section: x11
 Priority: optional
-Maintainer: Debian Xfce Maintainers <pkg-xfce-devel@lists.alioth.debian.org>
+Maintainer: Debian Xfce Maintainers <debian-xfce@lists.debian.org>
 Uploaders: Yves-Alexis Perez <corsac@debian.org>,
            Emanuele Rocca <ema@debian.org>,
            Simon Huggins <huggie@earth.li>
@@ -27,8 +27,8 @@ Build-Depends: debhelper (>= 9),
                valac
 Standards-Version: 4.0.0
 Homepage: https://launchpad.net/lightdm
-Vcs-Svn: svn://anonscm.debian.org/pkg-xfce/goodies/trunk/lightdm
-Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-xfce/goodies/trunk/lightdm
+Vcs-Git: https://salsa.debian.org/xfce-extras-team/lightdm.git
+Vcs-Browser: https://salsa.debian.org/xfce-extras-team/lightdm
 
 Package: lightdm
 Section: x11

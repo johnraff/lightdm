@@ -1,3 +1,10 @@
+lightdm (1.18.3-5) UNRELEASED; urgency=medium
+
+  * Moved the package to git on salsa.debian.org
+  * Updated the maintainer address to debian-xfce@lists.debian.org
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 26 Mar 2018 11:20:12 +0200
+
 lightdm (1.18.3-4) unstable; urgency=medium
 
   * debian/control:
