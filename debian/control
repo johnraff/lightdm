@@ -2,9 +2,7 @@ Source: lightdm
 Section: x11
 Priority: optional
 Maintainer: Debian Xfce Maintainers <debian-xfce@lists.debian.org>
-Uploaders: Yves-Alexis Perez <corsac@debian.org>,
-           Emanuele Rocca <ema@debian.org>,
-           Simon Huggins <huggie@earth.li>
+Uploaders: Yves-Alexis Perez <corsac@debian.org>
 Build-Depends: debhelper (>= 9),
                dh-systemd (>= 1.14),
                dpkg-dev (>= 1.16.1),
