@@ -8,6 +8,12 @@ liblightdm-gobject-1.so.0 liblightdm-gobject-1-0 #MINVER#
  lightdm_get_languages@Base 1.2.2
  lightdm_get_layout@Base 1.2.2
  lightdm_get_layouts@Base 1.2.2
+ lightdm_get_motd@Base 1.26.0
+ lightdm_get_os_id@Base 1.26.0
+ lightdm_get_os_name@Base 1.26.0
+ lightdm_get_os_pretty_name@Base 1.26.0
+ lightdm_get_os_version@Base 1.26.0
+ lightdm_get_os_version_id@Base 1.26.0
  lightdm_get_remote_sessions@Base 1.8.7
  lightdm_get_sessions@Base 1.2.2
  lightdm_greeter_authenticate@Base 1.2.2
@@ -23,8 +29,11 @@ liblightdm-gobject-1.so.0 liblightdm-gobject-1-0 #MINVER#
  lightdm_greeter_ensure_shared_data_dir@Base 1.12.2
  lightdm_greeter_ensure_shared_data_dir_finish@Base 1.12.2
  lightdm_greeter_ensure_shared_data_dir_sync@Base 1.9.8
+ lightdm_greeter_error_get_type@Base 1.26.0
+ lightdm_greeter_error_quark@Base 1.26.0
  lightdm_greeter_get_authentication_user@Base 1.2.2
  lightdm_greeter_get_autologin_guest_hint@Base 1.2.2
+ lightdm_greeter_get_autologin_session_hint@Base 1.26.0
  lightdm_greeter_get_autologin_timeout_hint@Base 1.2.2
  lightdm_greeter_get_autologin_user_hint@Base 1.2.2
  lightdm_greeter_get_default_session_hint@Base 1.2.2
