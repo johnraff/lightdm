@@ -96,3 +96,19 @@ liblightdm-qt-3.so.0 liblightdm-qt-3-0 #MINVER#
  (c++|optional)"QByteArray::~QByteArray()@Base" 1.18.2
  (c++|optional)"QHash<int, QByteArray>::~QHash()@Base" 1.18.2
  (c++|optional)"QString::~QString()@Base" 1.18.2
++ QLightDM::GreeterPrivate::cb_showPrompt(_LightDMGreeter*, char const*, LightDMPromptType, void*)@Base 1.26.0-1
++ QLightDM::GreeterPrivate::cb_showMessage(_LightDMGreeter*, char const*, LightDMMessageType, void*)@Base 1.26.0-1
++ QLightDM::GreeterPrivate::cb_autoLoginExpired(_LightDMGreeter*, void*)@Base 1.26.0-1
++ QLightDM::GreeterPrivate::cb_authenticationComplete(_LightDMGreeter*, void*)@Base 1.26.0-1
++ QLightDM::GreeterPrivate::cb_idle(_LightDMGreeter*, void*)@Base 1.26.0-1
++ QLightDM::GreeterPrivate::cb_reset(_LightDMGreeter*, void*)@Base 1.26.0-1
++ QLightDM::UsersModelPrivate::cb_userAdded(_LightDMUserList*, _LightDMUser*, void*)@Base 1.26.0-1
++ QLightDM::UsersModelPrivate::cb_userChanged(_LightDMUserList*, _LightDMUser*, void*)@Base 1.26.0-1
++ QLightDM::UsersModelPrivate::cb_userRemoved(_LightDMUserList*, _LightDMUser*, void*)@Base 1.26.0-1
++ QLightDM::Greeter::osVersionId() const@Base 1.26.0-1
++ QLightDM::Greeter::osPrettyName() const@Base 1.26.0-1
++ QLightDM::Greeter::autologinSessionHint() const@Base 1.26.0-1
++ QLightDM::Greeter::motd() const@Base 1.26.0-1
++ QLightDM::Greeter::osId() const@Base 1.26.0-1
++ QLightDM::Greeter::osName() const@Base 1.26.0-1
++ QLightDM::Greeter::osVersion() const@Base 1.26.0-1
