@@ -6,13 +6,26 @@ liblightdm-qt-3.so.0 liblightdm-qt-3-0 #MINVER#
  (c++|regex)"^typeinfo for .*@Base$" 1.8.7
  (c++|regex)"^typeinfo name for .*@Base$" 1.8.7
  (c++|regex)"^vtable for .*@Base$" 1.8.7
- (c++)"QDBusError::~QDBusError()@Base" 1.8.7
+ (c++|optional)"QHash<int, QByteArray>::deleteNode2(QHashData::Node*)@Base" 1.8.7
+ (c++|optional)"QHash<int, QByteArray>::detach_helper()@Base" 1.8.7
+ (c++|optional)"QHash<int, QByteArray>::duplicateNode(QHashData::Node*, void*)@Base" 1.8.7
+ (c++|optional)"QHash<int, QByteArray>::findNode(int const&, unsigned int*) const@Base" 1.8.7
+ (c++|optional)"SessionItem::~SessionItem()@Base" 1.8.7
+ (c++|optional)"SessionsModelPrivate::loadSessions(QLightDM::SessionsModel::SessionType)@Base" 1.8.7
+ (c++|optional)"SessionsModelPrivate::SessionsModelPrivate(QLightDM::SessionsModel*)@Base" 1.8.7
+ (c++|optional)"QList<SessionItem>::detach_helper_grow(int, int)@Base" 1.8.7
+ (c++|optional)"QList<SessionItem>::append(SessionItem const&)@Base" 1.8.7
+ (c++|optional)"UserItem::displayName() const@Base" 1.8.7
+ (c++|optional)"UserItem::~UserItem()@Base" 1.8.7
+ (c++|optional)"QList<UserItem>::detach_helper(int)@Base" 1.8.7
+ (c++|optional)"QList<UserItem>::detach_helper_grow(int, int)@Base" 1.8.7
+ (c++|optional)"QList<UserItem>::append(UserItem const&)@Base" 1.8.7
+ (c++|optional)"QDBusError::~QDBusError()@Base" 1.8.7
+ (c++|optional)"QByteArray::~QByteArray()@Base" 1.18.2
+ (c++|optional)"QHash<int, QByteArray>::~QHash()@Base" 1.18.2
+ (c++|optional)"QString::~QString()@Base" 1.18.2
  (c++)"QDBusReply<QString>::~QDBusReply()@Base" 1.8.7
  (c++)"QDebug::~QDebug()@Base" 1.8.7
- (c++)"QHash<int, QByteArray>::deleteNode2(QHashData::Node*)@Base" 1.8.7
- (c++)"QHash<int, QByteArray>::detach_helper()@Base" 1.8.7
- (c++)"QHash<int, QByteArray>::duplicateNode(QHashData::Node*, void*)@Base" 1.8.7
- (c++)"QHash<int, QByteArray>::findNode(int const&, unsigned int*) const@Base" 1.8.7
  (c++)"QLightDM::Greeter::authenticateAsGuest()@Base" 1.8.7
  (c++)"QLightDM::Greeter::authenticateAutologin()@Base" 1.8.7
  (c++)"QLightDM::Greeter::authenticate(QString const&)@Base" 1.8.7
@@ -84,17 +97,3 @@ liblightdm-qt-3.so.0 liblightdm-qt-3-0 #MINVER#
  (c++)"QLightDM::UsersModel::rowCount(QModelIndex const&) const@Base" 1.8.7
  (c++)"QLightDM::UsersModel::~UsersModel()@Base" 1.8.7
  (c++)"QLightDM::UsersModel::UsersModel(QObject*)@Base" 1.8.7
- (c++)"QList<SessionItem>::append(SessionItem const&)@Base" 1.8.7
- (c++)"QList<SessionItem>::detach_helper_grow(int, int)@Base" 1.8.7
- (c++)"QList<UserItem>::append(UserItem const&)@Base" 1.8.7
- (c++)"QList<UserItem>::detach_helper_grow(int, int)@Base" 1.8.7
- (c++)"QList<UserItem>::detach_helper(int)@Base" 1.8.7
- (c++)"SessionItem::~SessionItem()@Base" 1.8.7
- (c++)"SessionsModelPrivate::loadSessions(QLightDM::SessionsModel::SessionType)@Base" 1.8.7
- (c++)"SessionsModelPrivate::SessionsModelPrivate(QLightDM::SessionsModel*)@Base" 1.8.7
- (c++)"UserItem::displayName() const@Base" 1.8.7
- (c++)"UserItem::~UserItem()@Base" 1.8.7
- (c++|optional)"QByteArray::~QByteArray()@Base" 1.18.2
- (c++|optional)"QDBusError::~QDBusError()@Base" 1.8.7
- (c++|optional)"QHash<int, QByteArray>::~QHash()@Base" 1.18.2
- (c++|optional)"QString::~QString()@Base" 1.18.2
