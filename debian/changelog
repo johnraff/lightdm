@@ -1,9 +1,27 @@
-lightdm (1.18.3-5) UNRELEASED; urgency=medium
+lightdm (1.18.3-6) UNRELEASED; urgency=medium
 
   * Moved the package to git on salsa.debian.org
   * Updated the maintainer address to debian-xfce@lists.debian.org
 
  -- Yves-Alexis Perez <corsac@debian.org>  Mon, 26 Mar 2018 11:20:12 +0200
+
+lightdm (1.18.3-5) experimental; urgency=medium
+
+  * debian/control:
+    - add liblightdm-qt5-3-0 and liblightdm-qt5-3-dev (packaging bits imported
+    from Ubuntu)                                                closes: #871840
+    - add build-dep on qtbase5-dev
+    - move libraries to section libs
+    - update standards version to 4.1.0
+    - replace dh-systemd build-dep by a newer version of debhelper
+  * debian/liblightdm-qt5-3-0.install and debian/liblightdm-qt5-3-dev.install
+    added to ship relevant files to Qt5 library and development packages
+  * debian/liblightdm-qt-dev.install:
+    - narrow installation path to only cover Qt4 library.
+  * debian/rules:
+    - explicitly enable qt5 library
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 21 Sep 2017 21:09:40 +0200
 
 lightdm (1.18.3-4) unstable; urgency=medium
 

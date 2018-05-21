@@ -8,8 +8,13 @@ export DEB_CXXFLAGS_MAINT_APPEND=-fvisibility=hidden
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
 override_dh_auto_configure:
-	dh_auto_configure -- --with-greeter-user=lightdm --with-user-session=lightdm-xsession --enable-introspection=yes --disable-silent-rules --libexecdir=/usr/lib/$(DEB_HOST_MULTIARCH)/$(DEB_SOURCE)/
-
+	dh_auto_configure -- \
+		--with-greeter-user=lightdm \
+		--with-user-session=lightdm-xsession \
+		--enable-introspection=yes \
+		--disable-silent-rules \
+		--libexecdir=/usr/lib/$(DEB_HOST_MULTIARCH)/$(DEB_SOURCE)/ \
+		--enable-liblightdm-qt5
 override_dh_installchangelogs:
 	dh_installchangelogs -- NEWS
 
