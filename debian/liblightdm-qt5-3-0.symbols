@@ -6,31 +6,11 @@ liblightdm-qt5-3.so.0 liblightdm-qt5-3-0 #MINVER#
  (c++|regex)"^typeinfo for .*@Base$" 0
  (c++|regex)"^typeinfo name for .*@Base$" 0
  (c++|regex)"^vtable for .*@Base$" 0
- (c++|optional)"QByteArray::~QByteArray()@Base" 0
- (c++|optional)"QString::~QString()@Base" 0
- (c++|optional)"QVector<int>::~QVector()@Base" 0
- (c++|optional)"QHash<int, QByteArray>::deleteNode2(QHashData::Node*)@Base" 0
- (c++|optional)"QHash<int, QByteArray>::duplicateNode(QHashData::Node*, void*)@Base" 0
- (c++|optional)"QHash<int, QByteArray>::findNode(int const&, unsigned int) const@Base" 0
- (c++|optional)"QHash<int, QByteArray>::~QHash()@Base" 0
- (c++|optional)"SessionItem::~SessionItem()@Base" 1.18.3
- (c++|optional)"SessionsModelPrivate::loadSessions(QLightDM::SessionsModel::SessionType)@Base" 1.18.3
- (c++|optional)"SessionsModelPrivate::SessionsModelPrivate(QLightDM::SessionsModel*)@Base" 1.18.3
- (c++|optional)"QList<SessionItem>::detach_helper_grow(int, int)@Base" 1.18.3
- (c++|optional)"QList<SessionItem>::append(SessionItem const&)@Base" 1.18.3
- (c++|optional)"UserItem::displayName() const@Base" 1.18.3
- (c++|optional)"UserItem::~UserItem()@Base" 1.18.3
- (c++|optional)"QList<UserItem>::detach_helper(int)@Base" 1.18.3
- (c++|optional)"QList<UserItem>::detach_helper_grow(int, int)@Base" 1.18.3
- (c++|optional)"QList<UserItem>::append(UserItem const&)@Base" 1.18.3
  (c++)"QLightDM::UsersModel::UsersModel(QObject*)@Base" 1.18.3
  (c++)"QLightDM::UsersModel::~UsersModel()@Base" 1.18.3
  (c++)"QLightDM::SessionsModel::SessionsModel(QLightDM::SessionsModel::SessionType, QObject*)@Base" 1.18.3
  (c++)"QLightDM::SessionsModel::SessionsModel(QObject*)@Base" 1.18.3
- (c++)"QLightDM::SessionsModel::SessionsModel(QLightDM::SessionsModel::SessionType, QObject*)@Base" 1.18.3
- (c++)"QLightDM::SessionsModel::SessionsModel(QObject*)@Base" 1.18.3
  (c++)"QLightDM::SessionsModel::~SessionsModel()@Base" 1.18.3
- (c++)"QLightDM::GreeterPrivate::GreeterPrivate(QLightDM::Greeter*)@Base" 1.18.3
  (c++)"QLightDM::PowerInterface::canRestart()@Base" 1.18.3
  (c++)"QLightDM::PowerInterface::canSuspend()@Base" 1.18.3
  (c++)"QLightDM::PowerInterface::canShutdown()@Base" 1.18.3
@@ -42,9 +22,6 @@ liblightdm-qt5-3.so.0 liblightdm-qt5-3-0 #MINVER#
  (c++)"QLightDM::PowerInterface::hibernate()@Base" 1.18.3
  (c++)"QLightDM::PowerInterface::PowerInterface(QObject*)@Base" 1.18.3
  (c++)"QLightDM::PowerInterface::~PowerInterface()@Base" 1.18.3
- (c++)"QLightDM::UsersModelPrivate::loadUsers()@Base" 1.18.3
- (c++)"QLightDM::UsersModelPrivate::UsersModelPrivate(QLightDM::UsersModel*)@Base" 1.18.3
- (c++)"QLightDM::UsersModelPrivate::~UsersModelPrivate()@Base" 1.18.3
  (c++)"QLightDM::Greeter::showPrompt(QString, QLightDM::Greeter::PromptType)@Base" 1.18.3
  (c++)"QLightDM::Greeter::connectSync()@Base" 1.18.3
  (c++)"QLightDM::Greeter::setLanguage(QString const&)@Base" 1.18.3
@@ -86,14 +63,3 @@ liblightdm-qt5-3.so.0 liblightdm-qt5-3-0 #MINVER#
  (c++)"QLightDM::Greeter::getHint(QString const&) const@Base" 1.18.3
  (c++)"QLightDM::Greeter::hostname() const@Base" 1.18.3
  (c++)"QLightDM::Greeter::lockHint() const@Base" 1.18.3
- (c++)"QDBusReply<QString>::~QDBusReply()@Base" 1.18.3
- (c++)"QDBusReply<QString>::~QDBusReply()@Base" 1.18.3
- (c++)"QLightDM::GreeterPrivate::cb_showPrompt(LightDMGreeter*, char const*, LightDMPromptType, void*)@Base" 1.18.3
- (c++)"QLightDM::GreeterPrivate::cb_showMessage(LightDMGreeter*, char const*, LightDMMessageType, void*)@Base" 1.18.3
- (c++)"QLightDM::GreeterPrivate::cb_autoLoginExpired(LightDMGreeter*, void*)@Base" 1.18.3
- (c++)"QLightDM::GreeterPrivate::cb_authenticationComplete(LightDMGreeter*, void*)@Base" 1.18.3
- (c++)"QLightDM::GreeterPrivate::cb_idle(LightDMGreeter*, void*)@Base" 1.18.3
- (c++)"QLightDM::GreeterPrivate::cb_reset(LightDMGreeter*, void*)@Base" 1.18.3
- (c++)"QLightDM::UsersModelPrivate::cb_userAdded(LightDMUserList*, LightDMUser*, void*)@Base" 1.18.3
- (c++)"QLightDM::UsersModelPrivate::cb_userChanged(LightDMUserList*, LightDMUser*, void*)@Base" 1.18.3
- (c++)"QLightDM::UsersModelPrivate::cb_userRemoved(LightDMUserList*, LightDMUser*, void*)@Base" 1.18.3
