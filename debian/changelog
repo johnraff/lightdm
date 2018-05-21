@@ -1,4 +1,4 @@
-lightdm (1.26.0-1) UNRELEASED; urgency=medium
+lightdm (1.26.0-1) experimental; urgency=medium
 
   * Moved the package to git on salsa.debian.org
   * Updated the maintainer address to debian-xfce@lists.debian.org
@@ -31,7 +31,7 @@ lightdm (1.26.0-1) UNRELEASED; urgency=medium
     - remove symbols marked as private
     - add symbols introduced in 1.26
 
- -- Yves-Alexis Perez <corsac@debian.org>  Mon, 21 May 2018 17:35:55 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 21 May 2018 17:37:09 +0200
 
 lightdm (1.18.3-5) experimental; urgency=medium
 
