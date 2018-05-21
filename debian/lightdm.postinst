@@ -22,7 +22,7 @@ if ! getent passwd lightdm >/dev/null; then
 fi
 
 mkdir -p /var/lib/lightdm
-chown -R lightdm:lightdm /var/lib/lightdm
+chown lightdm:lightdm /var/lib/lightdm
 chmod 0750 /var/lib/lightdm
 
 # debconf is not a registry, so we only fiddle with the default file if it
