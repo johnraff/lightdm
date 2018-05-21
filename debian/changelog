@@ -1,9 +1,37 @@
-lightdm (1.18.3-6) UNRELEASED; urgency=medium
+lightdm (1.26.0-1) UNRELEASED; urgency=medium
 
   * Moved the package to git on salsa.debian.org
   * Updated the maintainer address to debian-xfce@lists.debian.org
+  * d/control: drop Emanuele and Simon from uploaders, thanks to them!
+  * d/watch: track 1.26 branch (maintained until 2023)
+  * d/watch updated to track 1.26 branch on github
+  * New upstream version 1.26.0
+  * d/p/01_set-default-path refreshed for new release
+  * d/p/06_change-user-dirs refreshed for new upstream
+  * d/p/08_reset-SIGPIPE-before-exec refreshed for new release
+  * install polkit, DBus and AccountsService file in lightdm package
+  * d/rules: migrate to dh_missing
+  * liblightdm-gobject-1-0 symbols file updated for new release
+  * liblightdm-qt-3-0.symbols: merge generic Qt symbols
+  * liblightdm-qt-3-0.symbols: sort generic symbols and mark some as optional
+  * liblightdm-qt-3-0.symbols: reorder symbols
+  * debian/liblightdm-qt-3-0.symbols:
+    - add new symbols in 1.26
+    - fix syntax
+    - remove private callback symbols which shouldn't be exported
+    - remove hidden/non-exported symbols
+  * d/p/03_liblightdm-qt3-add-header-visibility added, fix symbol visibility
+  * d/rules: mark symbols hidden by default
+  * d/compat bumped to 10
+  * d/control: update dh build-dep to 10 and drop obsolete dh-systemd
+  * d/rules: drop systemd addon and parallel (useless with compat 10)
+  * d/control: add build-dep on yelp-tools
+  * lightdm.postinst: don't recursively chown /var/lib/lightdm
+  * d/liblightdm-qt5-3-0.symbols:
+    - remove symbols marked as private
+    - add symbols introduced in 1.26
 
- -- Yves-Alexis Perez <corsac@debian.org>  Mon, 26 Mar 2018 11:20:12 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 21 May 2018 17:35:55 +0200
 
 lightdm (1.18.3-5) experimental; urgency=medium
 
