@@ -6,6 +6,8 @@ liblightdm-qt5-3.so.0 liblightdm-qt5-3-0 #MINVER#
  (c++|regex)"^typeinfo for .*@Base$" 0
  (c++|regex)"^typeinfo name for .*@Base$" 0
  (c++|regex)"^vtable for .*@Base$" 0
+ (c++|optional)"QByteArray::~QByteArray()@Base" 0
+ (c++|optional)"QString::~QString()@Base" 0
  (c++)"QLightDM::UsersModel::UsersModel(QObject*)@Base" 1.18.3
  (c++)"QLightDM::UsersModel::~UsersModel()@Base" 1.18.3
  (c++)"QLightDM::SessionsModel::SessionsModel(QLightDM::SessionsModel::SessionType, QObject*)@Base" 1.18.3
