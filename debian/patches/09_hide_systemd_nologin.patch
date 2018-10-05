@@ -1,0 +1,8 @@
+--- a/data/users.conf
++++ b/data/users.conf
+@@ -11,4 +11,4 @@
+ [UserList]
+ minimum-uid=500
+ hidden-users=nobody nobody4 noaccess
+-hidden-shells=/bin/false /usr/sbin/nologin
++hidden-shells=/bin/false /usr/sbin/nologin /sbin/nologin
