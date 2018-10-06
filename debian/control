@@ -30,7 +30,6 @@ Vcs-Git: https://salsa.debian.org/xfce-extras-team/lightdm.git
 Vcs-Browser: https://salsa.debian.org/xfce-extras-team/lightdm
 
 Package: lightdm
-Section: x11
 Architecture: any
 Depends: adduser,
          dbus,
@@ -57,7 +56,6 @@ Description: simple display manager
   * accountsservice is used to populate a user list with addition information.
 
 Package: lightdm-vala
-Section: x11
 Architecture: any
 Multi-Arch: same
 Depends: ${misc:Depends}, ${shlibs:Depends}
