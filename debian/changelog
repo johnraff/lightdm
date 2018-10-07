@@ -1,3 +1,16 @@
+lightdm (1.26.0-3) UNRELEASED; urgency=medium
+
+  [ Cody Garver ]
+  * Backport upstream hide systemd dynamic users fix
+
+  [ Yves-Alexis Perez ]
+  * d/control: stop duplicating section when it's useless
+  * d/control: update standards version to 4.2.1
+  * d/control: fix casing for Gobject
+  * d/liblightdm-gobject-1-0.lintian-overrides dropped, now useless
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 06 Oct 2018 17:41:46 +0200
+
 lightdm (1.26.0-2) unstable; urgency=medium
 
   * d/gbp.conf added, following DEP-14
