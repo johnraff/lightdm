@@ -1,4 +1,4 @@
-lightdm (1.26.0-3) UNRELEASED; urgency=medium
+lightdm (1.26.0-3) unstable; urgency=medium
 
   [ Cody Garver ]
   * Backport upstream hide systemd dynamic users fix
@@ -9,7 +9,7 @@ lightdm (1.26.0-3) UNRELEASED; urgency=medium
   * d/control: fix casing for Gobject
   * d/liblightdm-gobject-1-0.lintian-overrides dropped, now useless
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sat, 06 Oct 2018 17:41:46 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 07 Oct 2018 11:04:27 +0200
 
 lightdm (1.26.0-2) unstable; urgency=medium
 
