@@ -33,7 +33,7 @@ Package: lightdm
 Architecture: any
 Depends: adduser,
          dbus,
-         libpam-systemd [linux-any] | consolekit,
+         logind [linux-any] | consolekit,
          lightdm-gtk-greeter | lightdm-greeter,
          lsb-base (>= 3.0-6),
          ${misc:Depends},
