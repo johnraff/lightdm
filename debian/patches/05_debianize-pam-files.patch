@@ -1,3 +1,15 @@
+From: Yves-Alexis Perez <corsac@debian.org>
+Date: Fri, 22 Feb 2019 17:16:09 +0100
+Subject: debianize pam files
+
+---
+ data/pam/lightdm           | 38 +++++++++++++++++++++++++++-----------
+ data/pam/lightdm-autologin | 31 ++++++++++++++++++++++++-------
+ data/pam/lightdm-greeter   |  3 ++-
+ 3 files changed, 53 insertions(+), 19 deletions(-)
+
+diff --git a/data/pam/lightdm b/data/pam/lightdm
+index fed8a9b..f7f77d4 100644
 --- a/data/pam/lightdm
 +++ b/data/pam/lightdm
 @@ -1,20 +1,36 @@
@@ -48,18 +60,8 @@
 +-session optional        pam_gnome_keyring.so auto_start
 +
 +@include common-password
---- a/data/pam/lightdm-greeter
-+++ b/data/pam/lightdm-greeter
-@@ -1,7 +1,8 @@
- #%PAM-1.0
- 
- # Load environment from /etc/environment and ~/.pam_environment
--auth      required pam_env.so
-+session      required pam_env.so readenv=1
-+session      required pam_env.so readenv=1 envfile=/etc/default/locale
- 
- # Always let the greeter start without authentication
- auth      required pam_permit.so
+diff --git a/data/pam/lightdm-autologin b/data/pam/lightdm-autologin
+index ba7a68c..ad9c4ef 100644
 --- a/data/pam/lightdm-autologin
 +++ b/data/pam/lightdm-autologin
 @@ -1,20 +1,37 @@
@@ -107,3 +109,17 @@
 -session   required pam_unix.so
 -session   optional pam_systemd.so
 +@include common-password
+diff --git a/data/pam/lightdm-greeter b/data/pam/lightdm-greeter
+index 9a6862b..6343cc2 100644
+--- a/data/pam/lightdm-greeter
++++ b/data/pam/lightdm-greeter
+@@ -1,7 +1,8 @@
+ #%PAM-1.0
+ 
+ # Load environment from /etc/environment and ~/.pam_environment
+-auth      required pam_env.so
++session      required pam_env.so readenv=1
++session      required pam_env.so readenv=1 envfile=/etc/default/locale
+ 
+ # Always let the greeter start without authentication
+ auth      required pam_permit.so
