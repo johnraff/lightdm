@@ -1,3 +1,11 @@
+lightdm (1.26.0-5) UNRELEASED; urgency=medium
+
+  * d/control: drop consolekit dep, use a real package as first alternative
+  * move to debhelper-compat b-d for dh version
+  * d/control: update standards version to 4.4.0
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 10 Jul 2019 22:33:31 +0200
+
 lightdm (1.26.0-4) unstable; urgency=medium
 
   * d/control: replace libpam-systemd dep by logind (closes: #922160)
