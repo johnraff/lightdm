@@ -15,7 +15,8 @@ override_dh_auto_configure:
 		--disable-silent-rules \
 		--libexecdir=/usr/lib/$(DEB_HOST_MULTIARCH)/$(DEB_SOURCE)/ \
 		--enable-liblightdm-qt5 \
-		--disable-liblightdm-qt
+		--disable-liblightdm-qt \
+		--enable-gtk-doc
 override_dh_installchangelogs:
 	dh_installchangelogs -- NEWS
 
