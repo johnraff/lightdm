@@ -1,4 +1,4 @@
-lightdm (1.26.0-6) UNRELEASED; urgency=medium
+lightdm (1.26.0-6) unstable; urgency=medium
 
   * drop liblightdm-qt packages for Qt4 Debian removal.
     Thanks Moritz Mühlenhoff for the patch (closes: #875029)
@@ -8,7 +8,7 @@ lightdm (1.26.0-6) UNRELEASED; urgency=medium
     FTBFS because dh_install can't find the gtk-doc folder.
   * d/rules: override dh_installsystemd instead of dh_systemd_start
 
- -- Yves-Alexis Perez <corsac@debian.org>  Tue, 17 Sep 2019 22:20:14 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 17 Sep 2019 22:51:36 +0200
 
 lightdm (1.26.0-5) unstable; urgency=medium
 
