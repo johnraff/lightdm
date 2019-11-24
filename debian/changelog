@@ -1,3 +1,10 @@
+lightdm (1.26.0-7) UNRELEASED; urgency=medium
+
+  * d/control: drop build-dep on gnome-doc-utils (Closes: #945292)
+  * d/control: update standards version to 4.4.1
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 24 Nov 2019 18:38:08 +0100
+
 lightdm (1.26.0-6) unstable; urgency=medium
 
   * drop liblightdm-qt packages for Qt4 Debian removal.
