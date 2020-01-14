@@ -1,7 +1,11 @@
 lightdm (1.26.0-7) UNRELEASED; urgency=medium
 
+  [ Yves-Alexis Perez ]
   * d/control: drop build-dep on gnome-doc-utils (Closes: #945292)
   * d/control: update standards version to 4.4.1
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sun, 24 Nov 2019 18:38:08 +0100
 
