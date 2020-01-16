@@ -6,6 +6,10 @@ lightdm (1.26.0-7) UNRELEASED; urgency=medium
 
   [ Debian Janitor ]
   * Apply multi-arch hints.
+  * Trim trailing whitespace.
+  * Bump debhelper from old 11 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sun, 24 Nov 2019 18:38:08 +0100
 
@@ -127,8 +131,8 @@ lightdm (1.18.3-3) unstable; urgency=medium
     - replace libgcrypt11-dev by libgcrypt20-dev.               closes: #864121
     - update standards version to 4.0.0.
     - move gir1.2-lightdm-1 to section introspection.
-    - add dependency on gir1.2-lightdm-1 to liblightdm-gobject-dev. 
-    - add dependency on ${gir:Depends} to gir1.2-lightdm-1. 
+    - add dependency on gir1.2-lightdm-1 to liblightdm-gobject-dev.
+    - add dependency on ${gir:Depends} to gir1.2-lightdm-1.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Sun, 18 Jun 2017 19:46:04 +0200
 
@@ -191,7 +195,7 @@ lightdm (1.18.2-1) unstable; urgency=medium
   * New upstream bugfix release.
   * debian/control:
     - update standards version to 3.9.8.
-    - run wrap-and-sort 
+    - run wrap-and-sort
 
  -- Yves-Alexis Perez <corsac@debian.org>  Tue, 28 Jun 2016 21:43:15 +0200
 
@@ -216,7 +220,7 @@ lightdm (1.16.7-1) unstable; urgency=medium
   * debian/control:
     - make libaudit-dev build-dep linux-only, fix FTBFS on !linux.
                                                                 closes: #815343
-    - update standards version to 3.9.7. 
+    - update standards version to 3.9.7.
 
  -- Yves-Alexis Perez <corsac@debian.org>  Mon, 22 Feb 2016 13:20:36 +0100
 
@@ -643,7 +647,7 @@ lightdm (1.4.0-1) experimental; urgency=low
     - add build-dep on itstool.
   * debian/lightdm.install:
     - stop installing lightdm upstart script since it's broken. closes: #679409
-    - install /u/s/help.* 
+    - install /u/s/help.*
     - install PAM files
   * debian/rules:
     - stop installing own PAM files.
@@ -858,7 +862,7 @@ lightdm (0.9.6-1) unstable; urgency=low
   * debian/patches:
     - 01_set-default-path, 02_default-config, 03_quit-plymouth,
       04_default-gtk-greeter-config refreshed.
-    - 05_always-export-XAUTHORITY dropped, included upstream. 
+    - 05_always-export-XAUTHORITY dropped, included upstream.
     - 05_dont-add-pkglibexecdir-path added, don't add /usr/lib/lightdm/lightdm
       to the PATH, it's ugly.
   * debian/rules:
