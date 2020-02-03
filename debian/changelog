@@ -1,4 +1,4 @@
-lightdm (1.26.0-7) UNRELEASED; urgency=medium
+lightdm (1.26.0-7) unstable; urgency=medium
 
   [ Debian Janitor ]
   * Apply multi-arch hints.
@@ -15,7 +15,7 @@ lightdm (1.26.0-7) UNRELEASED; urgency=medium
   * d/rules: don't run installsystemd at all
   * d/lightdm.service: manually install systemd unit file
 
- -- Yves-Alexis Perez <corsac@debian.org>  Mon, 03 Feb 2020 20:12:33 +0100
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 03 Feb 2020 20:13:13 +0100
 
 lightdm (1.26.0-6) unstable; urgency=medium
 
