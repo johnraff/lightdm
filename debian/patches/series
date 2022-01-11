@@ -5,3 +5,4 @@
 06_change-user-dirs.patch
 08_reset-SIGPIPE-before-exec.patch
 09_hide_systemd_nologin.patch
+10_fix-build-glibc-2.33.patch
