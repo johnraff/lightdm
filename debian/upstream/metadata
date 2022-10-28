@@ -1,5 +1,5 @@
-Contact: Robert Ancell
-Bug-Database: https://bugs.launchpad.net/lightdm
-Bug-Submit: https://bugs.launchpad.net/lightdm/+filebug
-Repository: https://github.com/CanonicalLtd/lightdm.git
-Repository-Browse: https://github.com/CanonicalLtd/lightdm
+Bug-Database: https://github.com/canonical/lightdm/issues
+Bug-Submit: https://github.com/canonical/lightdm/issues/new
+Changelog: https://github.com/canonical/lightdm/commits/main
+Repository: https://github.com/canonical/lightdm.git
+Repository-Browse: https://github.com/canonical/lightdm
