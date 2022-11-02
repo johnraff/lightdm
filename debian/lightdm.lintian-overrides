@@ -1,3 +1,0 @@
-# we need the path since we check file existence
-lightdm: command-with-path-in-maintainer-script postrm:22 /usr/sbin/deluser
-lightdm: command-with-path-in-maintainer-script postrm:27 /usr/sbin/delgroup

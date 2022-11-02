@@ -18,7 +18,7 @@ if [ "$1" = "purge" ] ; then
         if [ -d /var/log/lightdm ]; then
                 rm -r /var/log/lightdm
         fi
-        error() { echo "Could not remove lightdm $1.
+        error() { echo >&2 "Could not remove lightdm $1.
 Please make sure lightdm is not running before attempting to purge lightdm"; }
         if getent passwd lightdm >/dev/null; then
                 if which deluser >/dev/null; then
