@@ -18,14 +18,16 @@ if [ "$1" = "purge" ] ; then
         if [ -d /var/log/lightdm ]; then
                 rm -r /var/log/lightdm
         fi
+        error() { echo "Could not remove lightdm $1.
+Please make sure lightdm is not running before attempting to purge lightdm"; }
         if getent passwd lightdm >/dev/null; then
-                if [ -x /usr/sbin/deluser ]; then
-                        deluser --system lightdm ||echo " Could not remove lightdm user, please make sure lightdm is not running before attempting to purge lightdm" 
+                if which deluser >/dev/null; then
+                        deluser --system lightdm || error user
                 fi
         fi
         if getent group lightdm >/dev/null; then
-                if [ -x /usr/sbin/delgroup ]; then
-                        delgroup --system lightdm || echo "Could not remove lightdm group, please make sure lightdm is not running before attempting to purge lightdm"
+                if which delgroup >/dev/null; then
+                        delgroup --system lightdm || error group
                 fi
         fi
 fi
