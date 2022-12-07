@@ -22,7 +22,7 @@ Build-Depends: debhelper-compat (= 13),
                valac,
                yelp-tools
 Rules-Requires-Root: no
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Homepage: https://discourse.ubuntu.com/c/light-dm/107
 Vcs-Git: https://salsa.debian.org/xfce-extras-team/lightdm.git
 Vcs-Browser: https://salsa.debian.org/xfce-extras-team/lightdm
