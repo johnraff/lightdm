@@ -4,7 +4,7 @@ dist_init_DATA = init/lightdm.conf
 confdir = $(sysconfdir)/lightdm
 dist_conf_DATA = lightdm.conf users.conf keys.conf
 
-dbusconfdir = $(sysconfdir)/dbus-1/system.d
+dbusconfdir = $(datadir)/dbus-1/system.d
 dist_dbusconf_DATA = org.freedesktop.DisplayManager.conf
 
 pamdir = $(sysconfdir)/pam.d
@@ -36,7 +36,7 @@ dist_dbus_DATA = \
 # AccountsService requires D-Bus interfaces to be symlinked
 install-exec-hook:
 	$(MKDIR_P) $(DESTDIR)$(datadir)/accountsservice/interfaces
-	$(LN_S) ../../dbus-1/interfaces/$(accountsservice_interface) $(DESTDIR)$(datadir)/accountsservice/interfaces/$(accountsservice_interface)
+	$(LN_S) -f ../../dbus-1/interfaces/$(accountsservice_interface) $(DESTDIR)$(datadir)/accountsservice/interfaces/$(accountsservice_interface)
 
 polkitdir = $(datadir)/polkit-1/actions
 polkit_in_files = org.freedesktop.DisplayManager.AccountsService.policy.in

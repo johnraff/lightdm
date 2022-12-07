@@ -127,12 +127,14 @@
     <keyword type="function" name="lightdm_user_get_logged_in ()" link="LightDMUser.html#lightdm-user-get-logged-in"/>
     <keyword type="function" name="lightdm_user_get_has_messages ()" link="LightDMUser.html#lightdm-user-get-has-messages"/>
     <keyword type="function" name="lightdm_user_get_uid ()" link="LightDMUser.html#lightdm-user-get-uid"/>
+    <keyword type="function" name="lightdm_user_get_is_locked ()" link="LightDMUser.html#lightdm-user-get-is-locked"/>
     <keyword type="property" name="The “background” property" link="LightDMUser.html#LightDMUser--background"/>
     <keyword type="property" name="The “common-user” property" link="LightDMUser.html#LightDMUser--common-user"/>
     <keyword type="property" name="The “display-name” property" link="LightDMUser.html#LightDMUser--display-name"/>
     <keyword type="property" name="The “has-messages” property" link="LightDMUser.html#LightDMUser--has-messages"/>
     <keyword type="property" name="The “home-directory” property" link="LightDMUser.html#LightDMUser--home-directory"/>
     <keyword type="property" name="The “image” property" link="LightDMUser.html#LightDMUser--image"/>
+    <keyword type="property" name="The “is-locked” property" link="LightDMUser.html#LightDMUser--is-locked"/>
     <keyword type="property" name="The “language” property" link="LightDMUser.html#LightDMUser--language"/>
     <keyword type="property" name="The “layout” property" link="LightDMUser.html#LightDMUser--layout"/>
     <keyword type="property" name="The “layouts” property" link="LightDMUser.html#LightDMUser--layouts"/>

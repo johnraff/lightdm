@@ -127,6 +127,15 @@ getgroups (int size, gid_t list[])
     return groups_length;
 }
 
+#ifdef HAVE___GETGROUPS_CHK
+int __getgroups_chk (int size, gid_t list[], size_t listlen);
+int
+__getgroups_chk (int size, gid_t list[], size_t listlen)
+{
+   return getgroups (size, list);
+}
+#endif
+
 int
 setgroups (size_t size, const gid_t *list)
 {
@@ -329,6 +338,10 @@ stat64 (const char *path, struct stat64 *buf)
     return _stat64 (new_path, buf);
 }
 
+// glibc 2.33 and newer does not declare these functions in a header file
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wmissing-prototypes"
+
 int
 __xstat (int version, const char *path, struct stat *buf)
 {
@@ -364,6 +377,8 @@ __fxstatat64(int ver, int dirfd, const char *pathname, struct stat64 *buf, int f
     g_autofree gchar *new_path = redirect_path (pathname);
     return ___fxstatat64 (ver, dirfd, new_path, buf, flags);
 }
+
+#pragma GCC diagnostic pop
 
 DIR *
 opendir (const char *name)
@@ -1556,14 +1571,10 @@ pututxline (const struct utmpx *ut)
         default:
             g_string_append_printf (status, " TYPE=%d", ut->ut_type);
         }
-        if (ut->ut_line)
-            g_string_append_printf (status, " LINE=%s", ut->ut_line);
-        if (ut->ut_id)
-            g_string_append_printf (status, " ID=%s", ut->ut_id);
-        if (ut->ut_user)
-            g_string_append_printf (status, " USER=%s", ut->ut_user);
-        if (ut->ut_host)
-            g_string_append_printf (status, " HOST=%s", ut->ut_host);
+        g_string_append_printf (status, " LINE=%s", ut->ut_line);
+        g_string_append_printf (status, " ID=%s", ut->ut_id);
+        g_string_append_printf (status, " USER=%s", ut->ut_user);
+        g_string_append_printf (status, " HOST=%s", ut->ut_host);
         status_notify ("%s", status->str);
     }
 

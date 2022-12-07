@@ -130,7 +130,8 @@ pam_conv_cb (int msg_length, const struct pam_message **msg, struct pam_response
     write_string (username);
     gboolean auth_complete = FALSE;
     write_data (&auth_complete, sizeof (auth_complete));
-    write_data (&msg_length, sizeof (msg_length));
+    size_t length = msg_length;
+    write_data (&length, sizeof (length));
     for (int i = 0; i < msg_length; i++)
     {
         const struct pam_message *m = msg[i];
@@ -765,14 +766,14 @@ session_child_run (int argc, char **argv)
             privileges_drop (user_get_uid (user), user_get_gid (user));
 
         g_autoptr(GError) error = NULL;
-        gboolean result = x_authority_write (x_authority, XAUTH_WRITE_MODE_REMOVE, x_authority_filename, &error);
+        x_authority_write (x_authority, XAUTH_WRITE_MODE_REMOVE, x_authority_filename, &error);
         if (drop_privileges)
             privileges_reclaim ();
 
         if (error)
             g_printerr ("Error removing X authority: %s\n", error->message);
-        if (!result)
-            _exit (EXIT_FAILURE);
+        g_clear_error (&error);
+        /* Ignore this error, don't exit, continue closing the session. */
     }
 
     /* Close the Console Kit session */

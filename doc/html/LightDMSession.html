@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>LightDMSession: LightDM Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="LightDM Reference Manual">
 <link rel="up" href="ch01.html" title="liblightdm-gobject">
 <link rel="prev" href="LightDMLayout.html" title="LightDMLayout">
 <link rel="next" href="LightDMUserList.html" title="LightDMUserList">
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -37,8 +37,8 @@
 <a name="LightDMSession.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -99,19 +99,19 @@
 <tbody>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMSession.html#LightDMSession--comment" title="The “comment” property">comment</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMSession.html#LightDMSession--key" title="The “key” property">key</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMSession.html#LightDMSession--name" title="The “name” property">name</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -143,7 +143,7 @@ lightdm_get_sessions (<em class="parameter"><code><span class="type">void</span>
 <div class="refsect3">
 <a name="lightdm-get-sessions.returns"></a><h4>Returns</h4>
 <p>A list of <a class="link" href="LightDMSession.html" title="LightDMSession"><span class="type">LightDMSession</span></a>. </p>
-<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LightDMSession][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LightDMSession][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -155,7 +155,7 @@ lightdm_get_remote_sessions (<em class="parameter"><code><span class="type">void
 <div class="refsect3">
 <a name="lightdm-get-remote-sessions.returns"></a><h4>Returns</h4>
 <p>A list of <a class="link" href="LightDMSession.html" title="LightDMSession"><span class="type">LightDMSession</span></a>. </p>
-<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LightDMSession][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LightDMSession][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -264,36 +264,36 @@ lightdm_session_get_comment (<em class="parameter"><code><a class="link" href="L
 </div>
 </div>
 <div class="refsect1">
-<a name="LightDMSession.other_details"></a><h2>Types and Values</h2>
-</div>
-<div class="refsect1">
 <a name="LightDMSession.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="LightDMSession--comment"></a><h3>The <code class="literal">“comment”</code> property</h3>
-<pre class="programlisting">  “comment”                  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “comment”                  <span class="type">char</span> *</pre>
 <p>Session comment.</p>
+<p>Owner: LightDMSession</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="LightDMSession--key"></a><h3>The <code class="literal">“key”</code> property</h3>
-<pre class="programlisting">  “key”                      <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “key”                      <span class="type">char</span> *</pre>
 <p>Session key.</p>
+<p>Owner: LightDMSession</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="LightDMSession--name"></a><h3>The <code class="literal">“name”</code> property</h3>
-<pre class="programlisting">  “name”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “name”                     <span class="type">char</span> *</pre>
 <p>Session name.</p>
+<p>Owner: LightDMSession</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.27</div>
+<hr>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

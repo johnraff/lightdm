@@ -32,7 +32,7 @@ typedef enum
     KEY_DEPRECATED
 } KeyStatus;
 
-G_DEFINE_TYPE (Configuration, config, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (Configuration, config, G_TYPE_OBJECT)
 
 static Configuration *configuration_instance = NULL;
 
@@ -321,7 +321,7 @@ config_get_boolean (Configuration *config, const gchar *section, const gchar *ke
 static void
 config_init (Configuration *config)
 {
-    config->priv = G_TYPE_INSTANCE_GET_PRIVATE (config, CONFIGURATION_TYPE, ConfigurationPrivate);
+    config->priv = config_get_instance_private (config);
     config->priv->key_file = g_key_file_new ();
     config->priv->key_sources = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
     config->priv->lightdm_keys = g_hash_table_new_full (g_str_hash, g_str_equal, NULL, NULL);
@@ -352,7 +352,7 @@ config_init (Configuration *config)
     g_hash_table_insert (config->priv->seat_keys, "pam-service", GINT_TO_POINTER (KEY_SUPPORTED));
     g_hash_table_insert (config->priv->seat_keys, "pam-autologin-service", GINT_TO_POINTER (KEY_SUPPORTED));
     g_hash_table_insert (config->priv->seat_keys, "pam-greeter-service", GINT_TO_POINTER (KEY_SUPPORTED));
-    g_hash_table_insert (config->priv->seat_keys, "xserver-backend", GINT_TO_POINTER (KEY_SUPPORTED));
+    g_hash_table_insert (config->priv->seat_keys, "xserver-backend", GINT_TO_POINTER (KEY_DEPRECATED));
     g_hash_table_insert (config->priv->seat_keys, "xserver-command", GINT_TO_POINTER (KEY_SUPPORTED));
     g_hash_table_insert (config->priv->seat_keys, "xmir-command", GINT_TO_POINTER (KEY_SUPPORTED));
     g_hash_table_insert (config->priv->seat_keys, "xserver-config", GINT_TO_POINTER (KEY_SUPPORTED));
@@ -364,8 +364,8 @@ config_init (Configuration *config)
     g_hash_table_insert (config->priv->seat_keys, "xdmcp-manager", GINT_TO_POINTER (KEY_SUPPORTED));
     g_hash_table_insert (config->priv->seat_keys, "xdmcp-port", GINT_TO_POINTER (KEY_SUPPORTED));
     g_hash_table_insert (config->priv->seat_keys, "xdmcp-key", GINT_TO_POINTER (KEY_SUPPORTED));
-    g_hash_table_insert (config->priv->seat_keys, "unity-compositor-command", GINT_TO_POINTER (KEY_SUPPORTED));
-    g_hash_table_insert (config->priv->seat_keys, "unity-compositor-timeout", GINT_TO_POINTER (KEY_SUPPORTED));
+    g_hash_table_insert (config->priv->seat_keys, "unity-compositor-command", GINT_TO_POINTER (KEY_DEPRECATED));
+    g_hash_table_insert (config->priv->seat_keys, "unity-compositor-timeout", GINT_TO_POINTER (KEY_DEPRECATED));
     g_hash_table_insert (config->priv->seat_keys, "greeter-session", GINT_TO_POINTER (KEY_SUPPORTED));
     g_hash_table_insert (config->priv->seat_keys, "greeter-hide-users", GINT_TO_POINTER (KEY_SUPPORTED));
     g_hash_table_insert (config->priv->seat_keys, "greeter-allow-guest", GINT_TO_POINTER (KEY_SUPPORTED));
@@ -429,6 +429,4 @@ config_class_init (ConfigurationClass *klass)
     GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     object_class->finalize = config_finalize;
-
-    g_type_class_add_private (klass, sizeof (ConfigurationPrivate));
 }

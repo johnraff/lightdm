@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>LightDMGreeter: LightDM Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="LightDM Reference Manual">
 <link rel="up" href="ch01.html" title="liblightdm-gobject">
 <link rel="prev" href="ch01.html" title="liblightdm-gobject">
 <link rel="next" href="LightDMLanguage.html" title="LightDMLanguage">
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -38,8 +38,8 @@
 <a name="LightDMGreeter.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -346,7 +346,7 @@
 <tbody>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMGreeter.html#LightDMGreeter--authentication-user" title="The “authentication-user” property">authentication-user</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -357,24 +357,24 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMGreeter.html#LightDMGreeter--autologin-session-hint" title="The “autologin-session-hint” property">autologin-session-hint</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_type"><span class="type">int</span></td>
 <td class="property_name"><a class="link" href="LightDMGreeter.html#LightDMGreeter--autologin-timeout-hint" title="The “autologin-timeout-hint” property">autologin-timeout-hint</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMGreeter.html#LightDMGreeter--autologin-user-hint" title="The “autologin-user-hint” property">autologin-user-hint</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMGreeter.html#LightDMGreeter--default-session-hint" title="The “default-session-hint” property">default-session-hint</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -410,7 +410,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMGreeter.html#LightDMGreeter--select-user-hint" title="The “select-user-hint” property">select-user-hint</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -431,9 +431,9 @@
 <a name="LightDMGreeter.signals"></a><h2>Signals</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="signals_return">
-<col width="300px" class="signals_name">
-<col width="200px" class="signals_flags">
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
 </colgroup>
 <tbody>
 <tr>
@@ -473,8 +473,8 @@
 <a name="LightDMGreeter.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -557,48 +557,48 @@
 40
 41
 42</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="gtkdoc kwb">int</span> <span class="function">main</span> <span class="gtkdoc opt">()</span>
-<span class="gtkdoc opt">{</span>
-    GMainLoop <span class="gtkdoc opt">*</span>main_loop<span class="gtkdoc opt">;</span>
-    LightDMGreeter <span class="gtkdoc opt">*</span>greeter
+        <td class="listing_code"><pre class="programlisting"><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">GMainLoop</span><span class="w"> </span><span class="o">*</span><span class="n">main_loop</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">LightDMGreeter</span><span class="w"> </span><span class="o">*</span><span class="n">greeter</span><span class="w"></span>
 
-    main_loop <span class="gtkdoc opt">=</span> <span class="function"><a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-loop-new">g_main_loop_new</a></span> <span class="gtkdoc opt">();</span>
+<span class="w">    </span><span class="n">main_loop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_main_loop_new</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
 
-    greeter <span class="gtkdoc opt">=</span> <span class="function"><a href="LightDMGreeter.html#lightdm-greeter-new">lightdm_greeter_new</a></span> <span class="gtkdoc opt">();</span>
-    <span class="function"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-connect">g_object_connect</a></span> <span class="gtkdoc opt">(</span>greeter<span class="gtkdoc opt">,</span> <span class="string">&quot;show-prompt&quot;</span><span class="gtkdoc opt">,</span> <span class="function"><a href="/usr/share/gtk-doc/html/gobject/gobject-Closures.html#G-CALLBACK:CAPS">G_CALLBACK</a></span> <span class="gtkdoc opt">(</span>show_prompt_cb<span class="gtkdoc opt">),</span> NULL<span class="gtkdoc opt">);</span>
-    <span class="function"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-connect">g_object_connect</a></span> <span class="gtkdoc opt">(</span>greeter<span class="gtkdoc opt">,</span> <span class="string">&quot;authentication-complete&quot;</span><span class="gtkdoc opt">,</span> <span class="function"><a href="/usr/share/gtk-doc/html/gobject/gobject-Closures.html#G-CALLBACK:CAPS">G_CALLBACK</a></span> <span class="gtkdoc opt">(</span>authentication_complete_cb<span class="gtkdoc opt">),</span> NULL<span class="gtkdoc opt">);</span>
+<span class="w">    </span><span class="n">greeter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lightdm_greeter_new</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">g_object_connect</span><span class="w"> </span><span class="p">(</span><span class="n">greeter</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;show-prompt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">G_CALLBACK</span><span class="w"> </span><span class="p">(</span><span class="n">show_prompt_cb</span><span class="p">),</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">g_object_connect</span><span class="w"> </span><span class="p">(</span><span class="n">greeter</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;authentication-complete&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">G_CALLBACK</span><span class="w"> </span><span class="p">(</span><span class="n">authentication_complete_cb</span><span class="p">),</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
 
-    <span class="gtkdoc slc">// Connect to LightDM daemon</span>
-    <span class="keyword">if</span> <span class="gtkdoc opt">(!</span><span class="function"><a href="LightDMGreeter.html#lightdm-greeter-connect-to-daemon-sync">lightdm_greeter_connect_to_daemon_sync</a></span> <span class="gtkdoc opt">(</span>greeter<span class="gtkdoc opt">,</span> NULL<span class="gtkdoc opt">))</span>
-        <span class="keyword">return</span> EXIT_FAILURE<span class="gtkdoc opt">;</span>
+<span class="w">    </span><span class="c1">// Connect to LightDM daemon</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">lightdm_greeter_connect_to_daemon_sync</span><span class="w"> </span><span class="p">(</span><span class="n">greeter</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">))</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">EXIT_FAILURE</span><span class="p">;</span><span class="w"></span>
 
-    <span class="gtkdoc slc">// Start authentication</span>
-    <span class="function"><a href="LightDMGreeter.html#lightdm-greeter-authenticate">lightdm_greeter_authenticate</a></span> <span class="gtkdoc opt">(</span>greeter<span class="gtkdoc opt">,</span> NULL<span class="gtkdoc opt">);</span>
+<span class="w">    </span><span class="c1">// Start authentication</span>
+<span class="w">    </span><span class="n">lightdm_greeter_authenticate</span><span class="w"> </span><span class="p">(</span><span class="n">greeter</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
 
-    <span class="function"><a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-loop-run">g_main_loop_run</a></span> <span class="gtkdoc opt">(</span>main_loop<span class="gtkdoc opt">);</span>
+<span class="w">    </span><span class="n">g_main_loop_run</span><span class="w"> </span><span class="p">(</span><span class="n">main_loop</span><span class="p">);</span><span class="w"></span>
 
-    <span class="keyword">return</span> EXIT_SUCCESS<span class="gtkdoc opt">;</span>
-<span class="gtkdoc opt">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EXIT_SUCCESS</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="gtkdoc kwb">static void</span> <span class="function">show_prompt_cb</span> <span class="gtkdoc opt">(</span>LightDMGreeter <span class="gtkdoc opt">*</span>greeter<span class="gtkdoc opt">,</span> <span class="gtkdoc kwb">const char</span> <span class="gtkdoc opt">*</span>text<span class="gtkdoc opt">,</span> LightDMPromptType type<span class="gtkdoc opt">)</span>
-<span class="gtkdoc opt">{</span>
-    <span class="gtkdoc slc">// Show the user the message and prompt for some response</span>
-    gchar <span class="gtkdoc opt">*</span>secret <span class="gtkdoc opt">=</span> <span class="function">prompt_user</span> <span class="gtkdoc opt">(</span>text<span class="gtkdoc opt">,</span> type<span class="gtkdoc opt">);</span>
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">show_prompt_cb</span><span class="w"> </span><span class="p">(</span><span class="n">LightDMGreeter</span><span class="w"> </span><span class="o">*</span><span class="n">greeter</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">LightDMPromptType</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Show the user the message and prompt for some response</span>
+<span class="w">    </span><span class="n">gchar</span><span class="w"> </span><span class="o">*</span><span class="n">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prompt_user</span><span class="w"> </span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p">);</span><span class="w"></span>
 
-    <span class="gtkdoc slc">// Give the result to the user</span>
-    <span class="function"><a href="LightDMGreeter.html#lightdm-greeter-respond">lightdm_greeter_respond</a></span> <span class="gtkdoc opt">(</span>greeter<span class="gtkdoc opt">,</span> response<span class="gtkdoc opt">);</span>
-<span class="gtkdoc opt">}</span>
+<span class="w">    </span><span class="c1">// Give the result to the user</span>
+<span class="w">    </span><span class="n">lightdm_greeter_respond</span><span class="w"> </span><span class="p">(</span><span class="n">greeter</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="gtkdoc kwb">static void</span> <span class="function">authentication_complete_cb</span> <span class="gtkdoc opt">(</span>LightDMGreeter <span class="gtkdoc opt">*</span>greeter<span class="gtkdoc opt">)</span>
-<span class="gtkdoc opt">{</span>
-    <span class="gtkdoc slc">// Start the session</span>
-    <span class="keyword">if</span> <span class="gtkdoc opt">(!</span><span class="function"><a href="LightDMGreeter.html#lightdm-greeter-get-is-authenticated">lightdm_greeter_get_is_authenticated</a></span> <span class="gtkdoc opt">(</span>greeter<span class="gtkdoc opt">) ||</span>
-        <span class="gtkdoc opt">!</span><span class="function"><a href="LightDMGreeter.html#lightdm-greeter-start-session-sync">lightdm_greeter_start_session_sync</a></span> <span class="gtkdoc opt">(</span>greeter<span class="gtkdoc opt">,</span> NULL<span class="gtkdoc opt">))</span>
-    <span class="gtkdoc opt">{</span>
-        <span class="gtkdoc slc">// Failed authentication, try again</span>
-        <span class="function"><a href="LightDMGreeter.html#lightdm-greeter-authenticate">lightdm_greeter_authenticate</a></span> <span class="gtkdoc opt">(</span>greeter<span class="gtkdoc opt">,</span> NULL<span class="gtkdoc opt">);</span>
-    <span class="gtkdoc opt">}</span>
-<span class="gtkdoc opt">}</span></pre></td>
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">authentication_complete_cb</span><span class="w"> </span><span class="p">(</span><span class="n">LightDMGreeter</span><span class="w"> </span><span class="o">*</span><span class="n">greeter</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Start the session</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">lightdm_greeter_get_is_authenticated</span><span class="w"> </span><span class="p">(</span><span class="n">greeter</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"></span>
+<span class="w">        </span><span class="o">!</span><span class="n">lightdm_greeter_start_session_sync</span><span class="w"> </span><span class="p">(</span><span class="n">greeter</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Failed authentication, try again</span>
+<span class="w">        </span><span class="n">lightdm_greeter_authenticate</span><span class="w"> </span><span class="p">(</span><span class="n">greeter</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1955,8 +1955,9 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <a name="LightDMGreeter.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="LightDMGreeter--authentication-user"></a><h3>The <code class="literal">“authentication-user”</code> property</h3>
-<pre class="programlisting">  “authentication-user”      <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “authentication-user”      <span class="type">char</span> *</pre>
 <p>The user being authenticated.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
 </div>
@@ -1965,22 +1966,25 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <a name="LightDMGreeter--autologin-guest-hint"></a><h3>The <code class="literal">“autologin-guest-hint”</code> property</h3>
 <pre class="programlisting">  “autologin-guest-hint”     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Autologin guest account hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="LightDMGreeter--autologin-session-hint"></a><h3>The <code class="literal">“autologin-session-hint”</code> property</h3>
-<pre class="programlisting">  “autologin-session-hint”   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “autologin-session-hint”   <span class="type">char</span> *</pre>
 <p>Autologin session hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="LightDMGreeter--autologin-timeout-hint"></a><h3>The <code class="literal">“autologin-timeout-hint”</code> property</h3>
-<pre class="programlisting">  “autologin-timeout-hint”   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<pre class="programlisting">  “autologin-timeout-hint”   <span class="type">int</span></pre>
 <p>Autologin timeout hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
@@ -1988,16 +1992,18 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <hr>
 <div class="refsect2">
 <a name="LightDMGreeter--autologin-user-hint"></a><h3>The <code class="literal">“autologin-user-hint”</code> property</h3>
-<pre class="programlisting">  “autologin-user-hint”      <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “autologin-user-hint”      <span class="type">char</span> *</pre>
 <p>Autologin user hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="LightDMGreeter--default-session-hint"></a><h3>The <code class="literal">“default-session-hint”</code> property</h3>
-<pre class="programlisting">  “default-session-hint”     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “default-session-hint”     <span class="type">char</span> *</pre>
 <p>Default session hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
 </div>
@@ -2006,6 +2012,7 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <a name="LightDMGreeter--has-guest-account-hint"></a><h3>The <code class="literal">“has-guest-account-hint”</code> property</h3>
 <pre class="programlisting">  “has-guest-account-hint”   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Has guest account hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
 </div>
@@ -2014,6 +2021,7 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <a name="LightDMGreeter--hide-users-hint"></a><h3>The <code class="literal">“hide-users-hint”</code> property</h3>
 <pre class="programlisting">  “hide-users-hint”          <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Hide users hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
 </div>
@@ -2022,6 +2030,7 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <a name="LightDMGreeter--in-authentication"></a><h3>The <code class="literal">“in-authentication”</code> property</h3>
 <pre class="programlisting">  “in-authentication”        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>TRUE if a user is being authenticated.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
 </div>
@@ -2030,6 +2039,7 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <a name="LightDMGreeter--is-authenticated"></a><h3>The <code class="literal">“is-authenticated”</code> property</h3>
 <pre class="programlisting">  “is-authenticated”         <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>TRUE if the selected user is authenticated.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
 </div>
@@ -2038,6 +2048,7 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <a name="LightDMGreeter--lock-hint"></a><h3>The <code class="literal">“lock-hint”</code> property</h3>
 <pre class="programlisting">  “lock-hint”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Lock hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
 </div>
@@ -2046,14 +2057,16 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <a name="LightDMGreeter--select-guest-hint"></a><h3>The <code class="literal">“select-guest-hint”</code> property</h3>
 <pre class="programlisting">  “select-guest-hint”        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Select guest account hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="LightDMGreeter--select-user-hint"></a><h3>The <code class="literal">“select-user-hint”</code> property</h3>
-<pre class="programlisting">  “select-user-hint”         <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “select-user-hint”         <span class="type">char</span> *</pre>
 <p>Select user hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
 </div>
@@ -2062,6 +2075,7 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <a name="LightDMGreeter--show-manual-login-hint"></a><h3>The <code class="literal">“show-manual-login-hint”</code> property</h3>
 <pre class="programlisting">  “show-manual-login-hint”   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Show manual login hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
 </div>
@@ -2070,6 +2084,7 @@ lightdm_greeter_connect_sync (<em class="parameter"><code><a class="link" href="
 <a name="LightDMGreeter--show-remote-login-hint"></a><h3>The <code class="literal">“show-remote-login-hint”</code> property</h3>
 <pre class="programlisting">  “show-remote-login-hint”   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Show remote login hint.</p>
+<p>Owner: LightDMGreeter</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
 </div>
@@ -2214,7 +2229,7 @@ resettable using <a class="link" href="LightDMGreeter.html#lightdm-greeter-set-r
 <a name="LightDMGreeter-show-message"></a><h3>The <code class="literal">“show-message”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="LightDMGreeter.html" title="LightDMGreeter"><span class="type">LightDMGreeter</span></a>    *greeter,
-               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>             *text,
+               <span class="type">char</span>              *text,
                <a class="link" href="LightDMGreeter.html#LightDMMessageType" title="enum LightDMMessageType"><span class="type">LightDMMessageType</span></a> type,
                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)</pre>
 <p>The ::show-message signal gets emitted when the greeter
@@ -2258,7 +2273,7 @@ should show a message to the user.</p>
 <a name="LightDMGreeter-show-prompt"></a><h3>The <code class="literal">“show-prompt”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="LightDMGreeter.html" title="LightDMGreeter"><span class="type">LightDMGreeter</span></a>   *greeter,
-               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>            *text,
+               <span class="type">char</span>             *text,
                <a class="link" href="LightDMGreeter.html#LightDMPromptType" title="enum LightDMPromptType"><span class="type">LightDMPromptType</span></a> type,
                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
 <p>The ::show-prompt signal gets emitted when the greeter should show a
@@ -2303,6 +2318,6 @@ field for the user to provide a response.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.27</div>
+<hr>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>
