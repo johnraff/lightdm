@@ -1,3 +1,26 @@
+lightdm (1.32.0-1) UNRELEASED; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster
+  * Remove overrides for lintian tags that are no longer supported.
+  * Set upstream metadata fields: Contact.
+  * Fix field name case in debian/control (Pre-depends => Pre-Depends).
+
+  [ Akbarkhon Variskhanov ]
+  * d/watch: Fix URL and pattern
+  * debian/control: Update Homepage.
+    Thanks to Boyuan Yang for the suggestion (Closes: #1022849)
+  * Update upstream metadata
+
+  [ Yves-Alexis Perez ]
+  * New upstream version 1.32.0
+  * d/patches: rebase against new upstream
+  * d/lightdm.install: drop /etc/dbus-1
+  * update symbols for new release
+  * d/control: update standards version to 4.6.1
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 07 Dec 2022 18:54:30 +0100
+
 lightdm (1.26.0-8) unstable; urgency=medium
 
   * Team upload.
