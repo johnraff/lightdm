@@ -47,8 +47,10 @@ liblightdm-qt5-3.so.0 liblightdm-qt5-3-0 #MINVER#
  (c++)"QLightDM::Greeter::~Greeter()@Base" 1.18.3
  (c++)"QLightDM::UsersModel::data(QModelIndex const&, int) const@Base" 1.18.3
  (c++)"QLightDM::UsersModel::rowCount(QModelIndex const&) const@Base" 1.18.3
+ (c++)"QLightDM::UsersModel::roleNames() const@Base" 1.32.0
  (c++)"QLightDM::SessionsModel::data(QModelIndex const&, int) const@Base" 1.18.3
  (c++)"QLightDM::SessionsModel::rowCount(QModelIndex const&) const@Base" 1.18.3
+ (c++)"QLightDM::SessionsModel::roleNames() const@Base" 1.32.0
  (c++)"QLightDM::Greeter::hideUsersHint() const@Base" 1.18.3
  (c++)"QLightDM::Greeter::selectUserHint() const@Base" 1.18.3
  (c++)"QLightDM::Greeter::isAuthenticated() const@Base" 1.18.3
