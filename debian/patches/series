@@ -1,8 +1,5 @@
-03_liblightdm-qt3-add-header-visibility.patch
 01_set-default-path.patch
 02_fix-apparmor-profile.patch
 05_debianize-pam-files.patch
 06_change-user-dirs.patch
 08_reset-SIGPIPE-before-exec.patch
-09_hide_systemd_nologin.patch
-10_fix-build-glibc-2.33.patch

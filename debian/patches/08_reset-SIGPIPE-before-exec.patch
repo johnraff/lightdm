@@ -13,7 +13,7 @@ Bug: https://bugs.launchpad.net/lightdm/+bug/1579867
  3 files changed, 12 insertions(+)
 
 diff --git a/src/lightdm.c b/src/lightdm.c
-index c54f1ba..0724669 100644
+index 74f9ff2..2f290d9 100644
 --- a/src/lightdm.c
 +++ b/src/lightdm.c
 @@ -551,6 +551,12 @@ main (int argc, char **argv)
@@ -30,10 +30,10 @@ index c54f1ba..0724669 100644
      if (argc >= 2 && strcmp (argv[1], "--session-child") == 0)
          return session_child_run (argc, argv);
 diff --git a/src/process.c b/src/process.c
-index 549ccd9..f121cc7 100644
+index aa614d3..042e570 100644
 --- a/src/process.c
 +++ b/src/process.c
-@@ -235,6 +235,9 @@ process_start (Process *process, gboolean block)
+@@ -259,6 +259,9 @@ process_start (Process *process, gboolean block)
          /* Reset SIGPIPE handler so the child has default behaviour (we disabled it at LightDM start) */
          signal (SIGPIPE, SIG_DFL);
  
@@ -44,10 +44,10 @@ index 549ccd9..f121cc7 100644
          _exit (EXIT_FAILURE);
      }
 diff --git a/src/session-child.c b/src/session-child.c
-index 7d0c7fd..d3ebfae 100644
+index 45534c3..16986c9 100644
 --- a/src/session-child.c
 +++ b/src/session-child.c
-@@ -669,6 +669,9 @@ session_child_run (int argc, char **argv)
+@@ -670,6 +670,9 @@ session_child_run (int argc, char **argv)
          /* Reset SIGPIPE handler so the child has default behaviour (we disabled it at LightDM start) */
          signal (SIGPIPE, SIG_DFL);
  
