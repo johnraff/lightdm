@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>LightDMLayout: LightDM Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="LightDM Reference Manual">
 <link rel="up" href="ch01.html" title="liblightdm-gobject">
 <link rel="prev" href="LightDMLanguage.html" title="LightDMLanguage">
 <link rel="next" href="LightDMSession.html" title="LightDMSession">
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -37,8 +37,8 @@
 <a name="LightDMLayout.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -100,21 +100,21 @@
 <tbody>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMLayout.html#LightDMLayout--description" title="The “description” property">description</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMLayout.html#LightDMLayout--name" title="The “name” property">name</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="LightDMLayout.html#LightDMLayout--short-description" title="The “short-description” property">short-description</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 </tbody>
 </table></div>
@@ -144,7 +144,7 @@ lightdm_get_layouts (<em class="parameter"><code><span class="type">void</span><
 <div class="refsect3">
 <a name="lightdm-get-layouts.returns"></a><h4>Returns</h4>
 <p>A list of <a class="link" href="LightDMLayout.html" title="LightDMLayout"><span class="type">LightDMLayout</span></a> that should be presented to the user. </p>
-<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LightDMLayout][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LightDMLayout][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -178,7 +178,7 @@ lightdm_get_layout (<em class="parameter"><code><span class="type">void</span></
 <div class="refsect3">
 <a name="lightdm-get-layout.returns"></a><h4>Returns</h4>
 <p>The currently active layout for this user. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -261,36 +261,36 @@ lightdm_layout_get_description (<em class="parameter"><code><a class="link" href
 </div>
 </div>
 <div class="refsect1">
-<a name="LightDMLayout.other_details"></a><h2>Types and Values</h2>
-</div>
-<div class="refsect1">
 <a name="LightDMLayout.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="LightDMLayout--description"></a><h3>The <code class="literal">“description”</code> property</h3>
-<pre class="programlisting">  “description”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “description”              <span class="type">char</span> *</pre>
 <p>Long description of the layout.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: LightDMLayout</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NULL</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="LightDMLayout--name"></a><h3>The <code class="literal">“name”</code> property</h3>
-<pre class="programlisting">  “name”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “name”                     <span class="type">char</span> *</pre>
 <p>Name of the layout.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: LightDMLayout</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NULL</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="LightDMLayout--short-description"></a><h3>The <code class="literal">“short-description”</code> property</h3>
-<pre class="programlisting">  “short-description”        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “short-description”        <span class="type">char</span> *</pre>
 <p>Short description of the layout.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: LightDMLayout</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NULL</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.27</div>
+<hr>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

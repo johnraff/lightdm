@@ -23,12 +23,9 @@ G_BEGIN_DECLS
 #define X_SERVER_LOCAL_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), X_SERVER_LOCAL_TYPE, XServerLocalClass))
 #define IS_X_SERVER_LOCAL(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), X_SERVER_LOCAL_TYPE))
 
-typedef struct XServerLocalPrivate XServerLocalPrivate;
-
 typedef struct
 {
-    XServer              parent_instance;
-    XServerLocalPrivate *priv;
+    XServer parent_instance;
 } XServerLocal;
 
 typedef struct
@@ -41,14 +38,6 @@ typedef struct
 } XServerLocalClass;
 
 G_DEFINE_AUTOPTR_CLEANUP_FUNC (XServerLocal, g_object_unref)
-
-const gchar *x_server_local_get_version (void);
-
-gint x_server_local_version_compare (guint major, guint minor);
-
-guint x_server_local_get_unused_display_number (void);
-
-void x_server_local_release_display_number (guint display_number);
 
 GType x_server_local_get_type (void);
 

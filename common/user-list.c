@@ -45,6 +45,7 @@ enum
     USER_PROP_HAS_MESSAGES,
     USER_PROP_UID,
     USER_PROP_GID,
+    USER_PROP_IS_LOCKED,
 };
 
 enum
@@ -139,6 +140,9 @@ typedef struct
 
     /* User default session */
     gchar *session;
+
+    /* TRUE if this user is locked */
+    gboolean is_locked;
 } CommonUserPrivate;
 
 typedef struct
@@ -153,14 +157,11 @@ typedef struct
     GObjectClass parent_class;
 } CommonSessionClass;
 
-G_DEFINE_TYPE (CommonUserList, common_user_list, G_TYPE_OBJECT)
-G_DEFINE_TYPE (CommonUser, common_user, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (CommonUserList, common_user_list, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (CommonUser, common_user, G_TYPE_OBJECT)
 #define COMMON_SESSION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), common_session_get_type (), CommonSession))
 GType common_session_get_type (void);
 G_DEFINE_TYPE (CommonSession, common_session, G_TYPE_OBJECT)
-
-#define GET_LIST_PRIVATE(obj) G_TYPE_INSTANCE_GET_PRIVATE ((obj), COMMON_TYPE_USER_LIST, CommonUserListPrivate)
-#define GET_USER_PRIVATE(obj) G_TYPE_INSTANCE_GET_PRIVATE ((obj), COMMON_TYPE_USER, CommonUserPrivate)
 
 #define PASSWD_FILE      "/etc/passwd"
 #define USER_CONFIG_FILE "/etc/lightdm/users.conf"
@@ -191,7 +192,7 @@ common_user_list_cleanup (void)
 static CommonUser *
 get_user_by_name (CommonUserList *user_list, const gchar *username)
 {
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
 
     for (GList *link = priv->users; link; link = link->next)
     {
@@ -206,12 +207,13 @@ get_user_by_name (CommonUserList *user_list, const gchar *username)
 static CommonUser *
 get_user_by_path (CommonUserList *user_list, const gchar *path)
 {
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
 
     for (GList *link = priv->users; link; link = link->next)
     {
         CommonUser *user = link->data;
-        if (g_strcmp0 (GET_USER_PRIVATE (user)->path, path) == 0)
+        CommonUserPrivate *user_priv = common_user_get_instance_private (user);
+        if (g_strcmp0 (user_priv->path, path) == 0)
             return user;
     }
 
@@ -228,7 +230,7 @@ compare_user (gconstpointer a, gconstpointer b)
 static gboolean
 update_passwd_user (CommonUser *user, const gchar *real_name, const gchar *home_directory, const gchar *shell, const gchar *image)
 {
-    CommonUserPrivate *priv = GET_USER_PRIVATE (user);
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
 
     /* Skip if already set to this */
     if (g_strcmp0 (common_user_get_real_name (user), real_name) == 0 &&
@@ -254,13 +256,14 @@ static void load_sessions (CommonUserList *user_list);
 static gboolean
 get_logged_in_cb (CommonUser *user, CommonUserList *user_list)
 {
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
+    CommonUserPrivate *user_priv = common_user_get_instance_private (user);
 
     // Lazily decide to load/listen to sessions
     if (priv->session_added_signal == 0)
         load_sessions (user_list);
 
-    const gchar *username = GET_USER_PRIVATE (user)->name;
+    const gchar *username = user_priv->name;
     for (GList *link = priv->sessions; link; link = link->next)
     {
         CommonSession *session = link->data;
@@ -281,7 +284,7 @@ static CommonUser *
 make_passwd_user (CommonUserList *user_list, struct passwd *entry)
 {
     CommonUser *user = g_object_new (COMMON_TYPE_USER, NULL);
-    CommonUserPrivate *priv = GET_USER_PRIVATE (user);
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
 
     g_signal_connect (user, "get-logged-in", G_CALLBACK (get_logged_in_cb), user_list);
 
@@ -318,7 +321,7 @@ make_passwd_user (CommonUserList *user_list, struct passwd *entry)
 static void
 load_passwd_file (CommonUserList *user_list, gboolean emit_add_signal)
 {
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
 
     g_debug ("Loading user config from %s", USER_CONFIG_FILE);
 
@@ -465,7 +468,7 @@ accounts_user_changed_cb (GDBusConnection *connection,
                           gpointer data)
 {
     CommonUser *user = data;
-    /*CommonUserPrivate *priv = GET_USER_PRIVATE (user);*/
+    /*CommonUserPrivate *priv = common_user_get_instance_private (user);*/
 
     /* Log message disabled as AccountsService can have arbitrary plugins that
      * might cause us to log when properties change we don't use. LP: #1376357
@@ -478,7 +481,7 @@ accounts_user_changed_cb (GDBusConnection *connection,
 static gboolean
 load_accounts_user (CommonUser *user)
 {
-    CommonUserPrivate *priv = GET_USER_PRIVATE (user);
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
 
     /* Get the properties for this user */
     if (!priv->changed_signal)
@@ -511,7 +514,7 @@ load_accounts_user (CommonUser *user)
         return FALSE;
 
     /* Store the properties we need */
-    GVariantIter *iter;
+    g_autoptr(GVariantIter) iter = NULL;
     g_variant_get (result, "(a{sv})", &iter);
     const gchar *name;
     GVariant *value;
@@ -560,8 +563,9 @@ load_accounts_user (CommonUser *user)
         }
         else if (strcmp (name, "Uid") == 0 && g_variant_is_of_type (value, G_VARIANT_TYPE_UINT64))
             priv->uid = g_variant_get_uint64 (value);
+        else if (strcmp (name, "Locked") == 0 && g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN))
+            priv->is_locked = g_variant_get_boolean (value);
     }
-    g_variant_iter_free (iter);
 
     g_autoptr(GVariant) extra_result = g_dbus_connection_call_sync (priv->bus,
                                                                     "org.freedesktop.Accounts",
@@ -577,8 +581,10 @@ load_accounts_user (CommonUser *user)
     if (error)
         g_warning ("Error updating user %s: %s", priv->path, error->message);
     if (extra_result) {
-        g_variant_get (extra_result, "(a{sv})", &iter);
-        while (g_variant_iter_loop (iter, "{&sv}", &name, &value))
+        g_autoptr(GVariantIter) extra_iter = NULL;
+
+        g_variant_get (extra_result, "(a{sv})", &extra_iter);
+        while (g_variant_iter_loop (extra_iter, "{&sv}", &name, &value))
         {
             if (strcmp (name, "BackgroundFile") == 0 && g_variant_is_of_type (value, G_VARIANT_TYPE_STRING))
             {
@@ -600,7 +606,6 @@ load_accounts_user (CommonUser *user)
                 }
             }
         }
-        g_variant_iter_free (iter);
     }
 
     return !system_account;
@@ -609,10 +614,10 @@ load_accounts_user (CommonUser *user)
 static void
 add_accounts_user (CommonUserList *user_list, const gchar *path, gboolean emit_signal)
 {
-    CommonUserListPrivate *list_priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *list_priv = common_user_list_get_instance_private (user_list);
 
     CommonUser *user = g_object_new (COMMON_TYPE_USER, NULL);
-    CommonUserPrivate *priv = GET_USER_PRIVATE (user);
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
 
     g_debug ("User %s added", path);
     priv->bus = g_object_ref (list_priv->bus);
@@ -665,7 +670,7 @@ accounts_user_deleted_cb (GDBusConnection *connection,
                           gpointer data)
 {
     CommonUserList *user_list = data;
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
 
     if (!g_variant_is_of_type (parameters, G_VARIANT_TYPE ("(o)")))
     {
@@ -692,7 +697,7 @@ accounts_user_deleted_cb (GDBusConnection *connection,
 static CommonSession *
 load_session (CommonUserList *user_list, const gchar *path)
 {
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
 
     g_autoptr(GError) error = NULL;
     g_autoptr(GVariant) result = g_dbus_connection_call_sync (priv->bus,
@@ -766,7 +771,7 @@ session_removed_cb (GDBusConnection *connection,
                     gpointer data)
 {
     CommonUserList *user_list = data;
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
 
     if (!g_variant_is_of_type (parameters, G_VARIANT_TYPE ("(o)")))
     {
@@ -796,7 +801,7 @@ session_removed_cb (GDBusConnection *connection,
 static void
 load_sessions (CommonUserList *user_list)
 {
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
 
     priv->session_added_signal = g_dbus_connection_signal_subscribe (priv->bus,
                                                                      "org.freedesktop.DisplayManager",
@@ -841,12 +846,11 @@ load_sessions (CommonUserList *user_list)
             g_variant_get (result, "(v)", &value);
 
             g_debug ("Loading sessions from org.freedesktop.DisplayManager");
-            GVariantIter *iter;
+            g_autoptr(GVariantIter) iter = NULL;
             g_variant_get (value, "ao", &iter);
             const gchar *path;
             while (g_variant_iter_loop (iter, "&o", &path))
                 load_session (user_list, path);
-            g_variant_iter_free (iter);
         }
         else
             g_warning ("Unexpected type from org.freedesktop.DisplayManager.Sessions: %s", g_variant_get_type_string (result));
@@ -856,7 +860,7 @@ load_sessions (CommonUserList *user_list)
 static void
 load_users (CommonUserList *user_list)
 {
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
 
     if (priv->have_users)
         return;
@@ -901,12 +905,11 @@ load_users (CommonUserList *user_list)
     if (result)
     {
         g_debug ("Loading users from org.freedesktop.Accounts");
-        GVariantIter *iter;
+        g_autoptr(GVariantIter) iter = NULL;
         g_variant_get (result, "(ao)", &iter);
         const gchar *path;
         while (g_variant_iter_loop (iter, "&o", &path))
             add_accounts_user (user_list, path, FALSE);
-        g_variant_iter_free (iter);
     }
     else
     {
@@ -938,8 +941,10 @@ gint
 common_user_list_get_length (CommonUserList *user_list)
 {
     g_return_val_if_fail (COMMON_IS_USER_LIST (user_list), 0);
+
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
     load_users (user_list);
-    return g_list_length (GET_LIST_PRIVATE (user_list)->users);
+    return g_list_length (priv->users);
 }
 
 /**
@@ -955,8 +960,10 @@ GList *
 common_user_list_get_users (CommonUserList *user_list)
 {
     g_return_val_if_fail (COMMON_IS_USER_LIST (user_list), NULL);
+
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
     load_users (user_list);
-    return GET_LIST_PRIVATE (user_list)->users;
+    return priv->users;
 }
 
 /**
@@ -996,7 +1003,7 @@ common_user_list_get_user_by_name (CommonUserList *user_list, const gchar *usern
 static void
 common_user_list_init (CommonUserList *user_list)
 {
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (user_list);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (user_list);
 
     priv->bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, NULL);
 }
@@ -1033,7 +1040,7 @@ static void
 common_user_list_finalize (GObject *object)
 {
     CommonUserList *self = COMMON_USER_LIST (object);
-    CommonUserListPrivate *priv = GET_LIST_PRIVATE (self);
+    CommonUserListPrivate *priv = common_user_list_get_instance_private (self);
 
     /* Remove children first, they might access us */
     g_list_free_full (priv->users, g_object_unref);
@@ -1057,8 +1064,6 @@ static void
 common_user_list_class_init (CommonUserListClass *klass)
 {
     GObjectClass *object_class = G_OBJECT_CLASS (klass);
-
-    g_type_class_add_private (klass, sizeof (CommonUserListPrivate));
 
     object_class->set_property = common_user_list_set_property;
     object_class->get_property = common_user_list_get_property;
@@ -1124,7 +1129,7 @@ static gboolean
 call_method (CommonUser *user, const gchar *method, GVariant *args,
              const gchar *expected, GVariant **result)
 {
-    CommonUserPrivate *priv = GET_USER_PRIVATE (user);
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
 
     g_autoptr(GError) error = NULL;
     g_autoptr(GVariant) answer = g_dbus_connection_call_sync (priv->bus,
@@ -1163,7 +1168,7 @@ save_string_to_dmrc (CommonUser *user, const gchar *group,
 static void
 load_dmrc (CommonUser *user)
 {
-    CommonUserPrivate *priv = GET_USER_PRIVATE (user);
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
 
     /* We're using Accounts service instead */
     if (priv->path)
@@ -1204,7 +1209,9 @@ const gchar *
 common_user_get_name (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
-    return GET_USER_PRIVATE (user)->name;
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
+    return priv->name;
 }
 
 /**
@@ -1219,7 +1226,9 @@ const gchar *
 common_user_get_real_name (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
-    return GET_USER_PRIVATE (user)->real_name;
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
+
+    return priv->real_name;
 }
 
 /**
@@ -1235,7 +1244,7 @@ common_user_get_display_name (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
 
-    CommonUserPrivate *priv = GET_USER_PRIVATE (user);
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
     if (!priv->real_name || strcmp (priv->real_name, "") == 0)
         return priv->name;
     else
@@ -1254,7 +1263,9 @@ const gchar *
 common_user_get_home_directory (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
-    return GET_USER_PRIVATE (user)->home_directory;
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
+    return priv->home_directory;
 }
 
 /**
@@ -1269,7 +1280,9 @@ const gchar *
 common_user_get_shell (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
-    return GET_USER_PRIVATE (user)->shell;
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
+    return priv->shell;
 }
 
 /**
@@ -1284,7 +1297,9 @@ const gchar *
 common_user_get_image (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
-    return GET_USER_PRIVATE (user)->image;
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
+    return priv->image;
 }
 
 /**
@@ -1299,7 +1314,9 @@ const gchar *
 common_user_get_background (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
-    return GET_USER_PRIVATE (user)->background;
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
+    return priv->background;
 }
 
 /**
@@ -1314,8 +1331,10 @@ const gchar *
 common_user_get_language (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
     load_dmrc (user);
-    const gchar *language = GET_USER_PRIVATE (user)->language;
+    const gchar *language = priv->language;
     return (language && language[0] == 0) ? NULL : language; /* Treat "" as NULL */
 }
 
@@ -1349,8 +1368,10 @@ const gchar *
 common_user_get_layout (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
     load_dmrc (user);
-    return GET_USER_PRIVATE (user)->layouts[0];
+    return priv->layouts[0];
 }
 
 /**
@@ -1365,8 +1386,10 @@ const gchar * const *
 common_user_get_layouts (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
     load_dmrc (user);
-    return (const gchar * const *) GET_USER_PRIVATE (user)->layouts;
+    return (const gchar * const *) priv->layouts;
 }
 
 /**
@@ -1381,15 +1404,17 @@ const gchar *
 common_user_get_session (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), NULL);
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
     load_dmrc (user);
-    const gchar *session = GET_USER_PRIVATE (user)->session;
+    const gchar *session = priv->session;
     return (session && session[0] == 0) ? NULL : session; /* Treat "" as NULL */
 }
 
 /**
  * common_user_set_session:
  * @user: A #CommonUser
- * @language: The user's new session
+ * @session: The user's new session
  *
  * Set the session for a user.
  **/
@@ -1435,7 +1460,9 @@ gboolean
 common_user_get_has_messages (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), FALSE);
-    return GET_USER_PRIVATE (user)->has_messages;
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
+    return priv->has_messages;
 }
 
 /**
@@ -1450,7 +1477,9 @@ uid_t
 common_user_get_uid (CommonUser *user)
 {
     g_return_val_if_fail (COMMON_IS_USER (user), 0);
-    return GET_USER_PRIVATE (user)->uid;
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
+    return priv->uid;
 }
 
 /**
@@ -1468,7 +1497,7 @@ common_user_get_gid (CommonUser *user)
     /* gid is not actually stored in AccountsService, so if our user is from
        AccountsService, we have to look up manually in passwd.  gid won't
        change, so just look up the first time we're asked and never again. */
-    CommonUserPrivate *priv = GET_USER_PRIVATE (user);
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
     if (priv->uid != 0 && priv->gid == 0)
     {
         struct passwd *entry = getpwuid (priv->uid);
@@ -1478,10 +1507,27 @@ common_user_get_gid (CommonUser *user)
     return priv->gid;
 }
 
+/**
+ * common_user_get_is_locked:
+ * @user: A #CommonUser
+ *
+ * Check if a user is locked.
+ *
+ * Return value: %TRUE if the user is locked.
+ **/
+gboolean
+common_user_get_is_locked (CommonUser *user)
+{
+    g_return_val_if_fail (COMMON_IS_USER (user), FALSE);
+
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
+    return priv->is_locked;
+}
+
 static void
 common_user_init (CommonUser *user)
 {
-    CommonUserPrivate *priv = GET_USER_PRIVATE (user);
+    CommonUserPrivate *priv = common_user_get_instance_private (user);
     priv->layouts = g_malloc (sizeof (gchar *) * 1);
     priv->layouts[0] = NULL;
 }
@@ -1550,6 +1596,9 @@ common_user_get_property (GObject    *object,
     case USER_PROP_GID:
         g_value_set_uint64 (value, common_user_get_gid (self));
         break;
+    case USER_PROP_IS_LOCKED:
+        g_value_set_boolean (value, common_user_get_is_locked (self));
+        break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
         break;
@@ -1560,7 +1609,7 @@ static void
 common_user_finalize (GObject *object)
 {
     CommonUser *self = COMMON_USER (object);
-    CommonUserPrivate *priv = GET_USER_PRIVATE (self);
+    CommonUserPrivate *priv = common_user_get_instance_private (self);
 
     g_clear_pointer (&priv->path, g_free);
     if (priv->changed_signal)
@@ -1581,8 +1630,6 @@ static void
 common_user_class_init (CommonUserClass *klass)
 {
     GObjectClass *object_class = G_OBJECT_CLASS (klass);
-
-    g_type_class_add_private (klass, sizeof (CommonUserPrivate));
 
     object_class->set_property = common_user_set_property;
     object_class->get_property = common_user_get_property;
@@ -1697,7 +1744,13 @@ common_user_class_init (CommonUserClass *klass)
                                                           G_MAXUINT64,
                                                           0,
                                                           G_PARAM_READWRITE));
-
+    g_object_class_install_property (object_class,
+                                     USER_PROP_IS_LOCKED,
+                                     g_param_spec_boolean ("is-locked",
+                                                           "is-locked",
+                                                           "TRUE if the user is currently locked",
+                                                           FALSE,
+                                                           G_PARAM_READABLE));
     /**
      * CommonUser::changed:
      * @user: A #CommonUser

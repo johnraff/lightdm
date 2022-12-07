@@ -47,9 +47,7 @@ typedef struct
     gchar *description;
 } LightDMLayoutPrivate;
 
-G_DEFINE_TYPE (LightDMLayout, lightdm_layout, G_TYPE_OBJECT)
-
-#define GET_PRIVATE(obj) G_TYPE_INSTANCE_GET_PRIVATE ((obj), LIGHTDM_TYPE_LAYOUT, LightDMLayoutPrivate)
+G_DEFINE_TYPE_WITH_PRIVATE (LightDMLayout, lightdm_layout, G_TYPE_OBJECT)
 
 static gboolean have_layouts = FALSE;
 static Display *display = NULL;
@@ -150,6 +148,7 @@ void
 lightdm_set_layout (LightDMLayout *dmlayout)
 {
     g_return_if_fail (dmlayout != NULL);
+    lightdm_get_layouts();
 
     g_debug ("Setting keyboard layout to '%s'", lightdm_layout_get_name (dmlayout));
 
@@ -157,17 +156,16 @@ lightdm_set_layout (LightDMLayout *dmlayout)
     g_autofree gchar *variant = NULL;
     parse_layout_string (lightdm_layout_get_name (dmlayout), &layout, &variant);
 
-    XklConfigRec *config = xkl_config_rec_new ();
-    config->layouts = g_malloc (sizeof (gchar *) * 2);
-    config->variants = g_malloc (sizeof (gchar *) * 2);
-    config->model = g_strdup (xkl_config->model);
-    config->layouts[0] = g_steal_pointer (&layout);
-    config->layouts[1] = NULL;
-    config->variants[0] = g_steal_pointer (&variant);
-    config->variants[1] = NULL;
-    if (!xkl_config_rec_activate (config, xkl_engine))
+    if (layouts && xkl_config)
+    {
+        xkl_config->layouts[0] = g_steal_pointer(&layout);
+        xkl_config->layouts[1] = NULL;
+        xkl_config->variants[0] = g_steal_pointer(&variant);
+        xkl_config->variants[1] = NULL;
+        default_layout = dmlayout;
+    }
+    if (!xkl_config_rec_activate (xkl_config, xkl_engine))
         g_warning ("Failed to activate XKL config");
-    g_object_unref (config);
 }
 
 /**
@@ -213,7 +211,9 @@ const gchar *
 lightdm_layout_get_name (LightDMLayout *layout)
 {
     g_return_val_if_fail (LIGHTDM_IS_LAYOUT (layout), NULL);
-    return GET_PRIVATE (layout)->name;
+
+    LightDMLayoutPrivate *priv = lightdm_layout_get_instance_private (layout);
+    return priv->name;
 }
 
 /**
@@ -228,7 +228,9 @@ const gchar *
 lightdm_layout_get_short_description (LightDMLayout *layout)
 {
     g_return_val_if_fail (LIGHTDM_IS_LAYOUT (layout), NULL);
-    return GET_PRIVATE (layout)->short_description;
+
+    LightDMLayoutPrivate *priv = lightdm_layout_get_instance_private (layout);
+    return priv->short_description;
 }
 
 /**
@@ -243,7 +245,9 @@ const gchar *
 lightdm_layout_get_description (LightDMLayout *layout)
 {
     g_return_val_if_fail (LIGHTDM_IS_LAYOUT (layout), NULL);
-    return GET_PRIVATE (layout)->description;
+
+    LightDMLayoutPrivate *priv = lightdm_layout_get_instance_private (layout);
+    return priv->description;
 }
 
 static void
@@ -258,7 +262,7 @@ lightdm_layout_set_property (GObject      *object,
                              GParamSpec   *pspec)
 {
     LightDMLayout *self = LIGHTDM_LAYOUT (object);
-    LightDMLayoutPrivate *priv = GET_PRIVATE (self);
+    LightDMLayoutPrivate *priv = lightdm_layout_get_instance_private (self);
 
     switch (prop_id) {
     case PROP_NAME:
@@ -307,7 +311,7 @@ static void
 lightdm_layout_finalize (GObject *object)
 {
     LightDMLayout *self = LIGHTDM_LAYOUT (object);
-    LightDMLayoutPrivate *priv = GET_PRIVATE (self);
+    LightDMLayoutPrivate *priv = lightdm_layout_get_instance_private (self);
 
     g_free (priv->name);
     g_free (priv->short_description);
@@ -318,8 +322,6 @@ static void
 lightdm_layout_class_init (LightDMLayoutClass *klass)
 {
     GObjectClass *object_class = G_OBJECT_CLASS (klass);
-
-    g_type_class_add_private (klass, sizeof (LightDMLayoutPrivate));
 
     object_class->set_property = lightdm_layout_set_property;
     object_class->get_property = lightdm_layout_get_property;

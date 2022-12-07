@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>LightDMUserList: LightDM Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="LightDM Reference Manual">
 <link rel="up" href="ch01.html" title="liblightdm-gobject">
 <link rel="prev" href="LightDMSession.html" title="LightDMSession">
 <link rel="next" href="LightDMUser.html" title="LightDMUser">
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -38,8 +38,8 @@
 <a name="LightDMUserList.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -87,12 +87,12 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_type"><span class="type">int</span></td>
 <td class="property_name"><a class="link" href="LightDMUserList.html#LightDMUserList--length" title="The “length” property">length</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_type"><span class="type">int</span></td>
 <td class="property_name"><a class="link" href="LightDMUserList.html#LightDMUserList--num-users" title="The “num-users” property">num-users</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -103,9 +103,9 @@
 <a name="LightDMUserList.signals"></a><h2>Signals</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="signals_return">
-<col width="300px" class="signals_name">
-<col width="200px" class="signals_flags">
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
 </colgroup>
 <tbody>
 <tr>
@@ -151,7 +151,7 @@ lightdm_user_list_get_instance (<em class="parameter"><code><span class="type">v
 <div class="refsect3">
 <a name="lightdm-user-list-get-instance.returns"></a><h4>Returns</h4>
 <p>the <a class="link" href="LightDMUserList.html" title="LightDMUserList"><span class="type">LightDMUserList</span></a>. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -211,7 +211,7 @@ lightdm_user_list_get_user_by_name (<em class="parameter"><code><a class="link" 
 <div class="refsect3">
 <a name="lightdm-user-list-get-user-by-name.returns"></a><h4>Returns</h4>
 <p>A <a class="link" href="LightDMUser.html" title="LightDMUser"><span class="type">LightDMUser</span></a> entry for the given user. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -239,19 +239,17 @@ available users and may be empty depending on the server configuration.</p>
 <div class="refsect3">
 <a name="lightdm-user-list-get-users.returns"></a><h4>Returns</h4>
 <p>A list of <a class="link" href="LightDMUser.html" title="LightDMUser"><span class="type">LightDMUser</span></a> that should be presented to the user. </p>
-<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LightDMUser][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LightDMUser][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
-</div>
-<div class="refsect1">
-<a name="LightDMUserList.other_details"></a><h2>Types and Values</h2>
 </div>
 <div class="refsect1">
 <a name="LightDMUserList.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="LightDMUserList--length"></a><h3>The <code class="literal">“length”</code> property</h3>
-<pre class="programlisting">  “length”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<pre class="programlisting">  “length”                   <span class="type">int</span></pre>
 <p>Number of login users.</p>
+<p>Owner: LightDMUserList</p>
 <p>Flags: Read</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
@@ -259,8 +257,9 @@ available users and may be empty depending on the server configuration.</p>
 <hr>
 <div class="refsect2">
 <a name="LightDMUserList--num-users"></a><h3>The <code class="literal">“num-users”</code> property</h3>
-<pre class="programlisting">  “num-users”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<pre class="programlisting">  “num-users”                <span class="type">int</span></pre>
 <p>Number of login users.</p>
+<p>Owner: LightDMUserList</p>
 <p>Flags: Read</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
@@ -381,6 +380,6 @@ user_function (<a class="link" href="LightDMUserList.html" title="LightDMUserLis
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.27</div>
+<hr>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

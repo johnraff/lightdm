@@ -11,6 +11,8 @@
 #include <unistd.h>
 #include <pwd.h>
 
+#include "../../config.h"
+
 /* Timeout in ms waiting for the status we expect */
 static int status_timeout_ms = 4000;
 
@@ -2557,7 +2559,8 @@ main (int argc, char **argv)
         perror ("Failed to copy greeters");
 
     /* Set up the default greeter */
-    g_autofree gchar *greeter_path = g_build_filename (temp_dir, "usr", "share", "lightdm", "greeters", "default.desktop", NULL);
+    g_autofree gchar *greeter_session = g_strdup_printf ("%s.desktop", DEFAULT_GREETER_SESSION);
+    g_autofree gchar *greeter_path = g_build_filename (temp_dir, "usr", "share", "lightdm", "greeters", greeter_session, NULL);
     g_autofree gchar *greeter = g_strdup_printf ("%s.desktop", argv[2]);
     if (symlink (greeter, greeter_path) < 0)
     {
@@ -2579,7 +2582,7 @@ main (int argc, char **argv)
         /* Root account */
         {"root",             "",          "root",                  0},
         /* Unprivileged account for greeters */
-        {"lightdm",          "",          "",                    100},
+        {GREETER_USER,          "",          "",                 100},
         /* These accounts have a password */
         {"have-password1",   "password",  "Password User 1",    1000},
         {"have-password2",   "password",  "Password User 2",    1001},

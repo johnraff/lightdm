@@ -58,5 +58,18 @@ Connect an existing X server to the display manager.
 .TP
 .B add-seat TYPE [NAME=VALUE...]
 Add a dynamic seat.
+.SH ENVIRONMENT
+.TP
+.B XDG_SEAT_PATH
+Used by dm-tool to determine in which display manager session it's running. When executing
+.B dm-tool
+outside of a display-manager use its
+.B list-seats
+command to show active sessions and set the session to connect to with:
+.B export XDG_SEAT_PATH=/org/freedesktop/DisplayManager/SeatX
+where
+.B SeatX
+is one of the listed sessions.
+.
 .SH SEE ALSO
 .BR lightdm (1)
