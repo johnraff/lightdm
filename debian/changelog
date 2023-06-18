@@ -1,4 +1,4 @@
-lightdm (1.32.0-2) UNRELEASED; urgency=medium
+lightdm (1.32.0-2) unstable; urgency=medium
 
   [ Akbarkhon Variskhanov ]
   * postrm: Use `which` & add `error()`
@@ -9,7 +9,7 @@ lightdm (1.32.0-2) UNRELEASED; urgency=medium
   * d/po/sv.po: convert to UTF-8
   * d/control: drop dependency on lsb-base
 
- -- Yves-Alexis Perez <corsac@debian.org>  Sun, 18 Jun 2023 11:34:11 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 18 Jun 2023 11:34:24 +0200
 
 lightdm (1.32.0-1) experimental; urgency=medium
 
