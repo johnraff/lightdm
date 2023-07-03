@@ -1,3 +1,10 @@
+lightdm (1.32.0-3) UNRELEASED; urgency=medium
+
+  * d/patches/05_debianize-pam-files: include common-session for greeter
+    (Closes: #932047)
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 03 Jul 2023 22:05:54 +0200
+
 lightdm (1.32.0-2) unstable; urgency=medium
 
   [ Akbarkhon Variskhanov ]
