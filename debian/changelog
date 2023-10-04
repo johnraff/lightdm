@@ -1,3 +1,10 @@
+lightdm (1.32.0-4) UNRELEASED; urgency=medium
+
+  * d/lightdm.maintscript: remove /e/d/s/org.freedesktop.DisplayManager.conf
+    properly
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 04 Oct 2023 20:56:41 +0200
+
 lightdm (1.32.0-3) unstable; urgency=medium
 
   * d/patches/05_debianize-pam-files: include common-session for greeter
