@@ -2,8 +2,10 @@ lightdm (1.32.0-4) UNRELEASED; urgency=medium
 
   * d/lightdm.maintscript: remove /e/d/s/org.freedesktop.DisplayManager.conf
     properly
+  * d/patches: fix guest session long login by updating AppArmor profile
+    (Closes: #1050417)
 
- -- Yves-Alexis Perez <corsac@debian.org>  Wed, 04 Oct 2023 20:56:41 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 28 Nov 2023 21:27:20 +0100
 
 lightdm (1.32.0-3) unstable; urgency=medium
 
