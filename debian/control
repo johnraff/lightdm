@@ -17,7 +17,7 @@ Build-Depends: debhelper-compat (= 13),
                libxcb1-dev,
                libxdmcp-dev,
                libxklavier-dev,
-               pkg-config,
+               pkgconf,
                qtbase5-dev,
                valac,
                yelp-tools
