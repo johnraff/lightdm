@@ -1,10 +1,11 @@
-lightdm (1.32.0-5~exp2) UNRELEASED; urgency=medium
+lightdm (1.32.0-5) unstable; urgency=medium
 
   * d/patch: add upstream patch for 64b time_t build failure (Closes: #1067561)
   * d/control: replace pkg-config build-dep by pkgconf
   * d/gir1.2-lightdm-1.install: move typelib to multi-arch dir
+  * Upload to unstable
 
- -- Yves-Alexis Perez <corsac@debian.org>  Fri, 19 Apr 2024 15:34:23 +0200
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 19 Apr 2024 15:34:32 +0200
 
 lightdm (1.32.0-5~exp1) experimental; urgency=medium
 
