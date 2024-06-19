@@ -17,4 +17,4 @@ etc/pam.d
 debian/lightdm-xsession.desktop /usr/share/xsessions
 debian/01_debian.conf /usr/share/lightdm/lightdm.conf.d
 usr/lib/*/lightdm/lightdm-guest-session
-debian/lightdm.service /lib/systemd/system/
+debian/lightdm.service /usr/lib/systemd/system/
