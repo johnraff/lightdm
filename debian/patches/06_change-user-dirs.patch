@@ -9,9 +9,8 @@ Bug: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=749243
 Bug: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=767359
 ---
  src/Makefile.am           | 2 +-
- src/Makefile.in           | 2 +-
  src/shared-data-manager.c | 2 +-
- 3 files changed, 3 insertions(+), 3 deletions(-)
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/src/Makefile.am b/src/Makefile.am
 index 834f7bb..eb93aae 100644
@@ -26,24 +25,12 @@ index 834f7bb..eb93aae 100644
  	-DLOG_DIR=\"$(localstatedir)/log/lightdm\" \
  	-DRUN_DIR=\"$(localstatedir)/run/lightdm\" \
  	-DCACHE_DIR=\"$(localstatedir)/cache/lightdm\" \
-diff --git a/src/Makefile.in b/src/Makefile.in
-index aa038cb..917f267 100644
---- a/src/Makefile.in
-+++ b/src/Makefile.in
-@@ -519,7 +519,7 @@ lightdm_CFLAGS = \
- 	$(LIGHTDM_CFLAGS) \
- 	-I"$(top_srcdir)/common" \
- 	-DSBIN_DIR=\"$(sbindir)\" \
--	-DUSERS_DIR=\"$(localstatedir)/lib/lightdm-data\" \
-+	-DUSERS_DIR=\"$(localstatedir)/lib/lightdm/data\" \
- 	-DLOG_DIR=\"$(localstatedir)/log/lightdm\" \
- 	-DRUN_DIR=\"$(localstatedir)/run/lightdm\" \
- 	-DCACHE_DIR=\"$(localstatedir)/cache/lightdm\" \
 diff --git a/src/shared-data-manager.c b/src/shared-data-manager.c
 index 50a9d01..2a61232 100644
 --- a/src/shared-data-manager.c
 +++ b/src/shared-data-manager.c
-@@ -86,7 +86,7 @@ shared_data_manager_ensure_user_dir (SharedDataManager *manager, const gchar *us
+@@ -89,9 +89,9 @@     g_autoptr(GFile) file = g_file_new_for_path (path);
+
      g_debug ("Creating shared data directory %s", path);
  
      g_autoptr(GError) error = NULL;

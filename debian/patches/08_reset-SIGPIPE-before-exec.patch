@@ -16,7 +16,7 @@ diff --git a/src/lightdm.c b/src/lightdm.c
 index 74f9ff2..2f290d9 100644
 --- a/src/lightdm.c
 +++ b/src/lightdm.c
-@@ -551,6 +551,12 @@ main (int argc, char **argv)
+@@ -566,6 +566,12 @@ main (int argc, char **argv)
      sigaction (SIGPIPE, &action, NULL);
      sigaction (SIGHUP, &action, NULL);
  
@@ -47,7 +47,7 @@ diff --git a/src/session-child.c b/src/session-child.c
 index 45534c3..16986c9 100644
 --- a/src/session-child.c
 +++ b/src/session-child.c
-@@ -670,6 +670,9 @@ session_child_run (int argc, char **argv)
+@@ -710,6 +710,9 @@ session_child_run (int argc, char **argv)
          /* Reset SIGPIPE handler so the child has default behaviour (we disabled it at LightDM start) */
          signal (SIGPIPE, SIG_DFL);
  
@@ -55,5 +55,5 @@ index 45534c3..16986c9 100644
 +        signal (SIGPIPE, SIG_DFL);
 +
          /* Run the command */
-         execve (command_argv[0], command_argv, pam_getenvlist (pam_handle));
-         _exit (EXIT_FAILURE);
+         execve (command_argv[0], command_argv,
+ #if HAVE_SETUSERCONTEXT
