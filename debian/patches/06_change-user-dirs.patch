@@ -29,7 +29,7 @@ diff --git a/src/shared-data-manager.c b/src/shared-data-manager.c
 index 50a9d01..2a61232 100644
 --- a/src/shared-data-manager.c
 +++ b/src/shared-data-manager.c
-@@ -89,9 +89,9 @@     g_autoptr(GFile) file = g_file_new_for_path (path);
+@@ -85,9 +85,9 @@ shared_data_manager_ensure_user_dir
 
      g_debug ("Creating shared data directory %s", path);
  
@@ -39,3 +39,4 @@ index 50a9d01..2a61232 100644
      if (error)
      {
          if (g_error_matches (error, G_IO_ERROR, G_IO_ERROR_EXISTS))
+         {
