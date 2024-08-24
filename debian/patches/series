@@ -4,3 +4,4 @@
 06_change-user-dirs.patch
 08_reset-SIGPIPE-before-exec.patch
 0006-Add-ICEAuthority-file-to-the-AppArmor-profile-for-gu.patch
+# 0007-Fix-tests-failing-on-32-bit-architectures-using-64-b.patch
