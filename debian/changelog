@@ -1,4 +1,4 @@
-lightdm (1.32.0+git240823-6+bl1) carbon; urgency=medium
+lightdm (1.32.0+git240823-6+bl1) carbon-trixie; urgency=medium
 
   * Non-maintainer upload.
   * Build from git 3abc9fb
